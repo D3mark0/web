@@ -3,11 +3,35 @@
 <title>D3mark0</title>
 <body>
 <head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<div id="top">
+
+</div>
+
+<div id="side">
+  <ul>
+    <li><div id="sideheader">Menu</div></li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</div>
+
+
+<script type="text/javascript" src="draggable.js"></script>
+<script>
+    //Make the DIV element draggagle:
+    dragElement(document.getElementById("side"));
+</script>
+
+<div id="bottom">
+
+</div>
 
 </body>
 </html>
