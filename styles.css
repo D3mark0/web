@@ -144,3 +144,22 @@ body {
 #photo img {
   height: 500px;
 }
+
+#video {
+  position: absolute;
+  z-index: 13;
+  top: 40%;
+  left: 40%;
+  display: none;
+}
+
+#videoheader {
+  cursor: move;
+  z-index: 14;
+  background-color: #ff6998;
+  color: white;
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-family: 'PT Sans', sans-serif;
+}

@@ -20,7 +20,7 @@
   <ul>
     <li><div id="sideheader">Menu</div></li>
     <li><a onclick="document.getElementById('photo').style.display = 'block';">Photo</a></li>
-    <li><a href="#news">Test</a></li>
+    <li><a onclick="document.getElementById('video').style.display = 'block';">Video</a></li>
     <li><a href="#contact">Test</a></li>
     <li><a href="#about">Test</a></li>
   </ul>
@@ -43,6 +43,16 @@
 
 <script>
     dragElement(document.getElementById("photo"));
+</script>
+
+<div id="video">
+  <div id="videoheader">Video</div>
+  <iframe width="640" height="360" frameBorder="0" src="https://www.youtube.com/embed/KnXRYWfP6pM">
+</iframe>
+</div>
+
+<script>
+    dragElement(document.getElementById("video"));
 </script>
 
 <div id="bottom">
