@@ -20,16 +20,62 @@ body {
     height: 30px;
 }
 
-#bottom {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #ff6998;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 30px;
+#bottom ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ff6998;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#bottom li {
+  float: left;
+}
+
+#bottom li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'PT Sans', sans-serif;
+}
+
+#bottom li a:hover, .dropup:hover .dropbtn {
+  background-color: #4fd8ff;
+}
+
+#bottom li.dropup {
+  position: relative;
+  display: inline-block;
+}
+
+#bottom .dropup-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  bottom: 48px;
+  z-index: 1;
+}
+
+#bottom .dropup-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+#bottom .dropup-content a:hover {
+  background-color: #ff6998;
+  color: white;
+}
+
+#bottom .dropup:hover .dropup-content {
+  display: block;
 }
 
 #side {
