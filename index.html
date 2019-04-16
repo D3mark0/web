@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <title>D3mark0</title>
+
 <body>
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
   <link rel="stylesheet" href="styles.css">
 </head>
+
+<script type="text/javascript" src="draggable.js"></script>
+<script type="text/javascript" src="randomimg.js"></script>
 
 <div id="top">
 
@@ -15,30 +19,42 @@
 <div id="side">
   <ul>
     <li><div id="sideheader">Menu</div></li>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a onclick="document.getElementById('photo').style.display = 'block';">Photo</a></li>
+    <li><a href="#news">Test</a></li>
+    <li><a href="#contact">Test</a></li>
+    <li><a href="#about">Test</a></li>
   </ul>
 </div>
 
-
-<script type="text/javascript" src="draggable.js"></script>
 <script>
-    //Make the DIV element draggagle:
     dragElement(document.getElementById("side"));
+</script>
+
+<div id="photo">
+  <div id="photoheader">Photo</div>
+  <a onClick="pickimg();">
+  <img src="" name="randimg">
+  </a>
+</div>
+
+<script>
+    pickimg();
+</script>
+
+<script>
+    dragElement(document.getElementById("photo"));
 </script>
 
 <div id="bottom">
   <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
+  <li><a href="#home">Test</a></li>
+  <li><a href="#news">Test</a></li>
   <li class="dropup">
     <a class="dropbtn">Dropdown</a>
     <div class="dropup-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      <a href="#">Test</a>
+      <a href="#">Test</a>
+      <a href="#">Test</a>
     </div>
   </li>
 </ul>

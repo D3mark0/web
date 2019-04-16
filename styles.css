@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-image: url(logo_pink.png);
+  background-image: url(img/logo_pink.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -120,4 +120,27 @@ body {
 #side li a:hover:not(.active) {
   background-color: #4fd8ff;
   color: white;
+}
+
+#photo {
+  position: absolute;
+  z-index: 11;
+  top: 20%;
+  left: 20%;
+  display: none;
+}
+
+#photoheader {
+  cursor: move;
+  z-index: 12;
+  background-color: #ff6998;
+  color: white;
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-family: 'PT Sans', sans-serif;
+}
+
+#photo img {
+  height: 500px;
 }
