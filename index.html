@@ -21,7 +21,7 @@
     <li><div id="sideheader">Menu</div></li>
     <li><a onclick="document.getElementById('photo').style.display = 'block';">Photo</a></li>
     <li><a onclick="document.getElementById('video').style.display = 'block';">Video</a></li>
-    <li><a href="#contact">Test</a></li>
+    <li><a onclick="document.getElementById('music').style.display = 'block';">Music</a></li>
     <li><a href="#about">Test</a></li>
   </ul>
 </div>
@@ -47,17 +47,25 @@
 
 <div id="video">
   <div id="videoheader">Video</div>
-  <iframe width="640" height="360" frameBorder="0" src="https://www.youtube.com/embed/KnXRYWfP6pM">
-</iframe>
+  <iframe width="640" height="360" frameBorder="0" src="https://www.youtube.com/embed/KnXRYWfP6pM"></iframe>
 </div>
 
 <script>
     dragElement(document.getElementById("video"));
 </script>
 
+<div id="music">
+  <div id="musicheader">Music</div>
+  <iframe width="300" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/729754332&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+</div>
+
+<script>
+    dragElement(document.getElementById("music"));
+</script>
+
 <div id="bottom">
   <ul>
-  <li><a href="#home">Test</a></li>
+  <li><a href="index.html">Home</a></li>
   <li><a href="#news">Test</a></li>
   <li class="dropup">
     <a class="dropbtn">Dropdown</a>

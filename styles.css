@@ -82,7 +82,7 @@ body {
   position: absolute;
   z-index: 9;
   top: 30%;
-  right: 10%;
+  left: 80%;
 }
 
 #sideheader {
@@ -156,6 +156,25 @@ body {
 #videoheader {
   cursor: move;
   z-index: 14;
+  background-color: #ff6998;
+  color: white;
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-family: 'PT Sans', sans-serif;
+}
+
+#music {
+  position: absolute;
+  z-index: 14;
+  top: 50%;
+  left: 60%;
+  display: none;
+}
+
+#musicheader {
+  cursor: move;
+  z-index: 15;
   background-color: #ff6998;
   color: white;
   display: block;
