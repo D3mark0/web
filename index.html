@@ -6,6 +6,7 @@
 <script type="text/javascript" src="draggable.js"></script>
 <script type="text/javascript" src="randomimg.js"></script>
 <script type="text/javascript" src="randomvideo.js"></script>
+<script type="text/javascript" src="randomusic.js"></script>
 <script type="text/javascript" src="randomnote.js"></script>
 
 <body onload="startTime()">
@@ -62,10 +63,11 @@
 
 <div id="music">
   <div id="musicheader">Музыка</div>
-  <iframe width="300" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/729754332&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+  <iframe id="randmusic" width="300" height="300" scrolling="no" frameborder="no" allow="autoplay" src=""></iframe>
 </div>
 
 <script>
+    pickmusic();
     dragElement(document.getElementById("music"));
 </script>
 
