@@ -2,19 +2,26 @@
 <html>
 <title>D3mark0</title>
 
-<body>
+<script type="text/javascript" src="clock.js"></script>
+<script type="text/javascript" src="draggable.js"></script>
+<script type="text/javascript" src="randomimg.js"></script>
+<script type="text/javascript" src="randomvideo.js"></script>
+<script type="text/javascript" src="randomnote.js"></script>
+
+<body onload="startTime()">
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<script type="text/javascript" src="draggable.js"></script>
-<script type="text/javascript" src="randomimg.js"></script>
-<script type="text/javascript" src="randomnote.js"></script>
-
 <div id="top">
-
+  <ul>
+    <li><a>Home</a></li>
+    <li><a>News</a></li>
+    <li><a>Contact</a></li>
+    <li style="float:right"><a class="unselectable" id="clock">Упс...</a></li>
+  </ul>
 </div>
 
 <div id="side">
@@ -45,10 +52,11 @@
 
 <div id="video">
   <div id="videoheader">Видео</div>
-  <iframe width="640" height="360" frameBorder="0" src="https://www.youtube.com/embed/KnXRYWfP6pM"></iframe>
+  <iframe id="randvideo" width="640" height="360" frameBorder="0" src=""></iframe>
 </div>
 
 <script>
+    pickvideo();
     dragElement(document.getElementById("video"));
 </script>
 
@@ -63,7 +71,7 @@
 
 <div id="text">
   <div id="textheader">Текст</div>
-  <textarea class="scrollabletextbox" id="randnote" readonly></textarea>
+  <textarea class="scrollabletextbox" id="randnote" onClick="picknote();"></textarea>
 </div>
 
 <script>
