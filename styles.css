@@ -182,3 +182,32 @@ body {
   text-decoration: none;
   font-family: 'PT Sans', sans-serif;
 }
+
+#text {
+  position: absolute;
+  z-index: 14;
+  top: 10%;
+  left: 20%;
+  display: none;
+}
+
+#textheader {
+  cursor: move;
+  z-index: 15;
+  background-color: #ff6998;
+  color: white;
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-family: 'PT Sans', sans-serif;
+}
+
+#text textarea {
+  height: 150px;
+  width: 250px;
+  resize: none;
+  font-family: 'PT Serif', sans-serif;
+  font-size: 11pt;
+  padding: 8px 16px;
+  border: none;
+}

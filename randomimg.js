@@ -14,5 +14,5 @@ function getRandomInt(min, max) {
 }
 
 function pickimg() {
-  document.randimg.src = myImages1[getRandomInt(0, myImages1.length - 1)];
+  document.getElementById("randimg").src = myImages1[getRandomInt(0, myImages1.length - 1)];
 }

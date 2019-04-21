@@ -11,6 +11,7 @@
 
 <script type="text/javascript" src="draggable.js"></script>
 <script type="text/javascript" src="randomimg.js"></script>
+<script type="text/javascript" src="randomnote.js"></script>
 
 <div id="top">
 
@@ -18,11 +19,11 @@
 
 <div id="side">
   <ul>
-    <li><div id="sideheader">Menu</div></li>
-    <li><a onclick="document.getElementById('photo').style.display = 'block';">Photo</a></li>
-    <li><a onclick="document.getElementById('video').style.display = 'block';">Video</a></li>
-    <li><a onclick="document.getElementById('music').style.display = 'block';">Music</a></li>
-    <li><a href="#about">Test</a></li>
+    <li><div id="sideheader">Меню</div></li>
+    <li><a onclick="document.getElementById('photo').style.display = 'block';">Фото</a></li>
+    <li><a onclick="document.getElementById('video').style.display = 'block';">Видео</a></li>
+    <li><a onclick="document.getElementById('music').style.display = 'block';">Музыка</a></li>
+    <li><a onclick="document.getElementById('text').style.display = 'block';">Текст</a></li>
   </ul>
 </div>
 
@@ -31,22 +32,19 @@
 </script>
 
 <div id="photo">
-  <div id="photoheader">Photo</div>
+  <div id="photoheader">Фото</div>
   <a onClick="pickimg();">
-  <img src="" name="randimg">
+  <img src="" id="randimg">
   </a>
 </div>
 
 <script>
     pickimg();
-</script>
-
-<script>
     dragElement(document.getElementById("photo"));
 </script>
 
 <div id="video">
-  <div id="videoheader">Video</div>
+  <div id="videoheader">Видео</div>
   <iframe width="640" height="360" frameBorder="0" src="https://www.youtube.com/embed/KnXRYWfP6pM"></iframe>
 </div>
 
@@ -55,7 +53,7 @@
 </script>
 
 <div id="music">
-  <div id="musicheader">Music</div>
+  <div id="musicheader">Музыка</div>
   <iframe width="300" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/729754332&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 </div>
 
@@ -63,16 +61,26 @@
     dragElement(document.getElementById("music"));
 </script>
 
+<div id="text">
+  <div id="textheader">Текст</div>
+  <textarea class="scrollabletextbox" id="randnote" readonly></textarea>
+</div>
+
+<script>
+    picknote();
+    dragElement(document.getElementById("text"));
+</script>
+
 <div id="bottom">
   <ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="#news">Test</a></li>
+  <li><a href="index.html">Домой</a></li>
+  <li><a href="#news">Тест</a></li>
   <li class="dropup">
-    <a class="dropbtn">Dropdown</a>
+    <a class="dropbtn">Дропап</a>
     <div class="dropup-content">
-      <a href="#">Test</a>
-      <a href="#">Test</a>
-      <a href="#">Test</a>
+      <a href="#">Тест</a>
+      <a href="#">Тест</a>
+      <a href="#">Тест</a>
     </div>
   </li>
 </ul>
