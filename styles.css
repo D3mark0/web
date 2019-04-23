@@ -24,6 +24,7 @@ body {
 }
 
 #top li a {
+  cursor: pointer;
   display: block;
   color: white;
   text-align: center;
@@ -37,7 +38,52 @@ body {
 }
 
 #top .unselectable {
-  background-color: #ff6998;
+  background-color: white;
+}
+
+#clock {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
+  font-family: 'PT Serif', sans-serif;
+}
+
+#title {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
+  font-family: 'PT Serif', sans-serif;
+}
+
+#expand {
+  color: white;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
+  font-family: 'PT Sans', sans-serif;
+  display: none;
+}
+
+#randomize {
+  color: white;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
+  font-family: 'PT Sans', sans-serif;
+  display: none;
+}
+
+#close {
+  color: white;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
+  font-family: 'PT Sans', sans-serif;
+  display: none;
 }
 
 #bottom ul {
@@ -55,6 +101,7 @@ body {
 }
 
 #bottom li a, .dropbtn {
+  cursor: pointer;
   display: inline-block;
   color: white;
   text-align: center;
@@ -100,14 +147,14 @@ body {
 
 #side {
   position: absolute;
-  z-index: 9;
+  z-index: 1;
   top: 30%;
   left: 80%;
 }
 
 #sideheader {
   cursor: move;
-  z-index: 10;
+  z-index: 2;
   background-color: #ff6998;
   color: white;
   display: block;
@@ -125,6 +172,7 @@ body {
 }
 
 #side li a {
+  cursor: pointer;
   display: block;
   color: #000;
   padding: 8px 16px;
@@ -144,7 +192,7 @@ body {
 
 #photo {
   position: absolute;
-  z-index: 11;
+  z-index: 3;
   top: 20%;
   left: 20%;
   display: none;
@@ -152,7 +200,7 @@ body {
 
 #photoheader {
   cursor: move;
-  z-index: 12;
+  z-index: 4;
   background-color: #ff6998;
   color: white;
   display: block;
@@ -162,12 +210,13 @@ body {
 }
 
 #photo img {
+  vertical-align: top;
   height: 500px;
 }
 
 #video {
   position: absolute;
-  z-index: 13;
+  z-index: 5;
   top: 40%;
   left: 40%;
   display: none;
@@ -175,7 +224,7 @@ body {
 
 #videoheader {
   cursor: move;
-  z-index: 14;
+  z-index: 6;
   background-color: #ff6998;
   color: white;
   display: block;
@@ -184,9 +233,13 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
+#video iframe {
+  vertical-align: top;
+}
+
 #music {
   position: absolute;
-  z-index: 14;
+  z-index: 7;
   top: 50%;
   left: 60%;
   display: none;
@@ -194,7 +247,7 @@ body {
 
 #musicheader {
   cursor: move;
-  z-index: 15;
+  z-index: 8;
   background-color: #ff6998;
   color: white;
   display: block;
@@ -203,9 +256,13 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
+#music iframe {
+  vertical-align: top;
+}
+
 #text {
   position: absolute;
-  z-index: 14;
+  z-index: 9;
   top: 10%;
   left: 20%;
   display: none;
@@ -213,7 +270,7 @@ body {
 
 #textheader {
   cursor: move;
-  z-index: 15;
+  z-index: 10;
   background-color: #ff6998;
   color: white;
   display: block;
@@ -223,6 +280,7 @@ body {
 }
 
 #text textarea {
+  vertical-align: top;
   height: 150px;
   width: 250px;
   resize: none;

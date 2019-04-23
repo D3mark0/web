@@ -3,11 +3,12 @@
 <title>D3mark0</title>
 
 <script type="text/javascript" src="clock.js"></script>
-<script type="text/javascript" src="draggable.js"></script>
+<script type="text/javascript" src="windows.js"></script>
 <script type="text/javascript" src="randomimg.js"></script>
 <script type="text/javascript" src="randomvideo.js"></script>
 <script type="text/javascript" src="randomusic.js"></script>
 <script type="text/javascript" src="randomnote.js"></script>
+<script type="text/javascript" src="topmenu.js"></script>
 
 <body onload="startTime()">
 <head>
@@ -18,20 +19,22 @@
 
 <div id="top">
   <ul>
-    <li><a>Home</a></li>
-    <li><a>News</a></li>
-    <li><a>Contact</a></li>
-    <li style="float:right"><a class="unselectable" id="clock">Упс...</a></li>
+    <li><div id="title" class="unselectable">Меню</div></li>
+    <li><a id="randomize" role="button" onclick="randomizeButton();">Обновить</a></li>
+    <li><a id="expand" role="button" onclick="expandButton();">Развернуть</a></li>
+    <li><a id="rollup" role="button">Свернуть</a></li>
+    <li><a id="close" role="button" onclick="closeButton();">Закрыть</a></li>
+    <li style="float:right"><div id="clock" class="unselectable">Упс...</div></li>
   </ul>
 </div>
 
 <div id="side">
   <ul>
     <li><div id="sideheader">Меню</div></li>
-    <li><a onclick="document.getElementById('photo').style.display = 'block';">Фото</a></li>
-    <li><a onclick="document.getElementById('video').style.display = 'block';">Видео</a></li>
-    <li><a onclick="document.getElementById('music').style.display = 'block';">Музыка</a></li>
-    <li><a onclick="document.getElementById('text').style.display = 'block';">Текст</a></li>
+    <li><a role="button" onclick="document.getElementById('photo').style.display = 'block';">Фото</a></li>
+    <li><a role="button" onclick="document.getElementById('video').style.display = 'block';">Видео</a></li>
+    <li><a role="button" onclick="document.getElementById('music').style.display = 'block';">Музыка</a></li>
+    <li><a role="button" onclick="document.getElementById('text').style.display = 'block';">Текст</a></li>
   </ul>
 </div>
 
@@ -42,7 +45,7 @@
 <div id="photo">
   <div id="photoheader">Фото</div>
   <a onClick="pickimg();">
-  <img src="" id="randimg">
+  <img id="randimg" src="">
   </a>
 </div>
 
@@ -53,7 +56,7 @@
 
 <div id="video">
   <div id="videoheader">Видео</div>
-  <iframe id="randvideo" width="640" height="360" frameBorder="0" src=""></iframe>
+  <iframe id="randvideo" width="640" height="360" frameBorder="0" src="" allowfullscreen></iframe>
 </div>
 
 <script>
@@ -84,7 +87,7 @@
 <div id="bottom">
   <ul>
   <li><a href="index.html">Домой</a></li>
-  <li><a href="#news">Тест</a></li>
+  <li><a href="#">Тест</a></li>
   <li class="dropup">
     <a class="dropbtn">Дропап</a>
     <div class="dropup-content">
@@ -95,6 +98,10 @@
   </li>
 </ul>
 </div>
+
+<script>
+    closeButton();
+</script>
 
 </body>
 </html>
