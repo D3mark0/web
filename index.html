@@ -21,8 +21,8 @@
   <ul>
     <li><div id="title" class="unselectable">Меню</div></li>
     <li><a id="randomize" role="button" onclick="randomizeButton();">Обновить</a></li>
-    <li><a id="expand" role="button" onclick="expandButton();">Развернуть</a></li>
-    <li><a id="rollup" role="button">Свернуть</a></li>
+    <li><a id="expand" role="button" onclick="expandButton()">Развернуть</a></li>
+    <li><a id="rollup" role="button" onclick="rollupButton()">Свернуть</a></li>
     <li><a id="close" role="button" onclick="closeButton();">Закрыть</a></li>
     <li style="float:right"><div id="clock" class="unselectable">Упс...</div></li>
   </ul>
@@ -44,14 +44,24 @@
 
 <div id="photo">
   <div id="photoheader">Фото</div>
-  <a onClick="pickimg();">
-  <img id="randimg" src="">
+  <a onClick="pickimgsmall();">
+    <img id="imgsmall" src="">
   </a>
 </div>
 
 <script>
-    pickimg();
+    pickimgsmall();
     dragElement(document.getElementById("photo"));
+</script>
+
+<div id="photoexpand">
+  <a onClick="pickimglarge();">
+    <img id="imglarge" src="">
+  </a>
+</div>
+
+<script>
+    pickimglarge();
 </script>
 
 <div id="video">
@@ -76,24 +86,31 @@
 
 <div id="text">
   <div id="textheader">Текст</div>
-  <textarea class="scrollabletextbox" id="randnote" onClick="picknote();"></textarea>
+  <textarea class="scrollabletextbox" id="notesmall" onClick="picknotesmall();"></textarea>
 </div>
 
 <script>
-    picknote();
+    picknotesmall();
     dragElement(document.getElementById("text"));
+</script>
+
+<div id="textexpand">
+  <textarea class="scrollabletextbox" id="notelarge" onClick="picknotelarge();"></textarea>
+</div>
+
+<script>
+    picknotelarge();
 </script>
 
 <div id="bottom">
   <ul>
   <li><a href="index.html">Домой</a></li>
-  <li><a href="#">Тест</a></li>
   <li class="dropup">
-    <a class="dropbtn">Дропап</a>
+    <a class="dropbtn">Выставки</a>
     <div class="dropup-content">
-      <a href="#">Тест</a>
-      <a href="#">Тест</a>
-      <a href="#">Тест</a>
+      <a href="#">Мистер КЕК</a>
+      <a href="#">ветермыслей</a>
+      <a href="#">ЧИСЛА</a>
     </div>
   </li>
 </ul>

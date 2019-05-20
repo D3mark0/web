@@ -13,6 +13,14 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function pickimg() {
-  document.getElementById("randimg").src = myImages1[getRandomInt(0, myImages1.length - 1)];
+function pickimg(elmnt) {
+  elmnt.src = myImages1[getRandomInt(0, myImages1.length - 1)];
+}
+
+function pickimgsmall() {
+  document.getElementById("imgsmall").src = myImages1[getRandomInt(0, myImages1.length - 1)];
+}
+
+function pickimglarge() {
+  document.getElementById("imglarge").src = myImages1[getRandomInt(0, myImages1.length - 1)];
 }

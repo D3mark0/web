@@ -13,6 +13,10 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function picknote() {
-  document.getElementById("randnote").value = MyNotes1[getRandomInt(0, MyNotes1.length - 1)];
+function picknotesmall() {
+  document.getElementById("notesmall").value = MyNotes1[getRandomInt(0, MyNotes1.length - 1)];
+}
+
+function picknotelarge() {
+  document.getElementById("notelarge").value = MyNotes1[getRandomInt(0, MyNotes1.length - 1)];
 }

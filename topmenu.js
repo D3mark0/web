@@ -12,8 +12,40 @@ function randomizeButton () {
   }
 }
 
-function expandButton() {
+function expandButton () {
+  var title = document.getElementById("title").innerHTML;
+  switch (title) {
+    case 'Фото':
+      document.getElementById("photoexpand").style.display = 'block';
+      break;
+    case 'Текст':
+      document.getElementById("textexpand").style.display = 'block';
+      break;
+    default:
+      break;
+  }
 
+  document.getElementById("expand").style.display = 'none';
+  document.getElementById("close").style.display = 'none';
+  document.getElementById("rollup").style.display = 'block';
+
+  hideall();
+}
+
+function rollupButton () {
+  var title = document.getElementById("title").innerHTML;
+  switch (title) {
+    case 'Фото':
+      document.getElementById("photoexpand").style.display = 'none';
+      break;
+    case 'Текст':
+      document.getElementById("textexpand").style.display = 'none';
+      break;
+    default:
+      break;
+  }
+
+  closeButton();
 }
 
 function closeButton () {
@@ -36,8 +68,18 @@ function closeButton () {
   }
 
   document.getElementById("title").innerHTML = 'Меню';
+  document.getElementById("side").style.display = 'block';
+
   document.getElementById("expand").style.display = 'none';
   document.getElementById("rollup").style.display = 'none';
   document.getElementById("randomize").style.display = 'none';
   document.getElementById("close").style.display = 'none';
+}
+
+function hideall () {
+  document.getElementById("side").style.display = 'none';
+  document.getElementById("photo").style.display = 'none';
+  document.getElementById("video").style.display = 'none';
+  document.getElementById("music").style.display = 'none';
+  document.getElementById("text").style.display = 'none';
 }
