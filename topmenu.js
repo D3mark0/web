@@ -63,6 +63,9 @@ function closeButton () {
     case 'Текст':
       document.getElementById("text").style.display = 'none';
       break;
+    case 'Мистер КЕК':
+    document.getElementById("mrkek").style.display = 'none';
+    break;
     default:
       break;
   }

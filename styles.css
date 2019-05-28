@@ -1,5 +1,6 @@
-body {
+html, body {
   margin: 0;
+  height: 100%;
   background-image: url(img/logo_pink.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -9,14 +10,15 @@ body {
 }
 
 #top ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #ff6998;
-    position: fixed;
-    top: 0;
-    width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ff6998;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 #top li {
@@ -94,6 +96,7 @@ body {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 1;
 }
 
 #bottom li {
@@ -319,4 +322,19 @@ body {
   padding: 8px 16px;
   border: none;
   outline: none;
+}
+
+#mrkek {
+  width: 300%;
+  height: 100%;
+  background-color: #f58b57;
+  display: none;
+}
+
+#mrkek pre {
+  position: fixed;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+  font-size: 50pt;
+  z-index: 0;
 }
