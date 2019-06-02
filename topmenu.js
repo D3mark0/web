@@ -65,10 +65,13 @@ function closeButton () {
       break;
     case 'Мистер КЕК':
       document.getElementById("mrkek").style.display = 'none';
-    break;
+      break;
     case 'ветермыслей':
       document.getElementById("windofthoughts").style.display = 'none';
-    break;
+      break;
+    case 'ЧИСЛА':
+      document.getElementById("numbers").style.display = 'none';
+      break;
     default:
       break;
   }
@@ -88,4 +91,8 @@ function hideall () {
   document.getElementById("video").style.display = 'none';
   document.getElementById("music").style.display = 'none';
   document.getElementById("text").style.display = 'none';
+
+  document.getElementById("mrkek").style.display = 'none';
+  document.getElementById("windofthoughts").style.display = 'none';
+  document.getElementById("numbers").style.display = 'none';
 }

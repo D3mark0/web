@@ -1,4 +1,6 @@
 function mrkekButton () {
+  hideall();
+
   document.getElementById("mrkek").style.display = 'block';
 
   document.getElementById("title").innerHTML = "Мистер КЕК";
@@ -7,11 +9,11 @@ function mrkekButton () {
   document.getElementById("rollup").style.display = 'none';
   document.getElementById("randomize").style.display = 'none';
   document.getElementById("close").style.display = 'block';
-
-  hideall();
 }
 
 function windofthoughtsButton () {
+  hideall();
+
   document.getElementById("windofthoughts").style.display = 'block';
 
   document.getElementById("title").innerHTML = "ветермыслей";
@@ -20,6 +22,17 @@ function windofthoughtsButton () {
   document.getElementById("rollup").style.display = 'none';
   document.getElementById("randomize").style.display = 'none';
   document.getElementById("close").style.display = 'block';
+}
 
+function numbersButton () {
   hideall();
+
+  document.getElementById("numbers").style.display = 'block';
+
+  document.getElementById("title").innerHTML = "ЧИСЛА";
+
+  document.getElementById("expand").style.display = 'none';
+  document.getElementById("rollup").style.display = 'none';
+  document.getElementById("randomize").style.display = 'none';
+  document.getElementById("close").style.display = 'block';
 }
