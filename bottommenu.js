@@ -10,3 +10,16 @@ function mrkekButton () {
 
   hideall();
 }
+
+function windofthoughtsButton () {
+  document.getElementById("windofthoughts").style.display = 'block';
+
+  document.getElementById("title").innerHTML = "ветермыслей";
+
+  document.getElementById("expand").style.display = 'none';
+  document.getElementById("rollup").style.display = 'none';
+  document.getElementById("randomize").style.display = 'none';
+  document.getElementById("close").style.display = 'block';
+
+  hideall();
+}

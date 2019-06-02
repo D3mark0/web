@@ -325,8 +325,8 @@ html, body {
 }
 
 #mrkek {
-  width: 300%;
-  height: 100%;
+  width: 5300px;
+  height: 1000px;
   background-color: #f58b57;
   display: none;
 }
@@ -336,5 +336,19 @@ html, body {
   font-family: 'PT Sans', sans-serif;
   font-weight: bold;
   font-size: 50pt;
+  z-index: 0;
+}
+
+#windofthoughts {
+  width: 4800px;
+  height: 940px;
+  background-color: white;
+  display: none;
+}
+
+#windofthoughts pre {
+  position: fixed;
+  font-family: 'PT Serif', sans-serif;
+  font-size: 25pt;
   z-index: 0;
 }

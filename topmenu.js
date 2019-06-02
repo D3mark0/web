@@ -64,7 +64,10 @@ function closeButton () {
       document.getElementById("text").style.display = 'none';
       break;
     case 'Мистер КЕК':
-    document.getElementById("mrkek").style.display = 'none';
+      document.getElementById("mrkek").style.display = 'none';
+    break;
+    case 'ветермыслей':
+      document.getElementById("windofthoughts").style.display = 'none';
     break;
     default:
       break;
