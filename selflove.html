@@ -14,12 +14,12 @@
 
 <div class="row">
   <div class="column">
-    <img src="https://i.imgur.com/4bjYEKG.jpg"> <!--1-->
-    <img src="https://i.imgur.com/aARlKPT.jpg" onclick="openModal();"> <!--2+, 3-->
-    <img src="https://i.imgur.com/xs5Kq67.jpg"> <!--4-->
-    <img src="https://i.imgur.com/hfQlHGz.jpg"> <!--5+, 24, 25-->
-    <img src="https://i.imgur.com/g5b1T5N.jpg"> <!--6-->
-    <img src="https://i.imgur.com/3j4Oy3L.jpg"> <!--7+, 13, 14-->
+    <img src="https://i.imgur.com/4bjYEKG.jpg" onclick="openModal('modal1');"> <!--1-->
+    <img src="https://i.imgur.com/aARlKPT.jpg" onclick="openModal('modal2');"> <!--2+, 3-->
+    <img src="https://i.imgur.com/xs5Kq67.jpg" onclick="openModal('modal4');"> <!--4-->
+    <img src="https://i.imgur.com/hfQlHGz.jpg" onclick="openModal('modal5')"> <!--5+, 24, 25-->
+    <img src="https://i.imgur.com/g5b1T5N.jpg" onclick="openModal('modal6')"> <!--6-->
+    <img src="https://i.imgur.com/3j4Oy3L.jpg" onclick="openModal('modal7')"> <!--7+, 13, 14-->
   </div>
   <div class="column">
     <img src="https://i.imgur.com/kWdwnLl.jpg"> <!--8+, 9, 10-->
@@ -48,20 +48,117 @@
   </div>
 </div>
 
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
+<div id="modal1" class="modal">
+  <span class="close cursor" onclick="closeModal('modal1')">Закрыть</span> <!-- &times; -->
+  <div class="modal-content">
+    <div class="caption-container">
+      <p>Внутренние границы</p>
+    </div>
+    <div class="modal-column">
+      <img src="https://i.imgur.com/4bjYEKG.jpg" style="width:100%"> <!--1-->
+    </div>
+    <div class="modal-column">
+      <div class="text-container">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <span class="close cursor" onclick="closeModal('modal2')">Закрыть</span>
   <div class="modal-content">
     <div class="caption-container">
       <p>Близость с природой</p>
     </div>
     <div class="modal-column">
-      <img src="https://i.imgur.com/aARlKPT.jpg" style="width:100%" alt="Nature and sunrise">
+      <img src="https://i.imgur.com/aARlKPT.jpg" style="width:100%"> <!--2-->
     </div>
     <div class="modal-column">
-      <img src="https://i.imgur.com/ULfsDvF.jpg" style="width:100%" alt="Snow">
+      <img src="https://i.imgur.com/ULfsDvF.jpg" style="width:100%"> <!--3-->
+      <div class="text-container">
+          <p>Гироинтегратор апериодичен. Сила переворачивает астатический угол тангажа. Векторная форма нестабильна.</p>
+
+          <p>Инерция ротора искажает резонансный момент силы трения. Уравнение возмущенного движения, как можно показать с помощью не совсем тривиальных вычислений, не зависит от скорости вращения внутреннего кольца подвеса, что не кажется странным, если вспомнить о том, что мы не исключили из рассмотрения период. Гироинтегратор эллиптично требует большего внимания к анализу ошибок, которые даёт экваториальный момент, используя имеющиеся в этом случае первые интегралы. Подвес позволяет пренебречь колебаниями корпуса, хотя этого в любом случае требует апериодический момент, даже если рамки подвеса буду ориентированы под прямым углом.</p>
+
+          <p>Суммарный поворот даёт большую проекцию на оси, чем стабилизатор. ПИГ устойчив. Вращение отличительно стабилизирует суммарный поворот.</p>
+      </div>
     </div>
   </div>
+</div>
 
+<div id="modal4" class="modal">
+  <span class="close cursor" onclick="closeModal('modal4')">Закрыть</span>
+  <div class="modal-content">
+    <div class="caption-container">
+      <p>Покинутость</p>
+    </div>
+    <div class="modal-column">
+      <img src="https://i.imgur.com/xs5Kq67.jpg" style="width:100%"> <!--4-->
+    </div>
+    <div class="modal-column">
+      <div class="text-container">
+        <p>Гироинтегратор апериодичен. Сила переворачивает астатический угол тангажа. Векторная форма нестабильна.</p>
+
+        <p>Инерция ротора искажает резонансный момент силы трения. Уравнение возмущенного движения, как можно показать с помощью не совсем тривиальных вычислений, не зависит от скорости вращения внутреннего кольца подвеса, что не кажется странным, если вспомнить о том, что мы не исключили из рассмотрения период. Гироинтегратор эллиптично требует большего внимания к анализу ошибок, которые даёт экваториальный момент, используя имеющиеся в этом случае первые интегралы. Подвес позволяет пренебречь колебаниями корпуса, хотя этого в любом случае требует апериодический момент, даже если рамки подвеса буду ориентированы под прямым углом.</p>
+
+        <p>Суммарный поворот даёт большую проекцию на оси, чем стабилизатор. ПИГ устойчив. Вращение отличительно стабилизирует суммарный поворот.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal5" class="modal">
+  <span class="close cursor" onclick="closeModal('modal5')">Закрыть</span>
+  <div class="modal-content">
+    <div class="caption-container">
+      <p>Нелюбовь к себе</p>
+    </div>
+    <div class="modal-column">
+      <img src="https://i.imgur.com/hfQlHGz.jpg" style="width:100%"> <!--5-->
+      <img src="https://i.imgur.com/EwIUUos.jpg" style="width:100%"> <!--24-->
+    </div>
+    <div class="modal-column">
+      <img src="https://i.imgur.com/JLPVK4j.jpg" style="width:100%"> <!--25-->
+      <div class="text-container">
+        <p>Инерция ротора искажает резонансный момент силы трения. Уравнение возмущенного движения, как можно показать с помощью не совсем тривиальных вычислений, не зависит от скорости вращения внутреннего кольца подвеса, что не кажется странным, если вспомнить о том, что мы не исключили из рассмотрения период. Гироинтегратор эллиптично требует большего внимания к анализу ошибок, которые даёт экваториальный момент, используя имеющиеся в этом случае первые интегралы. Подвес позволяет пренебречь колебаниями корпуса, хотя этого в любом случае требует апериодический момент, даже если рамки подвеса буду ориентированы под прямым углом.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal6" class="modal">
+  <span class="close cursor" onclick="closeModal('modal6')">Закрыть</span>
+  <div class="modal-content">
+    <div class="caption-container">
+      <p>Целостность</p>
+    </div>
+    <div class="modal-column">
+      <img src="https://i.imgur.com/g5b1T5N.jpg" style="width:100%"> <!--6-->
+    </div>
+    <div class="modal-column">
+      <div class="text-container">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal7" class="modal">
+  <span class="close cursor" onclick="closeModal('modal7')">Закрыть</span>
+  <div class="modal-content">
+    <div class="caption-container">
+      <p>Ребёнок</p>
+    </div>
+    <div class="modal-column">
+      <img src="https://i.imgur.com/3j4Oy3L.jpg" style="width:100%"> <!--7-->
+      <div class="text-container">
+        <p>Инерция ротора искажает резонансный момент силы трения. Уравнение возмущенного движения, как можно показать с помощью не совсем тривиальных вычислений, не зависит от скорости вращения внутреннего кольца подвеса, что не кажется странным, если вспомнить о том, что мы не исключили из рассмотрения период. Гироинтегратор эллиптично требует большего внимания к анализу ошибок, которые даёт экваториальный момент, используя имеющиеся в этом случае первые интегралы. Подвес позволяет пренебречь колебаниями корпуса, хотя этого в любом случае требует апериодический момент, даже если рамки подвеса буду ориентированы под прямым углом.</p>
+      </div>
+    </div>
+    <div class="modal-column">
+      <img src="https://i.imgur.com/vaD82nN.jpg" style="width:100%"> <!--13-->
+      <img src="https://i.imgur.com/W88cVce.jpg" style="width:100%"> <!--14-->
+    </div>
+  </div>
 </div>
 
 </body>

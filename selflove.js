@@ -1,9 +1,9 @@
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
+function openModal(modal) {
+  document.getElementById(modal).style.display = "block";
   document.body.style.overflowY = "hidden";
 }
 
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
+function closeModal(modal) {
+  document.getElementById(modal).style.display = "none";
   document.body.style.overflowY = "scroll";
 }

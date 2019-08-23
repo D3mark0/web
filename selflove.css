@@ -23,7 +23,6 @@ body {
   width: 100%;
   margin-top: 0;
   vertical-align: middle;
-  transition: transform .2s;
 }
 
 /*.column img:hover {
@@ -34,7 +33,7 @@ body {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 50px;
+  padding: 50px 0 0 0;
   left: 0;
   top: 0;
   width: 100%;
@@ -48,7 +47,7 @@ body {
   background-color: black;
   margin: auto;
   padding: 0;
-  width: 50%;
+  width: 75%;
 }
 
 .modal-column {
@@ -56,13 +55,18 @@ body {
   width: 50%;
 }
 
+.modal-column img {
+  vertical-align: top;
+}
+
 .close {
   color: white;
   position: absolute;
-  top: 10px;
+  top: 25px;
   right: 25px;
-  font-size: 35px;
-  font-weight: bold;
+  /*font-size: 35px;
+  font-weight: bold;*/
+  font-family: 'PT Serif', sans-serif;
 }
 
 .cursor {
@@ -72,7 +76,17 @@ body {
 .caption-container {
   text-align: center;
   background-color: black;
-  padding: 2px 16px;
+  padding: 10px 10px;
+  color: white;
+  font-family: 'PT Serif', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.text-container {
+  text-align: left;
+  background-color: black;
+  padding: 10px 30px;
   color: white;
   font-family: 'PT Serif', sans-serif;
 }
