@@ -63,6 +63,9 @@ function closeButton () {
     case 'Текст':
       document.getElementById("text").style.display = 'none';
       break;
+    case 'Калькулятор':
+      document.getElementById("calculator").style.display = 'none';
+      break;
     case 'Мистер КЕК':
       document.getElementById("mrkek").style.display = 'none';
       break;
@@ -91,6 +94,8 @@ function hideall () {
   document.getElementById("video").style.display = 'none';
   document.getElementById("music").style.display = 'none';
   document.getElementById("text").style.display = 'none';
+
+  document.getElementById("calculator").style.display = 'none';
 
   document.getElementById("mrkek").style.display = 'none';
   document.getElementById("windofthoughts").style.display = 'none';

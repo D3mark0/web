@@ -10,6 +10,7 @@
 <script type="text/javascript" src="randomnote.js"></script>
 <script type="text/javascript" src="topmenu.js"></script>
 <script type="text/javascript" src="bottommenu.js"></script>
+<script type="text/javascript" src="calculator.js"></script>
 
 <body onload="startTime()">
 <head>
@@ -21,9 +22,9 @@
 <div id="top">
   <ul>
     <li><div id="title" class="unselectable">Меню</div></li>
-    <li><a id="randomize" role="button" onclick="randomizeButton();">Обновить</a></li>
+    <li><a id="randomize" role="button" onclick="randomizeButton();">Получить</a></li>
     <li><a id="expand" role="button" onclick="expandButton()">Развернуть</a></li>
-    <li><a id="rollup" role="button" onclick="rollupButton()">Свернуть</a></li>
+    <li><a id="rollup" role="button" onclick="rollupButton()">Скрыть</a></li>
     <li><a id="close" role="button" onclick="closeButton();">Закрыть</a></li>
     <li style="float:right"><div id="clock" class="unselectable">Упс...</div></li>
   </ul>
@@ -103,9 +104,49 @@
     picknotelarge();
 </script>
 
+<div id="calculator">
+  <div id="calculatorheader">Калькулятор</div>
+  <div id='calculatorcontainer'>
+    <form name="calculator">
+      <input type="text" name="answer" id="answer"/>
+      <br>
+      <input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
+      <input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
+      <input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
+      <input type="button" value=" + " onclick="calculator.answer.value += '+'" />
+      <br/>
+      <input type="button" value=" 4 " onclick="calculator.answer.value += '4'" />
+      <input type="button" value=" 5 " onclick="calculator.answer.value += '5'" />
+      <input type="button" value=" 6 " onclick="calculator.answer.value += '6'" />
+      <input type="button" value=" - " onclick="calculator.answer.value += '-'" />
+      </br>
+      <input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
+      <input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
+      <input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
+      <input type="button" value=" x " onclick="calculator.answer.value += '*'" />
+      </br>
+      <input type="button" value=" c " onclick="calculator.answer.value = ''" />
+      <input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
+      <input type="button" value=" = " onclick="getanswer();" />
+      <input type="button" value=" / " onclick="calculator.answer.value += '/'" />
+      </br>
+    </form>
+  </div>
+</div>
+
+<script>
+    dragElement(document.getElementById("calculator"));
+</script>
+
 <div id="bottom">
   <ul>
   <li><a href="index.html">Домой</a></li>
+  <li class="dropup">
+    <a class="dropbtn">Приложения</a>
+    <div class="dropup-content">
+      <a onclick="document.getElementById('calculator').style.display='block'">Калькулятор</a>
+    </div>
+  </li>
   <li class="dropup">
     <a class="dropbtn">Выставки</a>
     <div class="dropup-content">
