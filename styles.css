@@ -25,7 +25,7 @@ html, body {
   float: left;
 }
 
-#top li a {
+#top li a, .dropbtn {
   cursor: pointer;
   display: block;
   color: white;
@@ -35,17 +35,50 @@ html, body {
   font-family: 'PT Sans', sans-serif;
 }
 
-#top li a:hover:not(.unselectable) {
+#top li a:hover:not(.unselectable), .dropdown:hover .dropbtn {
+  color: white;
   background-color: #4fd8ff;
+}
+
+#top li.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
 #top .unselectable {
   background-color: white;
 }
 
+#top .dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: white;
+  min-width: 160px;
+  top: 34px;
+  right: 0px;
+  z-index: 1;
+}
+
+#top .dropdown-content table {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  font-family: 'PT Serif', sans-serif;
+  border: none;
+  outline: none;
+}
+
+#top .dropdown:hover .dropdown-content {
+  display: block;
+}
+
 #clock {
   display: block;
-  color: black;
+  color: white;
   text-align: center;
   padding: 7px 8px;
   text-decoration: none;
