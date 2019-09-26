@@ -21,6 +21,9 @@ function expandButton () {
     case 'Текст':
       document.getElementById("textexpand").style.display = 'block';
       break;
+    case 'Веб-браузер':
+      document.getElementById("browser").style.display = 'none';
+      break;
     default:
       break;
   }
@@ -30,6 +33,10 @@ function expandButton () {
   document.getElementById("rollup").style.display = 'block';
 
   hideall();
+
+  if (title == 'Веб-браузер') {
+    closeButton();
+  }
 }
 
 function rollupButton () {
@@ -66,6 +73,9 @@ function closeButton () {
     case 'Калькулятор':
       document.getElementById("calculator").style.display = 'none';
       break;
+    case 'Веб-браузер':
+      document.getElementById("browser").style.display = 'none';
+      break;
     case 'Мистер КЕК':
       document.getElementById("mrkek").style.display = 'none';
       break;
@@ -96,6 +106,7 @@ function hideall () {
   document.getElementById("text").style.display = 'none';
 
   document.getElementById("calculator").style.display = 'none';
+  document.getElementById("browser").style.display = 'none';
 
   document.getElementById("mrkek").style.display = 'none';
   document.getElementById("windofthoughts").style.display = 'none';

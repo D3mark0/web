@@ -416,6 +416,29 @@ input[type = text] {
   font-family: 'PT Sans', sans-serif;
 }
 
+#browser {
+  position: absolute;
+  z-index: 9;
+  top: 20%;
+  left: 40%;
+  display: none;
+}
+
+#browserheader {
+  cursor: move;
+  z-index: 10;
+  background-color: #ff6998;
+  color: white;
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-family: 'PT Sans', sans-serif;
+}
+
+#browser iframe {
+  vertical-align: top;
+}
+
 #mrkek {
   width: 5300px;
   height: 1000px;

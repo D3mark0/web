@@ -55,6 +55,7 @@ function dragElement(elmnt) {
     document.getElementById("text").style.border = "none";
 
     document.getElementById("calculator").style.border = "none";
+    document.getElementById("browser").style.border = "none";
 
     switch (title) {
       case 'Фото':
@@ -79,6 +80,11 @@ function dragElement(elmnt) {
         break;
       case 'Калькулятор':
         document.getElementById("calculator").style.border = "thick solid #ff6998";
+        document.getElementById("close").style.display = 'block';
+        break;
+      case 'Веб-браузер':
+        document.getElementById("browser").style.border = "thick solid #ff6998";
+        document.getElementById("expand").style.display = 'block';
         document.getElementById("close").style.display = 'block';
         break;
       default:

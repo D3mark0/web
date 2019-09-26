@@ -224,6 +224,15 @@
     dragElement(document.getElementById("calculator"));
 </script>
 
+<div id="browser">
+  <div id="browserheader">Веб-браузер</div>
+  <iframe id="web" width="960" height="540" frameborder="no" src="index.html"></iframe>
+</div>
+
+<script>
+    dragElement(document.getElementById("browser"));
+</script>
+
 <div id="bottom">
   <ul>
   <li><a href="index.html">Домой</a></li>
@@ -231,6 +240,7 @@
     <a class="dropbtn">Приложения</a>
     <div class="dropup-content">
       <a onclick="document.getElementById('calculator').style.display='block'">Калькулятор</a>
+      <a onclick="document.getElementById('browser').style.display='block'">Веб-браузер</a>
     </div>
   </li>
   <li class="dropup">
