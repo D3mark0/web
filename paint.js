@@ -33,4 +33,17 @@ window.addEventListener("load", function onWindowLoad() {
         context.closePath();
       }
     };
+
+    document.getElementById("whitecolor").addEventListener('click', function changeColor(e) {
+              context.strokeStyle = e.target.style.backgroundColor;
+            });
+    document.getElementById("blackcolor").addEventListener('click', function changeColor(e) {
+              context.strokeStyle = e.target.style.backgroundColor;
+            });
+    document.getElementById("bluecolor").addEventListener('click', function changeColor(e) {
+              context.strokeStyle = e.target.style.backgroundColor;
+            });
+    document.getElementById("pinkcolor").addEventListener('click', function changeColor(e) {
+              context.strokeStyle = e.target.style.backgroundColor;
+            });
 });
