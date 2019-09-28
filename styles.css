@@ -46,6 +46,7 @@ html, body {
 }
 
 #top .unselectable {
+  cursor: default;
   background-color: white;
 }
 
@@ -60,6 +61,7 @@ html, body {
 }
 
 #top .dropdown-content table {
+  cursor: default;
   float: none;
   color: black;
   padding: 12px 16px;
@@ -72,13 +74,20 @@ html, body {
   outline: none;
 }
 
+#top td:hover:not(.empty) {
+  background-color: black;
+  color: white;
+}
+
 #top .dropdown:hover .dropdown-content {
   display: block;
 }
 
 #clock {
+  cursor: default;
   display: block;
-  color: white;
+  background-color: white;
+  color: black;
   text-align: center;
   padding: 7px 8px;
   text-decoration: none;
@@ -437,6 +446,43 @@ input[type = text] {
 
 #browser iframe {
   vertical-align: top;
+}
+
+#paint {
+  position: absolute;
+  z-index: 9;
+  top: 10%;
+  left: 20%;
+  background-color: white;
+  display: none;
+}
+
+#paintheader {
+  cursor: move;
+  z-index: 10;
+  background-color: #ff6998;
+  color: white;
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-family: 'PT Sans', sans-serif;
+}
+
+#canvas {
+  display: inline-block;
+  border: solid 1px #aaa;
+  cursor: default;
+  vertical-align: top;
+}
+
+#clear {
+  background: #eee;
+  color: #777;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  margin: 15px auto;
+  cursor: pointer;
 }
 
 #mrkek {

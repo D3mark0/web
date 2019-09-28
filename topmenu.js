@@ -76,6 +76,9 @@ function closeButton () {
     case 'Веб-браузер':
       document.getElementById("browser").style.display = 'none';
       break;
+    case 'Пеинт':
+      document.getElementById("paint").style.display = 'none';
+      break;
     case 'Мистер КЕК':
       document.getElementById("mrkek").style.display = 'none';
       break;
@@ -107,6 +110,7 @@ function hideall () {
 
   document.getElementById("calculator").style.display = 'none';
   document.getElementById("browser").style.display = 'none';
+  document.getElementById("paint").style.display = 'none';
 
   document.getElementById("mrkek").style.display = 'none';
   document.getElementById("windofthoughts").style.display = 'none';

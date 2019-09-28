@@ -1,0 +1,36 @@
+// Выполняем по завершении загрузки страницы
+window.addEventListener("load", function onWindowLoad() {
+    // Инициализируем переменные
+
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+
+    // переменные для рисования
+    context.lineCap = "round";
+    context.lineWidth = 8;
+
+    // вешаем обработчики на кнопки
+    // очистка изображения
+    document.getElementById("clear").onclick = function clear() {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+    };
+
+    // На любое движение мыши по canvas будет выполнятся эта функция
+    canvas.onmousemove = function drawIfPressed (e) {
+      // в "e"  попадает экземпляр MouseEvent
+      var x = e.offsetX;
+      var y = e.offsetY;
+      var dx = e.movementX;
+      var dy = e.movementY;
+
+      // Проверяем зажата ли какая-нибудь кнопка мыши
+      // Если да, то рисуем
+      if (e.buttons > 0) {
+        context.beginPath();
+        context.moveTo(x, y);
+        context.lineTo(x - dx, y - dy);
+        context.stroke();
+        context.closePath();
+      }
+    };
+});

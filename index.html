@@ -46,12 +46,12 @@
         </tr>
 
         <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class='empty'></td>
+        <td class='empty'></td>
+        <td class='empty'></td>
+        <td class='empty'></td>
+        <td class='empty'></td>
+        <td class='empty'></td>
         <td><font color="#ff6998">1</font></td>
         </tr>
 
@@ -98,11 +98,11 @@
         <tr>
         <td>30</td>
         <td>31</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class='empty'></td>
+        <td class='empty'></td>
+        <td class='empty'></td>
+        <td class='empty'></td>
+        <td class='empty'></td>
         </tr>
 
         </table>
@@ -110,11 +110,6 @@
     </div>
   </ul>
 </div>
-
-
-
-
-
 
 <div id="side">
   <ul>
@@ -233,6 +228,20 @@
     dragElement(document.getElementById("browser"));
 </script>
 
+
+<div id="paint">
+  <div id="paintheader">Пеинт</div>
+    <canvas id='canvas' width="500" height="500">Ваш браузер устарел!</canvas>
+    <div id="clear">Очистить изображение</div>
+</div>
+
+
+<script src="paint.js"></script>
+
+<script>
+    dragElement(document.getElementById("paint"));
+</script>
+
 <div id="bottom">
   <ul>
   <li><a href="index.html">Домой</a></li>
@@ -241,6 +250,7 @@
     <div class="dropup-content">
       <a onclick="document.getElementById('calculator').style.display='block'">Калькулятор</a>
       <a onclick="document.getElementById('browser').style.display='block'">Веб-браузер</a>
+      <a onclick="document.getElementById('paint').style.display='block'">Пеинт</a>
     </div>
   </li>
   <li class="dropup">
