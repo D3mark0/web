@@ -79,15 +79,6 @@ function closeButton () {
     case 'Пеинт':
       document.getElementById("paint").style.display = 'none';
       break;
-    case 'Мистер КЕК':
-      document.getElementById("mrkek").style.display = 'none';
-      break;
-    case 'ветермыслей':
-      document.getElementById("windofthoughts").style.display = 'none';
-      break;
-    case 'ЧИСЛА':
-      document.getElementById("numbers").style.display = 'none';
-      break;
     default:
       break;
   }
@@ -111,8 +102,4 @@ function hideall () {
   document.getElementById("calculator").style.display = 'none';
   document.getElementById("browser").style.display = 'none';
   document.getElementById("paint").style.display = 'none';
-
-  document.getElementById("mrkek").style.display = 'none';
-  document.getElementById("windofthoughts").style.display = 'none';
-  document.getElementById("numbers").style.display = 'none';
 }
