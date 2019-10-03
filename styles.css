@@ -256,8 +256,9 @@ html, body {
 }
 
 #photo img {
+  cursor: pointer;
   vertical-align: top;
-  height: 500px;
+  height: 600px;
 }
 
 #photoexpand {
@@ -265,6 +266,7 @@ html, body {
 }
 
 #photoexpand img {
+  cursor: pointer;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -292,6 +294,7 @@ html, body {
 
 #video iframe {
   vertical-align: top;
+  resize: both;
 }
 
 #music {
@@ -337,6 +340,7 @@ html, body {
 }
 
 #text textarea {
+  cursor: pointer;
   vertical-align: top;
   height: 150px;
   width: 250px;
@@ -353,6 +357,7 @@ html, body {
 }
 
 #textexpand textarea {
+  cursor: pointer;
   position: absolute;
   height: 500px;
   width: 1000px;

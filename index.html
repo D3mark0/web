@@ -113,11 +113,11 @@
 
 <div id="side">
   <ul>
-    <li><div id="sideheader">Меню</div></li>
-    <li><a role="button" onclick="document.getElementById('photo').style.display = 'block';">Фото</a></li>
-    <li><a role="button" onclick="document.getElementById('video').style.display = 'block';">Видео</a></li>
-    <li><a role="button" onclick="document.getElementById('music').style.display = 'block';">Музыка</a></li>
-    <li><a role="button" onclick="document.getElementById('text').style.display = 'block';">Текст</a></li>
+    <li><div id="sideheader">Новая папка</div></li>
+    <li><a role="button" onclick="document.getElementById('photo').style.display = 'block';">Фотоальбом</a></li>
+    <li><a role="button" onclick="document.getElementById('video').style.display = 'block';">ВЛЦ_Видеоплеер.exe</a></li>
+    <li><a role="button" onclick="document.getElementById('music').style.display = 'block';">Музыкальный проигрыватель.ink</a></li>
+    <li><a role="button" onclick="document.getElementById('text').style.display = 'block';">Заметки</a></li>
   </ul>
 </div>
 
@@ -126,7 +126,7 @@
 </script>
 
 <div id="photo">
-  <div id="photoheader">Фото</div>
+  <div id="photoheader">Фотоальбом</div>
   <a onClick="pickimgsmall();">
     <img id="imgsmall" src="">
   </a>
@@ -148,7 +148,7 @@
 </script>
 
 <div id="video">
-  <div id="videoheader">Видео</div>
+  <div id="videoheader">ВЛЦ Видеоплеер</div>
   <iframe id="randvideo" width="640" height="360" frameBorder="0" src="" allowfullscreen></iframe>
 </div>
 
@@ -158,7 +158,7 @@
 </script>
 
 <div id="music">
-  <div id="musicheader">Музыка</div>
+  <div id="musicheader">Музыкальный проигрыватель</div>
   <iframe id="randmusic" width="300" height="300" scrolling="no" frameborder="no" allow="autoplay" src=""></iframe>
 </div>
 
@@ -168,8 +168,8 @@
 </script>
 
 <div id="text">
-  <div id="textheader">Текст</div>
-  <textarea class="scrollabletextbox" id="notesmall" onClick="picknotesmall();"></textarea>
+  <div id="textheader">Заметки</div>
+  <textarea id="notesmall" onClick="picknotesmall();" readonly></textarea>
 </div>
 
 <script>
@@ -178,7 +178,7 @@
 </script>
 
 <div id="textexpand">
-  <textarea class="scrollabletextbox" id="notelarge" onClick="picknotelarge();"></textarea>
+  <textarea id="notelarge" onClick="picknotelarge();" readonly></textarea>
 </div>
 
 <script>

@@ -1,10 +1,10 @@
 function randomizeButton () {
   var title = document.getElementById("title").innerHTML;
   switch (title) {
-    case 'Видео':
+    case 'ВЛЦ Видеоплеер':
       pickvideo();
       break;
-    case 'Музыка':
+    case 'Музыкальный проигрыватель':
       pickmusic();
       break;
     default:
@@ -15,10 +15,10 @@ function randomizeButton () {
 function expandButton () {
   var title = document.getElementById("title").innerHTML;
   switch (title) {
-    case 'Фото':
+    case 'Фотоальбом':
       document.getElementById("photoexpand").style.display = 'block';
       break;
-    case 'Текст':
+    case 'Заметки':
       document.getElementById("textexpand").style.display = 'block';
       break;
     case 'Веб-браузер':
@@ -42,10 +42,10 @@ function expandButton () {
 function rollupButton () {
   var title = document.getElementById("title").innerHTML;
   switch (title) {
-    case 'Фото':
+    case 'Фотоальбом':
       document.getElementById("photoexpand").style.display = 'none';
       break;
-    case 'Текст':
+    case 'Заметки':
       document.getElementById("textexpand").style.display = 'none';
       break;
     default:
@@ -58,16 +58,16 @@ function rollupButton () {
 function closeButton () {
   var title = document.getElementById("title").innerHTML;
   switch (title) {
-    case 'Фото':
+    case 'Фотоальбом':
       document.getElementById("photo").style.display = 'none';
       break;
-    case 'Видео':
+    case 'ВЛЦ Видеоплеер':
       document.getElementById("video").style.display = 'none';
       break;
-    case 'Музыка':
+    case 'Музыкальный проигрыватель':
       document.getElementById("music").style.display = 'none';
       break;
-    case 'Текст':
+    case 'Заметки':
       document.getElementById("text").style.display = 'none';
       break;
     case 'Калькулятор':

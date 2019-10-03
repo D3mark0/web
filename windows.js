@@ -60,22 +60,22 @@ function dragElement(elmnt) {
     document.getElementById("word").style.border = "none";
 
     switch (title) {
-      case 'Фото':
+      case 'Фотоальбом':
         document.getElementById("photo").style.border = "thick solid #ff6998";
         document.getElementById("expand").style.display = 'block';
         document.getElementById("close").style.display = 'block';
         break;
-      case 'Видео':
+      case 'ВЛЦ Видеоплеер':
         document.getElementById("video").style.border = "thick solid #ff6998";
         document.getElementById("randomize").style.display = 'block';
         document.getElementById("close").style.display = 'block';
         break;
-      case 'Музыка':
+      case 'Музыкальный проигрыватель':
         document.getElementById("music").style.border = "thick solid #ff6998";
         document.getElementById("randomize").style.display = 'block';
         document.getElementById("close").style.display = 'block';
         break;
-      case 'Текст':
+      case 'Заметки':
         document.getElementById("text").style.border = "thick solid #ff6998";
         document.getElementById("expand").style.display = 'block';
         document.getElementById("close").style.display = 'block';
