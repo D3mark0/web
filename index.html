@@ -228,7 +228,6 @@
     dragElement(document.getElementById("browser"));
 </script>
 
-
 <div id="paint">
   <div id="paintheader">Пеинт</div>
     <canvas id='canvas' width="500" height="500">Ваш браузер устарел!</canvas>
@@ -241,22 +240,57 @@
     <div id="clear">Очистить изображение</div>
 </div>
 
-
 <script src="paint.js"></script>
 
 <script>
     dragElement(document.getElementById("paint"));
 </script>
 
+<div id="word">
+  <div id="wordheader">Ворд</div>
+  <div id="wordcontrol">
+    <div class="dropdown">
+      <a class="dropbtn">Шрифт</a>
+      <div class="dropdown-content">
+        <a onclick="document.getElementById('wordarea').style.fontFamily = 'PT Sans, sans-serif'">PT Sans</a>
+        <a onclick="document.getElementById('wordarea').style.fontFamily = 'PT Serif, sans-serif'">PT Serif</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="dropbtn">Размер</a>
+      <div class="dropdown-content">
+        <a onclick="document.getElementById('wordarea').style.fontSize = '9pt'">Маленький</a>
+        <a onclick="document.getElementById('wordarea').style.fontSize = '18pt'">Средний</a>
+        <a onclick="document.getElementById('wordarea').style.fontSize = '27pt'">Большой</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="dropbtn">Цвет</a>
+      <div class="dropdown-content">
+        <a onclick="document.getElementById('wordarea').style.color = 'white';">Белый</a>
+        <a onclick="document.getElementById('wordarea').style.color = 'black';">Чёрный</a>
+        <a onclick="document.getElementById('wordarea').style.color = '#4fd8ff';">Голубой</a>
+        <a onclick="document.getElementById('wordarea').style.color = '#ff6998';">Розовый</a>
+      </div>
+    </div>
+  </div>
+  <textarea id="wordarea"></textarea>
+</div>
+
+<script>
+    dragElement(document.getElementById("word"));
+</script>
+
 <div id="bottom">
   <ul>
-  <li><a href="index.html">Домой</a></li>
+  <li><a style="cursor: pointer;" href="index.html">Домой</a></li>
   <li class="dropup">
     <a class="dropbtn">Приложения</a>
     <div class="dropup-content">
       <a onclick="document.getElementById('calculator').style.display='block'">Калькулятор</a>
       <a onclick="document.getElementById('browser').style.display='block'">Веб-браузер</a>
       <a onclick="document.getElementById('paint').style.display='block'">Пеинт</a>
+      <a onclick="document.getElementById('word').style.display='block'">Ворд</a>
     </div>
   </li>
   <li class="dropup">

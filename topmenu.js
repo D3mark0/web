@@ -79,6 +79,9 @@ function closeButton () {
     case 'Пеинт':
       document.getElementById("paint").style.display = 'none';
       break;
+    case 'Ворд':
+      document.getElementById("word").style.display = 'none';
+      break;
     default:
       break;
   }
@@ -102,4 +105,5 @@ function hideall () {
   document.getElementById("calculator").style.display = 'none';
   document.getElementById("browser").style.display = 'none';
   document.getElementById("paint").style.display = 'none';
+  document.getElementById("word").style.display = 'none';
 }

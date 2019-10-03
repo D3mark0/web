@@ -57,6 +57,7 @@ function dragElement(elmnt) {
     document.getElementById("calculator").style.border = "none";
     document.getElementById("browser").style.border = "none";
     document.getElementById("paint").style.border = "none";
+    document.getElementById("word").style.border = "none";
 
     switch (title) {
       case 'Фото':
@@ -90,6 +91,10 @@ function dragElement(elmnt) {
         break;
       case 'Пеинт':
         document.getElementById("paint").style.border = "thick solid #ff6998";
+        document.getElementById("close").style.display = 'block';
+        break;
+      case 'Ворд':
+        document.getElementById("word").style.border = "thick solid #ff6998";
         document.getElementById("close").style.display = 'block';
         break;
       default:
