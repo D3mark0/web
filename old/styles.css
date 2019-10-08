@@ -25,7 +25,7 @@ html, body {
   float: left;
 }
 
-#top li a, .dropbtn {
+#top li a {
   cursor: pointer;
   display: block;
   color: white;
@@ -35,58 +35,16 @@ html, body {
   font-family: 'PT Sans', sans-serif;
 }
 
-#top li a:hover:not(.unselectable), .dropdown:hover .dropbtn {
-  color: white;
+#top li a:hover:not(.unselectable) {
   background-color: #4fd8ff;
 }
 
-#top li.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
 #top .unselectable {
-  cursor: default;
   background-color: white;
-}
-
-#top .dropdown-content {
-  display: none;
-  position: fixed;
-  min-width: 160px;
-  top: 34px;
-  right: 0px;
-  z-index: 1;
-}
-
-#top .dropdown-content table {
-  cursor: default;
-  float: none;
-  color: black;
-  background-color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: right;
-  text-decoration: none;
-  font-family: 'PT Serif', sans-serif;
-  border: none;
-  outline: none;
-}
-
-#top td:hover:not(.empty) {
-  background-color: black;
-  color: white;
-}
-
-#top .dropdown:hover .dropdown-content {
-  display: block;
 }
 
 #clock {
-  cursor: default;
   display: block;
-  background-color: white;
   color: black;
   text-align: center;
   padding: 7px 8px;
@@ -146,7 +104,7 @@ html, body {
 }
 
 #bottom li a, .dropbtn {
-  cursor: default;
+  cursor: pointer;
   display: inline-block;
   color: white;
   text-align: center;
@@ -174,7 +132,6 @@ html, body {
 }
 
 #bottom .dropup-content a {
-  cursor: pointer;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -256,9 +213,8 @@ html, body {
 }
 
 #photo img {
-  cursor: pointer;
   vertical-align: top;
-  height: 600px;
+  height: 500px;
 }
 
 #photoexpand {
@@ -266,7 +222,6 @@ html, body {
 }
 
 #photoexpand img {
-  cursor: pointer;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -294,7 +249,6 @@ html, body {
 
 #video iframe {
   vertical-align: top;
-  resize: both;
 }
 
 #music {
@@ -340,7 +294,6 @@ html, body {
 }
 
 #text textarea {
-  cursor: pointer;
   vertical-align: top;
   height: 150px;
   width: 250px;
@@ -357,7 +310,6 @@ html, body {
 }
 
 #textexpand textarea {
-  cursor: pointer;
   position: absolute;
   height: 500px;
   width: 1000px;
@@ -372,232 +324,47 @@ html, body {
   outline: none;
 }
 
-#calculator {
-  position: absolute;
-  z-index: 9;
-  top: 15%;
-  left: 50%;
+#mrkek {
+  width: 5300px;
+  height: 1000px;
+  background-color: #f58b57;
   display: none;
 }
 
-#calculatorheader {
-  cursor: move;
-  z-index: 10;
-  background-color: #ff6998;
-  color: white;
-  display: block;
-  padding: 8px 16px;
-  text-decoration: none;
+#mrkek pre {
+  position: fixed;
   font-family: 'PT Sans', sans-serif;
-}
-
-#calculatorcontainer{
-  position: relative;
-  width: 340px;
-  margin: 0px auto;
-  padding: 10px 10px 10px 10px;
-  background-color: white;
-}
-
-input[type=button] {
-  width: 20%;
-  font-size: 20px;
-  font-weight: 900;
-  margin-left: 13px;
-  margin-top: 10px;
-  border: none;
-  outline: none;
-  color: white;
-  background: #4fd8ff;
-  font-family: 'PT Sans', sans-serif;
-}
-
-input[type=button]:hover {
-  background-color: #ff6998;
-}
-
-input[type = text] {
-  position: relative;
-  display: block;
-  width: 90%;
-  margin: 5px auto;
-  font-size: 20px;
-  padding: 10px;
-  border: none;
-  outline: none;
-  color: white;
-  background-color: #ff6998;
   font-weight: bold;
-  font-family: 'PT Sans', sans-serif;
+  font-size: 50pt;
+  z-index: 0;
 }
 
-#browser {
-  position: absolute;
-  z-index: 9;
-  top: 20%;
-  left: 40%;
-  display: none;
-}
-
-#browserheader {
-  cursor: move;
-  z-index: 10;
-  background-color: #ff6998;
-  color: white;
-  display: block;
-  padding: 8px 16px;
-  text-decoration: none;
-  font-family: 'PT Sans', sans-serif;
-}
-
-#browser iframe {
-  vertical-align: top;
-}
-
-#paint {
-  position: absolute;
-  z-index: 9;
-  top: 10%;
-  left: 10%;
+#windofthoughts {
+  width: 4800px;
+  height: 940px;
   background-color: white;
   display: none;
 }
 
-#paintheader {
-  cursor: move;
-  z-index: 10;
-  background-color: #ff6998;
-  color: white;
-  display: block;
-  padding: 8px 16px;
-  text-decoration: none;
-  font-family: 'PT Sans', sans-serif;
-}
-
-#canvas {
-  display: inline-block;
-  cursor: default;
-  vertical-align: top;
-}
-
-#clear {
-  background-color: #4fd8ff;
-  color: white;
-  padding: 10px;
-  width: 175px;
-  text-align: center;
-  margin: 10px auto;
-  cursor: pointer;
-  text-decoration: none;
-  font-family: 'PT Sans', sans-serif;
-}
-
-#clear:hover {
-  background-color: #ff6998;
-}
-
-#palette {
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.palettecolor {
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  padding: 1px;
-  cursor: pointer;
-  border: solid 1px black;
-  float: left;
-  margin: 0 5px;
-}
-
-.palettecolor:hover {
-  border: solid 1px white;
-}
-
-#word {
-  position: absolute;
-  z-index: 9;
-  top: 30%;
-  left: 35%;
-  background-color: white;
-  display: none;
-}
-
-#wordheader {
-  cursor: move;
-  z-index: 10;
-  background-color: #ff6998;
-  color: white;
-  display: block;
-  padding: 8px 16px;
-  text-decoration: none;
-  font-family: 'PT Sans', sans-serif;
-}
-
-#word textarea {
-  vertical-align: top;
-  min-height: 500px;
-  min-width: 350px;
-  resize: both;
+#windofthoughts pre {
+  position: fixed;
   font-family: 'PT Serif', sans-serif;
-  font-size: 18pt;
-  padding: 8px 16px;
-  border: none;
-  outline: none;
+  font-size: 25pt;
+  z-index: 0;
 }
 
-#wordcontrol {
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#word .dropbtn {
-  cursor: default;
-  display: block;
-  color: white;
-  background-color: #4fd8ff;
-  width: 100px;
-  text-align: center;
-  padding: 7px 8px;
-  text-decoration: none;
-  font-family: 'PT Sans', sans-serif;
-}
-
-#word .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-#word .dropdown-content {
+#numbers {
+  width: 100%;
+  height: 2600px;
+  background-color: black;
   display: none;
-  position: absolute;
-  width: 100px;
-  z-index: 1;
 }
 
-#word .dropdown-content a {
-  display: block;
-  cursor: pointer;
-  color: black;
-  background-color: white;
-  text-align: center;
-  width: 100px;
-  padding: 7px 8px;
-  text-decoration: none;
+#numbers pre {
+  position: fixed;
   font-family: 'PT Sans', sans-serif;
-}
-
-#word .dropdown:hover .dropdown-content {
-  display: block;
-}
-
-#word .dropdown-content a:hover {
-  background-color: #ff6998;
+  font-weight: bold;
+  font-size: 150pt;
   color: white;
+  z-index: 0;
 }

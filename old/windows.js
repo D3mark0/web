@@ -40,13 +40,25 @@ function dragElement(elmnt) {
   }
 
   function topElement() {
+    document.getElementById("side").style.zIndex = "1";
+    document.getElementById("sideheader").style.zIndex = "2";
+    document.getElementById("photo").style.zIndex = "3";
+    document.getElementById("photoheader").style.zIndex = "4";
+    document.getElementById("video").style.zIndex = "5";
+    document.getElementById("videoheader").style.zIndex = "6";
+    document.getElementById("music").style.zIndex = "7";
+    document.getElementById("musicheader").style.zIndex = "8";
+    document.getElementById("text").style.zIndex = "9";
+    document.getElementById("textheader").style.zIndex = "10";
+    elmnt.style.zIndex = "11";
+    document.getElementById(elmnt.id + "header").style.zIndex = "12";
+
     document.getElementById("title").innerHTML = document.getElementById(elmnt.id + "header").innerHTML;
 
     var title = document.getElementById("title").innerHTML;
     document.getElementById("expand").style.display = 'none';
     document.getElementById("rollup").style.display = 'none';
     document.getElementById("randomize").style.display = 'none';
-    document.getElementById("save").style.display = 'none';
     document.getElementById("close").style.display = 'none';
 
     document.getElementById("side").style.border = "none";
@@ -55,49 +67,25 @@ function dragElement(elmnt) {
     document.getElementById("music").style.border = "none";
     document.getElementById("text").style.border = "none";
 
-    document.getElementById("calculator").style.border = "none";
-    document.getElementById("browser").style.border = "none";
-    document.getElementById("paint").style.border = "none";
-    document.getElementById("word").style.border = "none";
-
     switch (title) {
-      case 'Фотоальбом':
+      case 'Фото':
         document.getElementById("photo").style.border = "thick solid #ff6998";
         document.getElementById("expand").style.display = 'block';
         document.getElementById("close").style.display = 'block';
         break;
-      case 'ВЛЦ Видеоплеер':
+      case 'Видео':
         document.getElementById("video").style.border = "thick solid #ff6998";
         document.getElementById("randomize").style.display = 'block';
         document.getElementById("close").style.display = 'block';
         break;
-      case 'Музыкальный проигрыватель':
+      case 'Музыка':
         document.getElementById("music").style.border = "thick solid #ff6998";
         document.getElementById("randomize").style.display = 'block';
         document.getElementById("close").style.display = 'block';
         break;
-      case 'Заметки':
+      case 'Текст':
         document.getElementById("text").style.border = "thick solid #ff6998";
         document.getElementById("expand").style.display = 'block';
-        document.getElementById("close").style.display = 'block';
-        break;
-      case 'Калькулятор':
-        document.getElementById("calculator").style.border = "thick solid #ff6998";
-        document.getElementById("close").style.display = 'block';
-        break;
-      case 'Интернет Эксплоурер':
-        document.getElementById("browser").style.border = "thick solid #ff6998";
-        document.getElementById("expand").style.display = 'block';
-        document.getElementById("close").style.display = 'block';
-        break;
-      case 'Пеинт':
-        document.getElementById("paint").style.border = "thick solid #ff6998";
-        document.getElementById("save").style.display = 'block';
-        document.getElementById("close").style.display = 'block';
-        break;
-      case 'Ворд':
-        document.getElementById("word").style.border = "thick solid #ff6998";
-        document.getElementById("save").style.display = 'block';
         document.getElementById("close").style.display = 'block';
         break;
       default:

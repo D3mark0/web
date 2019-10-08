@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<title>D3mark0</title>
+
+<script type="text/javascript" src="clock.js"></script>
+<script type="text/javascript" src="windows.js"></script>
+<script type="text/javascript" src="randomimg.js"></script>
+<script type="text/javascript" src="randomvideo.js"></script>
+<script type="text/javascript" src="randomusic.js"></script>
+<script type="text/javascript" src="randomnote.js"></script>
+<script type="text/javascript" src="topmenu.js"></script>
+<script type="text/javascript" src="bottommenu.js"></script>
+
+<body onload="startTime()">
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<div id="top">
+  <ul>
+    <li><div id="title" class="unselectable">Меню</div></li>
+    <li><a id="randomize" role="button" onclick="randomizeButton();">Обновить</a></li>
+    <li><a id="expand" role="button" onclick="expandButton()">Развернуть</a></li>
+    <li><a id="rollup" role="button" onclick="rollupButton()">Свернуть</a></li>
+    <li><a id="close" role="button" onclick="closeButton();">Закрыть</a></li>
+    <li style="float:right"><div id="clock" class="unselectable">Упс...</div></li>
+  </ul>
+</div>
+
+<div id="side">
+  <ul>
+    <li><div id="sideheader">Меню</div></li>
+    <li><a role="button" onclick="document.getElementById('photo').style.display = 'block';">Фото</a></li>
+    <li><a role="button" onclick="document.getElementById('video').style.display = 'block';">Видео</a></li>
+    <li><a role="button" onclick="document.getElementById('music').style.display = 'block';">Музыка</a></li>
+    <li><a role="button" onclick="document.getElementById('text').style.display = 'block';">Текст</a></li>
+  </ul>
+</div>
+
+<script>
+    dragElement(document.getElementById("side"));
+</script>
+
+<div id="photo">
+  <div id="photoheader">Фото</div>
+  <a onClick="pickimgsmall();">
+    <img id="imgsmall" src="">
+  </a>
+</div>
+
+<script>
+    pickimgsmall();
+    dragElement(document.getElementById("photo"));
+</script>
+
+<div id="photoexpand">
+  <a onClick="pickimglarge();">
+    <img id="imglarge" src="">
+  </a>
+</div>
+
+<script>
+    pickimglarge();
+</script>
+
+<div id="video">
+  <div id="videoheader">Видео</div>
+  <iframe id="randvideo" width="640" height="360" frameBorder="0" src="" allowfullscreen></iframe>
+</div>
+
+<script>
+    pickvideo();
+    dragElement(document.getElementById("video"));
+</script>
+
+<div id="music">
+  <div id="musicheader">Музыка</div>
+  <iframe id="randmusic" width="300" height="300" scrolling="no" frameborder="no" allow="autoplay" src=""></iframe>
+</div>
+
+<script>
+    pickmusic();
+    dragElement(document.getElementById("music"));
+</script>
+
+<div id="text">
+  <div id="textheader">Текст</div>
+  <textarea class="scrollabletextbox" id="notesmall" onClick="picknotesmall();"></textarea>
+</div>
+
+<script>
+    picknotesmall();
+    dragElement(document.getElementById("text"));
+</script>
+
+<div id="textexpand">
+  <textarea class="scrollabletextbox" id="notelarge" onClick="picknotelarge();"></textarea>
+</div>
+
+<script>
+    picknotelarge();
+</script>
+
+<div id="bottom">
+  <ul>
+  <li><a href="index.html">Домой</a></li>
+  <li class="dropup">
+    <a class="dropbtn">Выставки</a>
+    <div class="dropup-content">
+      <a onclick="mrkekButton();">Мистер КЕК</a>
+      <a onclick="windofthoughtsButton();">ветермыслей</a>
+      <a onclick="numbersButton();">ЧИСЛА</a>
+    </div>
+  </li>
+</ul>
+</div>
+
+<script>
+    closeButton();
+</script>
+
+<div id="mrkek">
+  <pre style="top: 100px; left: 180px;">
+      МИСТЕР КЕК мистер кек МИСТЕР КЕК
+      мистер кек МИСТЕР КЕК мистер кек
+      МИСТЕР КЕК мистер кек МИСТЕР КЕК
+  </pre>
+  <pre style="top: 150px; left: 320px;">
+      МИСТЕР КЕК мистер кек МИСТЕР КЕК
+      мистер кек МИСТЕР КЕК мистер кек
+      МИСТЕР КЕК мистер кек МИСТЕР КЕК
+  </pre>
+  <img style="position: absolute; top: 50px; left: 100px; height: 600px;" src="https://i.imgur.com/C15cmDL.jpg">
+  <img style="position: absolute; top: 100px; left: 550px; height: 300px;" src="https://i.imgur.com/JsdqqCu.jpg">
+  <img style="position: absolute; top: 450px; left: 800px; height: 400px;" src="https://i.imgur.com/BN9OyGK.jpg">
+  <img style="position: absolute; top: 400px; left: 1200px; height: 500px;" src="https://i.imgur.com/MxOxyqd.jpg">
+  <img style="position: absolute; top: 75px; left: 2000px; height: 700px;" src="https://i.imgur.com/i9Bn2SG.jpg">
+  <img style="position: absolute; top: 550px; left: 2500px; height: 400px;" src="https://i.imgur.com/8qyDwkw.jpg">
+  <img style="position: absolute; top: 50px; left: 2900px; height: 400px;" src="https://i.imgur.com/JSsiHNm.jpg">
+  <img style="position: absolute; top: 200px; left: 3200px; height: 600px;" src="https://i.imgur.com/MyBZD0h.jpg">
+  <img style="position: absolute; top: 75px; left: 4000px; height: 800px;" src="https://i.imgur.com/WQZxinT.jpg">
+</div>
+
+<div id="windofthoughts">
+  <pre style="bottom: 10%; left: 100px; margin: 0 0 0 0;">
+      ветермыслей
+  </pre>
+  <iframe style="position: absolute; top: 50%; left: 200px; margin: -200px 0 0 0;" width="720" height="405" frameBorder="0" src="https://www.youtube.com/embed/s8izo1m_K0k"></iframe>
+  <iframe style="position: absolute; top: 50%; left: 1120px; margin: -200px 0 0 0;" width="720" height="405" frameBorder="0" src="https://www.youtube.com/embed/Rgy-2HfPzzs"></iframe>
+  <iframe style="position: absolute; top: 50%; left: 2040px; margin: -200px 0 0 0;" width="720" height="405" frameBorder="0" src="https://www.youtube.com/embed/THnZdWoKf80"></iframe>
+  <iframe style="position: absolute; top: 50%; left: 2960px; margin: -200px 0 0 0;" width="720" height="405" frameBorder="0" src="https://www.youtube.com/embed/H0YrKe28B_U"></iframe>
+  <iframe style="position: absolute; top: 50%; left: 3880px; margin: -200px 0 0 0;" width="720" height="405" frameBorder="0" src="https://www.youtube.com/embed/sMPdxMddElM"></iframe>
+</div>
+
+<div id="numbers">
+  <pre style="top: 50%; left: 50%; margin: -480px 0 0 -100px;">
+      ЧИСЛА
+  </pre>
+  <iframe style="position: absolute; top: 100px; left: 50%; margin: 0 0 0 -360px;" width="720" height="405" frameBorder="0" src="https://www.youtube.com/embed/9pw3MEaY1kY"></iframe>
+  <iframe style="position: absolute; top: 605px; left: 50%; margin: 0 0 0 -360px;" width="720" height="405" frameBorder="0" src="https://www.youtube.com/embed/ataj5gsuSr4"></iframe>
+  <iframe style="position: absolute; top: 1110px; left: 50%; margin: 0 0 0 -360px;" width="720" height="405" frameBorder="0" src="https://www.youtube.com/embed/Aquqdslyp0o"></iframe>
+  <iframe style="position: absolute; top: 1615px; left: 50%; margin: 0 0 0 -360px;" width="720" height="405" frameBorder="0" src="https://www.youtube.com/embed/fsgZKN4CMvQ"></iframe>
+  <iframe style="position: absolute; top: 2120px; left: 50%; margin: 0 0 0 -360px;" width="720" height="405" frameBorder="0" src="https://www.youtube.com/embed/YMSCyVanY94"></iframe>
+</div>
+
+</body>
+</html>

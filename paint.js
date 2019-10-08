@@ -9,10 +9,13 @@ window.addEventListener("load", function onWindowLoad() {
     context.lineCap = "round";
     context.lineWidth = 8;
 
+    context.fillStyle = "white";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
     // вешаем обработчики на кнопки
     // очистка изображения
     document.getElementById("clear").onclick = function clear() {
-      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.fillRect(0, 0, canvas.width, canvas.height);
     };
 
     // На любое движение мыши по canvas будет выполнятся эта функция

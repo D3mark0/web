@@ -12,6 +12,34 @@ function randomizeButton () {
   }
 }
 
+function saveButton (element) {
+  var title = document.getElementById("title").innerHTML;
+  switch (title) {
+    case 'Пеинт':
+      //document.getElementById("save").setAttribute("download", "paint.jpg");
+      var canvas = document.getElementById("canvas");
+      var image = canvas.toDataURL("image/jpg");
+      element.href = image;
+      break;
+    case 'Ворд':
+      //document.getElementById("save").setAttribute("download", "word.txt");
+      var text = document.getElementById("wordarea").value + "\nА на сайте было красивее!";
+      text = text.replace(/\n/g, "\r\n");
+      var blob = new Blob([text], { type: "text/plain"});
+      var anchor = document.createElement("a");
+      anchor.download = "word.txt";
+      anchor.href = window.URL.createObjectURL(blob);
+      anchor.target ="_blank";
+      anchor.style.display = "none"; // just to be safe!
+      document.body.appendChild(anchor);
+      anchor.click();
+      document.body.removeChild(anchor);
+      break;
+    default:
+      break;
+  }
+}
+
 function expandButton () {
   var title = document.getElementById("title").innerHTML;
   switch (title) {
@@ -21,7 +49,7 @@ function expandButton () {
     case 'Заметки':
       document.getElementById("textexpand").style.display = 'block';
       break;
-    case 'Веб-браузер':
+    case 'Интернет Эксплоурер':
       document.getElementById("browser").style.display = 'none';
       break;
     default:
@@ -34,7 +62,7 @@ function expandButton () {
 
   hideall();
 
-  if (title == 'Веб-браузер') {
+  if (title == 'Интернет Эксплоурер') {
     closeButton();
   }
 }
@@ -73,7 +101,7 @@ function closeButton () {
     case 'Калькулятор':
       document.getElementById("calculator").style.display = 'none';
       break;
-    case 'Веб-браузер':
+    case 'Интернет Эксплоурер':
       document.getElementById("browser").style.display = 'none';
       break;
     case 'Пеинт':
@@ -86,12 +114,13 @@ function closeButton () {
       break;
   }
 
-  document.getElementById("title").innerHTML = 'Меню';
+  document.getElementById("title").innerHTML = 'Новая папка';
   document.getElementById("side").style.display = 'block';
 
   document.getElementById("expand").style.display = 'none';
   document.getElementById("rollup").style.display = 'none';
   document.getElementById("randomize").style.display = 'none';
+  document.getElementById("save").style.display = 'none';
   document.getElementById("close").style.display = 'none';
 }
 
