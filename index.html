@@ -21,14 +21,19 @@
 
 <div id="top">
   <ul>
-    <li><div id="title" class="unselectable">Меню</div></li>
-    <li><a id="randomize" role="button" onclick="randomizeButton();">Получить</a></li>
-    <li><a id="expand" role="button" onclick="expandButton()">Развернуть</a></li>
-    <li><a id="save" download="paint.jpg" role="button" onclick="saveButton(this)">Сохранить как...</a></li>
-    <li><a id="rollup" role="button" onclick="rollupButton()">Скрыть</a></li>
+    <div class="dropdown">
+      <li><div id="title" class="unselectable dropbtn">Меню</div></li>
+      <div class="dropdown-content" style="top: 33px; right: auto; left: 0px;">
+        <textarea id="info" readonly></textarea>
+      </div>
+    </div>
+    <li><a id="randomize" role="button" onclick="randomizeButton();">Обновить текущий контент</a></li>
+    <li><a id="expand" role="button" onclick="expandButton()">На весь экран</a></li>
+    <li><a id="save" download="paint.jpg" role="button" onclick="saveButton(this)">Сохранить как</a></li>
+    <li><a id="rollup" role="button" onclick="rollupButton()">Скрыть всё</a></li>
     <li><a id="close" role="button" onclick="closeButton();">Закрыть</a></li>
     <div class="dropdown">
-      <li style="float:right"><div id="clock" class="dropbtn">Упс...</div></li>
+      <li style="float:right"><div id="clock" class="dropbtn">Загрузка</div></li>
       <div class="dropdown-content">
         <table>
 

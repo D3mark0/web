@@ -116,6 +116,7 @@ function closeButton () {
 
   document.getElementById("title").innerHTML = 'Новая папка';
   document.getElementById("side").style.display = 'block';
+  document.getElementById("info").value = "Чтобы создать Новую папку, кликните правой кнопкой мыши по Рабочему столу (там, где ничего нет) или по свободной поверхности окна папки. После этого появится выпадающее окно, которое называется контекстным меню. Такое название меню объясняется тем, что список команд в таком меню полностью зависит от контекста (или от объекта). Другими словами, кликая правой кнопкой мыши по разным объектам, получим разные контексные меню, отличающиеся набором предлагаемых действий.";
 
   document.getElementById("expand").style.display = 'none';
   document.getElementById("rollup").style.display = 'none';
