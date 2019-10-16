@@ -1,3 +1,15 @@
+var posdict = {
+  "side" : 2,
+  "photo" : 4,
+  "video" : 6,
+  "music" : 8,
+  "text" : 10,
+  "calculator" : 12,
+  "browser" : 14,
+  "paint" : 16,
+  "word" : 18
+};
+
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elmnt.id + "header")) {
@@ -62,7 +74,26 @@ function dragElement(elmnt) {
 
     document.getElementById("info").value = "";
 
+    if (posdict[elmnt.id] != 18) {
+      var checker = posdict[elmnt.id];
+      elmnt.style.zIndex = "18";
+      document.getElementById(elmnt.id + "header").style.zIndex = "19";
+      posdict[elmnt.id] = 20;
+
+      for (var key in posdict) {
+        if (posdict[key] > checker) {
+          posdict[key] = posdict[key] - 2;
+          document.getElementById(key).style.zIndex = posdict[key];
+          document.getElementById(key + "header").style.zIndex = posdict[key] + 1;
+        }
+      }
+    }
+
     switch (title) {
+      case 'Новая папка':
+        document.getElementById("side").style.border = "thick solid #ff6998";
+        document.getElementById("info").value = "Чтобы создать Новую папку, кликните правой кнопкой мыши по Рабочему столу (там, где ничего нет) или по свободной поверхности окна папки. После этого появится выпадающее окно, которое называется контекстным меню. Такое название меню объясняется тем, что список команд в таком меню полностью зависит от контекста (или от объекта). Другими словами, кликая правой кнопкой мыши по разным объектам, получим разные контексные меню, отличающиеся набором предлагаемых действий.";
+        break;
       case 'Фотоальбом':
         document.getElementById("photo").style.border = "thick solid #ff6998";
         document.getElementById("expand").style.display = 'block';
@@ -111,8 +142,6 @@ function dragElement(elmnt) {
         document.getElementById("info").value = "Это программа для печатания и оформления текста. Эта программа создана для создания текстов различной сложности. Вы можете создать статью, документ, реферат, курсовую, диплом и даже книгу. К тому же, Ворд позволяет красиво оформить текст, выбрать стиль и цвет шрифта по своему вкусу, добавить в него картинку или фото и даже составить таблицу. И, конечно, напечатанное можно легко распечатать на принтере.";
         break;
       default:
-        document.getElementById("side").style.border = "thick solid #ff6998";
-        document.getElementById("info").value = "Чтобы создать Новую папку, кликните правой кнопкой мыши по Рабочему столу (там, где ничего нет) или по свободной поверхности окна папки. После этого появится выпадающее окно, которое называется контекстным меню. Такое название меню объясняется тем, что список команд в таком меню полностью зависит от контекста (или от объекта). Другими словами, кликая правой кнопкой мыши по разным объектам, получим разные контексные меню, отличающиеся набором предлагаемых действий.";
         break;
     }
   }
