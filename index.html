@@ -12,7 +12,7 @@
 <script type="text/javascript" src="bottommenu.js"></script>
 <script type="text/javascript" src="calculator.js"></script>
 
-<body onload="startTime()">
+<body>
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
@@ -22,7 +22,7 @@
 <div id="top">
   <ul>
     <div class="dropdown">
-      <li><div id="title" class="unselectable dropbtn">Меню</div></li>
+      <li><div id="title" class="unselectable dropbtn">Новая папка</div></li>
       <div class="dropdown-content" style="top: 33px; right: auto; left: 0px;">
         <textarea id="info" readonly></textarea>
       </div>
@@ -289,7 +289,7 @@
 
 <div id="bottom">
   <ul>
-  <li><a style="cursor: pointer;" href="index.html">Домой</a></li>
+  <li><a style="cursor: pointer;" onclick="reset();">Пуск</a></li>
   <li class="dropup">
     <a class="dropbtn">Приложения</a>
     <div class="dropup-content">
@@ -328,7 +328,15 @@
     closeButton();
 </script>
 
+<div id="splashscreen"></div>
 
+<script>
+  window.onload = function() {
+    setTimeout(function() { document.getElementById('splashscreen').style.display= "none";}, 1000)
+  }
+
+  startTime();
+</script>
 
 </body>
 </html>

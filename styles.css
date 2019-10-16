@@ -383,7 +383,7 @@ html, body {
 #calculator {
   position: absolute;
   z-index: 12;
-  top: 15%;
+  top: 5%;
   left: 50%;
   display: none;
 }
@@ -443,7 +443,7 @@ input[type = text] {
   position: absolute;
   z-index: 14;
   top: 20%;
-  left: 40%;
+  left: 35%;
   display: none;
 }
 
@@ -465,8 +465,8 @@ input[type = text] {
 #paint {
   position: absolute;
   z-index: 16;
-  top: 10%;
-  left: 10%;
+  top: 5%;
+  left: 5%;
   background-color: white;
   display: none;
 }
@@ -608,4 +608,19 @@ input[type = text] {
 #word .dropdown-content a:hover {
   background-color: #ff6998;
   color: white;
+}
+
+#splashscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(img/logo_pink.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: auto;
+  background-color: #4fd8ff;
+  z-index: 20;
 }

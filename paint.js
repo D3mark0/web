@@ -1,9 +1,9 @@
+var canvas = document.getElementById("canvas");
+var context = canvas.getContext("2d");
+
 // Выполняем по завершении загрузки страницы
 window.addEventListener("load", function onWindowLoad() {
     // Инициализируем переменные
-
-    var canvas = document.getElementById("canvas");
-    var context = canvas.getContext("2d");
 
     // переменные для рисования
     context.lineCap = "round";
