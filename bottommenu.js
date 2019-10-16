@@ -1,5 +1,7 @@
 function reset () {
   hideall();
+  document.getElementById("photoexpand").style.display = 'none';
+  document.getElementById("textexpand").style.display = 'none';
 
   posdict = {
     "side" : 2,
