@@ -1,7 +1,6 @@
 html, body {
   margin: 0;
   height: 100%;
-  background-image: url(img/logo_pink.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -616,11 +615,15 @@ input[type = text] {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url(img/logo_pink.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: auto;
   background-color: #4fd8ff;
   z-index: 20;
+}
+
+#splashscreen video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
 }

@@ -12,13 +12,20 @@
 <script type="text/javascript" src="bottommenu.js"></script>
 <script type="text/javascript" src="calculator.js"></script>
 
-<body>
+<script type="text/javascript">
+if (screen.width <= 699) {
+document.location = "mobile.html";
+}
+</script>
+
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
   <link rel="stylesheet" href="styles.css">
 </head>
+
+<body>
 
 <div id="top">
   <ul>
@@ -329,13 +336,18 @@
     closeButton();
 </script>
 
-<div id="splashscreen"></div>
+<div id="splashscreen">
+  <video autoplay muted loop>
+    <source src="media/logo_pink.webm" type="video/webm">
+  </video>
+</div>
 
 <script>
   window.onload = function() {
-    setTimeout(function() { document.getElementById('splashscreen').style.display= "none";}, 1000)
+    setTimeout( function() {
+      document.getElementById('splashscreen').style.display= "none";
+      document.body.style.backgroundImage = "url(img/logo_pink.png)"; }, 1000)
   }
-
   startTime();
 </script>
 
