@@ -1,12 +1,13 @@
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
+body {font-family: 'PT Serif', sans-serif; margin:0}
+.mySlides1 {display: none}
 img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
   padding: 50px 0px;
-  max-width: 1000px;
+  width: 1000px;
+  height: 758px;
   position: relative;
   margin: auto;
 }
@@ -36,7 +37,8 @@ img {vertical-align: middle;}
 }
 
 /* Caption text */
-.text {
+.text-header {
+  cursor: pointer;
   color: white;
   font-size: 20px;
   padding: 8px 12px;
@@ -47,6 +49,31 @@ img {vertical-align: middle;}
   font-family: 'PT Serif', sans-serif;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
+.text-container {
+  display: none;
+  text-align: left;
+  padding: 10px 30px;
+  color: black;
+  font-family: 'PT Serif', sans-serif;
+}
+
+.close {
+  display: none;
+  cursor: pointer;
+  color: black;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 58px;
+  width: 100%;
+  text-align: center;
+  font-family: 'PT Serif', sans-serif;
+}
+
+.title {
+  text-align: center;
+  padding: 150px 0px 50px 0px;
+  color: black;
+  font-family: 'PT Serif', sans-serif;
+  font-size: 70px;
 }
