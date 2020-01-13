@@ -57,6 +57,7 @@ body {
 }
 
 .title-container {
+  cursor: default;
   text-align: center;
   color: black;
   font-family: 'PT Serif', sans-serif;
@@ -64,6 +65,7 @@ body {
 }
 
 .caption-container {
+  cursor: default;
   text-align: center;
   padding: 10px 10px;
   color: black;
@@ -73,20 +75,17 @@ body {
 }
 
 .text-container {
+  cursor: default;
   text-align: left;
   padding: 10px 30px;
   color: black;
   font-family: 'PT Serif', sans-serif;
 }
 
-.text-container p {
-  cursor: pointer;
-}
-
-#hidden {
+.hidden {
   color: white;
 }
 
-#hidden:hover {
+.hidden:hover {
   color: black;
 }
