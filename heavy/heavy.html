@@ -11,45 +11,230 @@
 </head>
 
 <body>
+  
   <div class="webm-container">
-    <video width="1280" height="720" autoplay="autoplay" loop="loop">
+    <video width="1280" height="720" autoplay="autoplay" loop="loop" onclick="openModal('modal1');">
       <source src="webm/on_the_wave.webm" type="video/webm" />
     </video>
   </div>
 
-  <marquee class="text-scroll" behavior="scroll" direction="left">на волне</marquee>
+  <div class="text-scroll">
+    <span>на волне</span>
+  </div>
 
   <div class="webm-container">
-    <video width="1280" height="720" autoplay="autoplay" loop="loop">
+    <video width="1280" height="720" autoplay="autoplay" loop="loop" onclick="openModal('modal2');">
       <source src="webm/den.webm" type="video/webm" />
     </video>
   </div>
 
-  <marquee class="text-scroll" behavior="scroll" direction="left">притон</marquee>
+  <div class="text-scroll">
+    <span>притон</span>
+  </div>
 
   <div class="webm-container">
-    <video width="1280" height="720" autoplay="autoplay" loop="loop">
+    <video width="1280" height="720" autoplay="autoplay" loop="loop" onclick="openModal('modal3');">
       <source src="webm/look_how_I_can.webm" type="video/webm" />
     </video>
   </div>
 
-  <marquee class="text-scroll" behavior="scroll" direction="left">смотри, как могу</marquee>
+  <div class="text-scroll">
+    <span>смотри, как могу</span>
+  </div>
 
   <div class="webm-container">
-    <video width="1280" height="720" autoplay="autoplay" loop="loop">
+    <video width="1280" height="720" autoplay="autoplay" loop="loop" onclick="openModal('modal4');">
       <source src="webm/trap.webm" type="video/webm" />
     </video>
   </div>
 
-  <marquee class="text-scroll" behavior="scroll" direction="left">trap</marquee>
+  <div class="text-scroll">
+    <span>trap</span>
+  </div>
 
   <div class="webm-container">
-    <video width="1280" height="720" autoplay="autoplay" loop="loop">
+    <video width="1280" height="720" autoplay="autoplay" loop="loop" onclick="openModal('modal5');">
       <source src="webm/what_happened.webm" type="video/webm" />
     </video>
   </div>
 
-  <marquee class="text-scroll" behavior="scroll" direction="left">что произошло</marquee>
+  <div class="text-scroll">
+    <span>что произошло</span>
+  </div>
+
+  <div id="modal1" class="modal">
+    <span class="close cursor" onclick="closeModal('modal1')">Закрыть</span>
+    <div class="modal-content">
+      <div class="caption-container">
+        <p>на волне</p>
+      </div>
+      <div class="modal-column">
+        <img src="https://i.imgur.com/xfHqotn.jpg" style="width:100%">
+        <img src="https://i.imgur.com/74Zd8lc.jpg" style="width:100%">
+        <img src="https://i.imgur.com/rCodjLe.jpg" style="width:100%">
+        <div class="text-scroll">
+          <span>вот здесь текст</span>
+        </div>
+        <img src="https://i.imgur.com/h0LjgSH.jpg" style="width:100%">
+        <img src="https://i.imgur.com/bGuxaJA.jpg" style="width:100%">
+        <img src="https://i.imgur.com/51AWgjs.jpg" style="width:100%">
+        <img src="https://i.imgur.com/y3m39wQ.jpg" style="width:100%">
+        <div class="text-scroll">
+          <span>вот здесь текст</span>
+        </div>
+        <img src="https://i.imgur.com/RAGKAY9.jpg" style="width:100%">
+        <img src="https://i.imgur.com/th89JkT.jpg" style="width:100%">
+        <div class="text-scroll">
+          <span>вот здесь текст</span>
+        </div>
+        <img src="https://i.imgur.com/eEk930j.jpg" style="width:100%">
+        <img src="https://i.imgur.com/nHKiom3.jpg" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <span class="close cursor" onclick="closeModal('modal2')">Закрыть</span>
+    <div class="modal-content">
+      <div class="caption-container">
+        <p>притон</p>
+      </div>
+      <div class="modal-column">
+        <div class="text-scroll">
+          <span>вот здесь текст</span>
+        </div>
+        <img src="https://i.imgur.com/aIjivdV.jpg" style="width:100%">
+        <img src="https://i.imgur.com/i5phrG1.jpg" style="width:100%">
+        <img src="https://i.imgur.com/rdegiDS.jpg" style="width:100%">
+        <img src="https://i.imgur.com/OLDhjU3.jpg" style="width:100%">
+        <div class="text-scroll">
+          <span>вот здесь текст</span>
+        </div>
+        <img src="https://i.imgur.com/vlbmcdz.jpg" style="width:100%">
+        <img src="https://i.imgur.com/JjkKsye.jpg" style="width:100%">
+        <img src="https://i.imgur.com/xyh0y11.jpg" style="width:100%">
+        <div class="text-scroll">
+          <span>вот здесь текст</span>
+        </div>
+        <img src="https://i.imgur.com/d8LJz1a.jpg" style="width:100%">
+        <img src="https://i.imgur.com/ZoTAvdK.jpg" style="width:100%">
+        <div class="text-scroll">
+          <span>вот здесь текст</span>
+        </div>
+        <img src="https://i.imgur.com/Jls90GJ.jpg" style="width:100%">
+        <img src="https://i.imgur.com/8bJpgWG.jpg" style="width:100%">
+        <img src="https://i.imgur.com/qgpOdJf.jpg" style="width:100%">
+        <img src="https://i.imgur.com/WKJieRi.jpg" style="width:100%">
+        <img src="https://i.imgur.com/SMi155m.jpg" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <span class="close cursor" onclick="closeModal('modal3')">Закрыть</span>
+    <div class="modal-content">
+      <div class="caption-container">
+        <p>смотри, как могу</p>
+      </div>
+      <div class="modal-column">
+        <img src="https://i.imgur.com/z7IpLQG.jpg" style="width:100%">
+        <img src="https://i.imgur.com/lDZcdyA.jpg" style="width:100%">
+        <img src="https://i.imgur.com/VHtOBmD.jpg" style="width:100%">
+        <div class="text-scroll">
+          <span>вот здесь текст</span>
+        </div>
+        <video width="100%" height="100%" autoplay="autoplay" loop="loop">
+          <source src="webm/look_how_I_can_DANCE.webm" type="video/webm" />
+        </video>
+        <div class="text-scroll">
+          <span>вот здесь текст</span>
+        </div>
+        <img src="https://i.imgur.com/19W7q3i.jpg" style="width:100%">
+        <img src="https://i.imgur.com/QpUFeB0.jpg" style="width:100%">
+        <div class="text-scroll">
+          <span>вот здесь текст</span>
+        </div>
+        <img src="https://i.imgur.com/vCmEQaa.jpg" style="width:100%">
+        <img src="https://i.imgur.com/uqB99us.jpg" style="width:100%">
+        <div class="text-scroll">
+          <span>вот здесь текст</span>
+        </div>
+        <img src="https://i.imgur.com/wRk84Sj.jpg" style="width:100%">
+        <img src="https://i.imgur.com/RhWaPpV.jpg" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <span class="close cursor" onclick="closeModal('modal4')">Закрыть</span>
+    <div class="modal-content">
+      <div class="caption-container">
+        <p>trap</p>
+      </div>
+      <div class="modal-column">
+        <div class="text-scroll">
+          <span>вот здесь текст</span>
+        </div>
+        <img src="https://i.imgur.com/CcDsGzK.jpg" style="width:100%">
+        <img src="https://i.imgur.com/6BArcmB.jpg" style="width:100%">
+        <img src="https://i.imgur.com/uNiBUqc.jpg" style="width:100%">
+        <img src="https://i.imgur.com/3skHf8x.jpg" style="width:100%">
+        <div class="text-scroll">
+          <span>вот здесь текст</span>
+        </div>
+        <video width="100%" height="100%" autoplay="autoplay" loop="loop">
+          <source src="webm/trap_FIRE.webm" type="video/webm" />
+        </video>
+        <div class="text-scroll">
+          <span>вот здесь текст</span>
+        </div>
+        <img src="https://i.imgur.com/otScrEL.jpg" style="width:100%">
+        <img src="https://i.imgur.com/wSkzwRO.jpg" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div id="modal5" class="modal">
+    <span class="close cursor" onclick="closeModal('modal5')">Закрыть</span>
+    <div class="modal-content">
+      <div class="caption-container">
+        <p>что произошло</p>
+      </div>
+      <div class="modal-column">
+        <div class="text-container">
+          <p>Галактика методологически трансформирует мир. Созерцание осмысленно рассматривается субъективный катарсис. Отвечая на вопрос о взаимоотношении идеального ли и материального ци, Дай Чжень заявлял, что гений подрывает закон внешнего мира. Даосизм методологически осмысляет конфликт. Даосизм не так уж очевиден.</p>
+        </div>
+        <img src="https://i.imgur.com/pGuQADz.jpg" style="width:100%">
+        <img src="https://i.imgur.com/bYEad6Y.jpg" style="width:100%">
+        <img src="https://i.imgur.com/CwX69iT.jpg" style="width:100%">
+        <div class="text-container">
+          <p>Галактика методологически трансформирует мир. Созерцание осмысленно рассматривается субъективный катарсис. Отвечая на вопрос о взаимоотношении идеального ли и материального ци, Дай Чжень заявлял, что гений подрывает закон внешнего мира. Даосизм методологически осмысляет конфликт. Даосизм не так уж очевиден.</p>
+        </div>
+        <img src="https://i.imgur.com/Ld4MoMc.jpg" style="width:100%">
+        <img src="https://i.imgur.com/gGa8vvl.jpg" style="width:100%">
+        <div class="text-container">
+          <p>Галактика методологически трансформирует мир. Созерцание осмысленно рассматривается субъективный катарсис. Отвечая на вопрос о взаимоотношении идеального ли и материального ци, Дай Чжень заявлял, что гений подрывает закон внешнего мира. Даосизм методологически осмысляет конфликт. Даосизм не так уж очевиден.</p>
+        </div>
+        <img src="https://i.imgur.com/07uKC7e.jpg" style="width:100%">
+        <div class="text-container">
+          <p>Галактика методологически трансформирует мир. Созерцание осмысленно рассматривается субъективный катарсис. Отвечая на вопрос о взаимоотношении идеального ли и материального ци, Дай Чжень заявлял, что гений подрывает закон внешнего мира. Даосизм методологически осмысляет конфликт. Даосизм не так уж очевиден.</p>
+        </div>
+        <img src="https://i.imgur.com/D1jrgbk.jpg" style="width:100%">
+        <img src="https://i.imgur.com/eaik7t3.jpg" style="width:100%">
+        <img src="https://i.imgur.com/k184Hc3.jpg" style="width:100%">
+        <div class="text-container">
+          <p>Галактика методологически трансформирует мир. Созерцание осмысленно рассматривается субъективный катарсис. Отвечая на вопрос о взаимоотношении идеального ли и материального ци, Дай Чжень заявлял, что гений подрывает закон внешнего мира. Даосизм методологически осмысляет конфликт. Даосизм не так уж очевиден.</p>
+        </div>
+        <img src="https://i.imgur.com/1aBSUeM.jpg" style="width:100%">
+        <img src="https://i.imgur.com/bIUNtvk.jpg" style="width:100%">
+        <img src="https://i.imgur.com/VbOD64u.jpg" style="width:100%">
+        <img src="https://i.imgur.com/mPJO3Mo.jpg" style="width:100%">
+        <div class="text-container">
+          <p>Галактика методологически трансформирует мир. Созерцание осмысленно рассматривается субъективный катарсис. Отвечая на вопрос о взаимоотношении идеального ли и материального ци, Дай Чжень заявлял, что гений подрывает закон внешнего мира. Даосизм методологически осмысляет конфликт. Даосизм не так уж очевиден.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 
