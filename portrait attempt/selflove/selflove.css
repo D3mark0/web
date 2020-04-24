@@ -6,35 +6,29 @@ body {
   margin: 0;
   overflow-x: hidden;
   overflow-y: scroll;
-  background-color: white;
+  background-color: black;
 }
 
-.block {
+.row {
   display: flex;
   flex-wrap: wrap;
   padding: 0 0;
 }
 
-.block img {
-  position: absolute;
+.column {
+  flex: 25%;
+  padding: 0 0;
 }
 
-.hover {
-  display: block;
+.column img {
+  width: 100%;
+  margin-top: 0;
+  vertical-align: middle;
 }
 
-.hover .top {
-    display: none;
-    position: absolute;
-    z-index: 99;
-}
-.hover:hover .top {
-    display: block;
-}
-
-.cursor {
-  cursor: pointer;
-}
+/*.column img:hover {
+  transform: scale(1.05);
+}*/
 
 .modal {
   display: none;
@@ -45,24 +39,29 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  background-color: white;
+  overflow: auto;
+  background-color: black;
 }
 
 .modal-content {
   position: relative;
-  background-color: white;
+  background-color: black;
   margin: auto;
   padding: 0;
+  width: 75%;
 }
 
 .modal-column {
-  width: 100%;
+  float: left;
+  width: 50%;
+}
+
+.modal-column img {
+  vertical-align: top;
 }
 
 .close {
-  color: black;
+  color: white;
   position: absolute;
   top: 25px;
   right: 25px;
@@ -71,12 +70,16 @@ body {
   font-family: 'PT Serif', sans-serif;
 }
 
+.cursor {
+  cursor: pointer;
+}
+
 .title-container {
   cursor: default;
   text-align: center;
-  background-color: white;
+  background-color: black;
   padding: 50px 50px;
-  color: black;
+  color: white;
   font-family: 'PT Serif', sans-serif;
   font-size: 70px;
 }
@@ -84,18 +87,47 @@ body {
 .caption-container {
   cursor: default;
   text-align: center;
-  background-color: white;
+  background-color: black;
   padding: 10px 10px;
-  color: black;
+  color: white;
   font-family: 'PT Serif', sans-serif;
   font-size: 20px;
+  font-weight: bold;
 }
 
 .text-container {
   cursor: default;
   text-align: left;
-  background-color: white;
+  background-color: black;
   padding: 10px 30px;
-  color: black;
+  color: white;
   font-family: 'PT Serif', sans-serif;
+}
+
+#menu {
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#menu a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-family: 'PT Serif', sans-serif;
+  font-size: 15px;
+}
+
+#menu a:hover {
+  background: white;
+  color: black;
+}
+
+#main {
+  margin-top: 39px;
 }

@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+.title {
+  cursor: default;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  white-space: nowrap;
+  color: black;
+  font-family: 'PT Serif', sans-serif;
+  font-size: 70px;
+}
+
+#menu {
+  z-index: 100;
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#menu a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-family: 'PT Serif', sans-serif;
+  font-size: 15px;
+}
+
+#menu a:hover {
+  background: black;
+  color: white;
+}
+
+#main {
+  margin-top: 39px;
+}
