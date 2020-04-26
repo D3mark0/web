@@ -21,7 +21,7 @@ body {
   font-size: 70px;
 }
 
-#menu {
+#top {
   z-index: 100;
   overflow: hidden;
   background-color: white;
@@ -30,7 +30,7 @@ body {
   width: 100%;
 }
 
-#menu a {
+#top a {
   float: left;
   display: block;
   color: black;
@@ -41,9 +41,38 @@ body {
   font-size: 15px;
 }
 
-#menu a:hover {
+#top a:hover {
   background: black;
   color: white;
+}
+
+#bottom {
+  z-index: 100;
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#bottom a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-family: 'PT Serif', sans-serif;
+  font-size: 15px;
+}
+
+#bottom a:hover {
+  background: black;
+  color: white;
+}
+
+#bottom .button {
+  cursor: pointer;
 }
 
 #main {
