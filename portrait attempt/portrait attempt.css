@@ -4,19 +4,16 @@
 
 body {
   margin: 0;
-  overflow-x: hidden;
-  overflow-y: scroll;
   background-color: white;
 }
 
-.title {
+#title {
   cursor: default;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
   white-space: nowrap;
-  color: black;
   font-family: 'PT Serif', sans-serif;
   font-size: 70px;
 }
@@ -77,4 +74,71 @@ body {
 
 #main {
   margin-top: 39px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding: 50px 0 0 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+  background-color: white;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 75%;
+}
+
+.modal-column {
+  float: left;
+  width: 100%;
+}
+
+.modal-column img {
+  vertical-align: top;
+}
+
+.close {
+  color: black;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  font-family: 'PT Serif', sans-serif;
+  font-size: 25px;
+}
+
+.close:hover {
+  background: black;
+  color: white;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.caption-container {
+  cursor: default;
+  text-align: center;
+  padding: 10px 10px;
+  font-family: 'PT Serif', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.text-container {
+  height: 250px;
+  overflow: auto;
+  cursor: default;
+  text-align: left;
+  padding: 10px 30px;
+  font-family: 'PT Serif', sans-serif;
 }
