@@ -139,20 +139,11 @@ img {vertical-align: middle;}
   color: black;
 }
 
-@media only screen and (width <= 1280px) {
+@media only screen and (max-width: 1280px) {
   #blocked {
     display: block;
   }
   body {
     overflow-y: hidden;
-  }
-}
-
-@media only screen and (width > 1280px) {
-  #blocked {
-    display: none;
-  }
-  body {
-    overflow-y: scroll;
   }
 }
