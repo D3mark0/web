@@ -12,7 +12,8 @@ body {
 .webm-container {
   cursor: default;
   padding: 50px 0px;
-  width: 1280px;
+  width: 75%;
+  height: 50%;
   margin: auto;
 }
 
