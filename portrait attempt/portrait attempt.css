@@ -8,7 +8,7 @@ body {
 }
 
 #title {
-  cursor: default;
+  cursor: pointer;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -84,9 +84,9 @@ body {
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 50%;
-  height: 50%;
-  overflow: auto;
+  width: 750px;
+  height: 500px;
+  overflow: none;
   background-color: white;
 }
 
@@ -102,10 +102,6 @@ body {
   width: 100%;
 }
 
-.modal-column img {
-  vertical-align: top;
-}
-
 .close {
   color: black;
   position: absolute;
@@ -114,6 +110,7 @@ body {
   bottom: 0px;
   font-family: 'PT Serif', sans-serif;
   font-size: 25px;
+  margin: 0px;
 }
 
 .close:hover {
@@ -141,6 +138,18 @@ body {
   text-align: left;
   padding: 10px 30px;
   font-family: 'PT Serif', sans-serif;
+}
+
+.img-container {
+  height: 250px;
+  overflow: auto;
+  cursor: default;
+}
+
+.img-container img {
+  margin: 0 198px;
+  vertical-align: middle;
+  display: flex;
 }
 
 #blocked {

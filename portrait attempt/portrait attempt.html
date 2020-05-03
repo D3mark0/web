@@ -33,11 +33,12 @@ document.location = "mobile.html";
   <div id="bottom">
     <a class="button" onclick="openModal('modal1')">О проекте</a>
     <a class="button" onclick="openModal('modal2')">История создания</a>
+    <a class="button" onclick="openModal('modal3')">Инструкция</a>
     <a href="../index.html" style="float:right">D3mark0</a>
   </div>
 
   <div id="main">
-    <div id="title">Попытка Портрета</div>
+    <div id="title" onclick="openModal('modal4')">Попытка Портрета</div>
 
     <div id="modal1" class="modal">
       <div class="modal-content">
@@ -46,11 +47,12 @@ document.location = "mobile.html";
         </div>
         <div class="modal-column">
           <div class="text-container">
-            <p>Внутренние границы - это ваши разрешения и запреты, как по отношению к себе, так и по отношению к другим людям.</p>
-            <p>Когда я ценю своё время, я знаю, сколько времени я готова ждать человека, который опаздывает. У меня есть внутренняя договорённость о том, что я могу подождать его не более получаса. Через полчаса я просто уйду.</p>
-            <p>Если человек не уважает моё время, значит он нарушает мои границы.</p>
-            <p>Если человек кричит на меня, значит он нарушает мои границы.</p>
-            <p>Злость, как реакция в ситуации, когда мои определённости игнорируют, естественна. И я её не боюсь.</p>
+            <p style="font-weight: bold;">D3mark0</p>
+            <p>Слово portrait происходит от старофранцузского portraire - «воспроизводить что-либо черта в черту». Вики же предлагает следующее определение: изображение или описание какого-либо человека либо группы людей, существующих или существовавших в реальной действительности, в том числе художественными средствами.</p>
+            <p>Если говорить об истинном портрете, становится понятно, что в настоящее время сделать Портрет человека с помощью фотокамеры практически невозможно: для воспроизведения «черта в черту» необходимо охватить портретируемого камерами со всех сторон так, чтобы они охватывали и его самого полностью, и всё его окружающее, а саму съёмку производить с минимальным интервалом времени между кадрами всю жизнь портретируемого - и даже в таком случае эту утопическую идею не удастся реализовать в полной мере, хотя бы из-за существования технических ограничений.</p>
+            <p>Поэтому доступно совершать только попытки Портрета.</p>
+            <p>Всё, что Вы видите на данных страницах, служит для наиболее точного отображения портретиуремых: фотография, текст, форма повествования, синергия этих трёх составляющих. Всё устремлено в уточнение бесконечных черт.</p>
+            <p>Всегда стоит помнить про время. Это - лишь короткий отрезок из множества.</p>
           </div>
         </div>
       </div>
@@ -64,16 +66,159 @@ document.location = "mobile.html";
         </div>
         <div class="modal-column">
           <div class="text-container">
-            <p>Внутренние границы - это ваши разрешения и запреты, как по отношению к себе, так и по отношению к другим людям.</p>
-            <p>Когда я ценю своё время, я знаю, сколько времени я готова ждать человека, который опаздывает. У меня есть внутренняя договорённость о том, что я могу подождать его не более получаса. Через полчаса я просто уйду.</p>
-            <p>Если человек не уважает моё время, значит он нарушает мои границы.</p>
-            <p>Если человек кричит на меня, значит он нарушает мои границы.</p>
-            <p>Злость, как реакция в ситуации, когда мои определённости игнорируют, естественна. И я её не боюсь.</p>
+            <p style="font-weight: bold;">D3mark0</p>
+            <p>На одной из встреч красноярского Фотоклуба Олег Дитз рассказал про другой взгляд на портрет в фотографии, который кардинально отличается от общепринятого, взаимодействовашего по большей части с планами отображения, но не с портретируемыми.</p>
+            <p>...</p>
+            <p>Во время съёмки другого проекта я случайно познакомился с Анастасией. Недолго после знакомства вспомнил про идею Попытки Портрета и предложил реализовать, взяв её в качестве портретируемого. Анастасия согласилась.</p>
+            <p>Сначала портретиуремая описала словами определения пяти разных явлений, а также образы к каждому из явлений. Затем мы вместе обсуждали время, место и визуал для воплощения каждого из определений с помощью фотографии, и реализовывали. Так как для меня творчество - это поток, процесс, то в какой-то момент сам этот процесс начал заполнять неясности и сглаживать неровности.</p>
+            <p>Затем Анастасия познакомила меня с Данилом, и произошёл ещё один виток в спирали.</p>
+            <p>В какой-то момент мне стало ясно, что сама форма подачи должна как можно более точно соответствовать задумке.</p>
+            <p>В потоке творчества произошла та форма, которую Вы сейчас наблюдаете.</p>
           </div>
         </div>
       </div>
       <span class="close cursor" onclick="closeModal('modal2')">&nbsp;&#10005;&nbsp;</span>
     </div>
+
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <div class="caption-container">
+          <p>Инструкция</p>
+        </div>
+        <div class="modal-column">
+          <div class="text-container">
+            <p>Сверху представлены пять разнличных явлений: «Любовь к себе», «Самоценность», «Безмятежность», «Осознанность», «Жесть».</p>
+            <p>Это - ссылки для перехода на соответсвующие страницы представления двух портретируемых: Анастасии и Данила.</p>
+            <p>На страницах «Самоценность», «Безмятежность» и «Осознанность» курсор мыши становится указателем тогда, когда нужно нажать на определённый элемент - это Ваше взаимодействие.</p>
+            <p>Страницы «Любовь к себе» и «Жесть» работают точно так же, за исключением того, что на первой практически отсутсвует указатель за ненадобностью, в то время как на второй присутсвует спрятанный элемент, который указателем не выделен.</p>
+            <p>Ваш главный инструмент здесь - клик мыши.</p>
+            <p>Пожалуйста, исследуйте!</p>
+          </div>
+        </div>
+      </div>
+      <span class="close cursor" onclick="closeModal('modal3')">&nbsp;&#10005;&nbsp;</span>
+    </div>
+
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <div class="caption-container">
+          <p>&nbsp;</p>
+        </div>
+        <div class="modal-column">
+          <div class="img-container">
+            <img src="https://i.imgur.com/MFUQDUi.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/HxAD1qs.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/9ykIVtq.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/cvilbDN.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/IdZqVXd.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/RrV2hhh.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/DGTtFcn.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/ahRcsIR.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/lviZtTE.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/dn67XXP.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/DYklQad.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/84O98r4.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/7z7yrVm.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/EZGcad5.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/tNBH0LY.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/EcEITwo.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/KoJfMfs.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/Zs9t5A4.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/uZsrRlw.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/o8mGK4E.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/m9f55gh.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/6sMo1ra.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/d1s5Z44.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/EbFzTMo.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/j54vGzG.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/7nH5EK7.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/AM5L34b.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/VY44xCN.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/G7Uv7lq.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/H81Ue5x.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/Ibb0pJh.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/N6yY22l.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/RqUu8i3.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/TOPGoIO.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/OoEuX65.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/fS1QhGn.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/5UXI9fI.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/R0mCOE9.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/4pvY9bN.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/2RxjRlN.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/FLcpOz4.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/16NhTnh.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/XYiazQQ.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/x9GBCLi.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/0ammxaY.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/5S8Txc8.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/CbDUEJM.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/jnOxvOm.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/MFEL5rE.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/2Ux5LPZ.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/cBORIdi.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/MCS4CZS.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/i2CYsc4.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/o4AeClg.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/Qkw8hOm.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/H7Scj3l.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/NcH0HFs.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/46WWCqL.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/HU657Y1.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/5K4duM0.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/5fr1i2L.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/VleYYa9.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/MEpGPoS.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/95jx6rY.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/zok8Ybu.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/C9w3yWd.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/3FpCzjM.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/OgPTF7A.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/ClQEHc9.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/RPxlzme.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/dJW7DJ9.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/G4XmSui.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/OuN3IoY.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/UhoY0gx.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/iwc729o.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/NEYQfJM.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/gOGgoCj.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/Hd7SB1m.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/iGMeEbc.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/jM3afVc.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/NxX2aHo.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/3ptpt34.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/NlkXpr8.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/6xm14uV.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/sddbo2P.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/qjXr38z.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/FQYKgxn.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/wP6K7qq.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/T6Q6P86.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/rgTWlVB.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/0wk9Sd9.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/TrA1Ph5.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/8q5FIl5.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/7xcSNqT.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/mmQW8HK.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/17xZiYP.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/biRN3fk.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/pfq4Wpo.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/6MtrJ7x.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/ZWftuCL.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/PZyb54K.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/WrQt3LN.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/0qmwiVg.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/66AMaEg.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/z5KvLI3.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/mKaoQKT.jpg" style="width:167px;">
+            <img src="https://i.imgur.com/pPcdhXN.jpg" style="width:167px;">
+          </div>
+        </div>
+      </div>
+      <span class="close cursor" onclick="closeModal('modal4')">&nbsp;&#10005;&nbsp;</span>
+    </div>
+
   </div>
 
   <div id="blocked">
