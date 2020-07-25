@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<title>пни</title>
+<script type="text/javascript" src="stumps.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
+  <link rel="stylesheet" href="stumps.css">
+</head>
+<body>
+  <div id="top">
+    <a onclick="showdescription();">пни</a>
+    <a href="http://d3mark0.ru/" style="float:right">D3mark0</a>
+  </div>
+  <div id="stump">
+    <div id="descriptrion" onclick="showbody();">
+      <p>Это будет описание.</p>
+    </div>
+    <figure id="body">
+      <img id="img" src="" onclick="pick();">
+      <figcaption id="text" onclick="pick();"></figcaption>
+    </figure>
+  </div>
+  <script>pick();</script>
+</body>
+</html>
