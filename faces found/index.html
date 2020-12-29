@@ -27,6 +27,42 @@
         }
       });
     });
+
+    var language = true;
+
+    function switcher() {
+      if (language) {
+        document.getElementById("genre").innerHTML = "<i>In-game photography, Digital Art</i>";
+        document.getElementById("author").innerHTML = "<i>Author: D3mark0</i>";
+        document.getElementById("сurator").innerHTML = "<i>Curator: Konstantin Remizov</i>";
+
+        document.getElementById("description1-2").innerHTML = "The mannequins were the primary visual stimulus - their number, and sometimes absolute irrelevance, quickly hit me and prompted me to start filming. In the very process of filming, the thought came up that this image of a dummy is very consonant with the avatars of the players, because the interaction of another person with the machine is hidden from the eyes of another player - there are no threads, there is only the avatar itself. This was the starting point from which I began my study. Later, along with photographs of mannequins and players, photos of stuffed toys and NPCs were included, and a large number of dead NPCs also accumulated. At some point, I realized that I had moved far from the initial idea of ​​comparing dummies and players, and put the resulting array of photos aside ...";
+        document.getElementById("description1-3").innerHTML = "... Konstantin Remizov suggested using some recognition algorithms, and I 'fed' all the images to a neural network that trained to recognize faces from photographs.";
+
+        document.getElementById("description2-1").innerHTML = "<b>Konstantin Remizov:</b>";
+        document.getElementById("description2-2").innerHTML = "... I also like how some characters seem to react to the presence of the interface and to the fact that they remain invisible to it; well, the very formation of new internal connections in the image - an arbitrary structure appears, which inevitably looks not random; such an emulation of a wandering gaze paying attention to minor details - very characteristic, for example, of Japanese art ...";
+        document.getElementById("description2-3").innerHTML = "... another well-known feature of manga is an appeal to face recognition algorithms sewn into the human subconscious, which the same McCloud calls the 'principle of masks'; roughly speaking, the closer the character should be to the reader, the more the reader should identify him with himself, the easier his face is depicted - so that the reader can project his own onto him with the least possible assumptions ...";
+        document.getElementById("description2-4").innerHTML = "... you can try to read the resulting episode precisely through this desire to find an avatar in the game world; someone with whom I would like to relate ...";
+
+        language = false;
+      }
+      else {
+        document.getElementById("genre").innerHTML = "<i>In-game фотография, Digital Art</i>";
+        document.getElementById("author").innerHTML = "<i>Автор: D3mark0</i>";
+        document.getElementById("сurator").innerHTML = "<i>Куратор: Константин Ремизов</i>";
+
+        document.getElementById("description1-2").innerHTML = "В качестве первичного визуального раздражителя выступили манекены - их количество, а иногда и абсолютная неуместность, довольно быстро меня задели и побудили начать снимать. В самом процессе съёмки пришла мысль, что этот образ манекена очень созвучен с аватарами игроков, ведь взаимодействие другого человека с машиной скрыто от глаз другого игрока - нет никаких ниточек, есть только сам аватар. Это была отправная точка, с которой я начал изучение. В последствии, наряду с фотографиями манекенов и игроков, туда попали и фото мягких игрушек, и NPC, причём, мёртвых NPC тоже накопилось большое количество. В какой-то момент я понял, что далеко отошёл от первоначальной идеи сопоставления манекенов и игроков, а получившийся массив фотографий отложил в сторону...";
+        document.getElementById("description1-3").innerHTML = "...Константин Ремизов предложил задействовать какие-нибудь алгоритмы распознавания, и я 'скормил' все изображения нейронной сети, которая тренировалась распознавать лица по фотографиям.";
+
+        document.getElementById("description2-1").innerHTML = "<b>Константин Ремизов:</b>";
+        document.getElementById("description2-2").innerHTML = "...ещё мне нравится как некоторые персонажи словно бы реагируют на присутствие интерфейса и на то, что они остаются невидимы для него; ну и само формирование новых внутренних связей на изображении - возникает произвольная структура, которая неизбежно выглядит неслучайной; такая эмуляция блуждающего взгляда, обращающего внимание на незначительные детали - очень характерного, например, для японского искусства...";
+        document.getElementById("description2-3").innerHTML = "...ещё одна, всем известная особенность манги - апелляция к вшитым в человеческое подсознание алгоритмам распознавания лиц, которую тот же Макклауд называет 'принципом масок'; грубо говоря, чем ближе должен быть читателю персонаж, чем больше читатель должен идентифицировать его с собой, тем проще изображается его лицо — чтобы читатель смог с наименьшими допущениями спроецировать на него своё собственное...";
+        document.getElementById("description2-4").innerHTML = "...можно попробовать прочитать получившуюся серию именно через это стремление к поиску аватара в мире игры; кого-то, с кем хотелось бы себя соотнести...";
+
+        language = true;
+      }
+    }
+
   </script>
 
   <style>
@@ -42,6 +78,11 @@
       font-size: 10vh;
     }
 
+    #title:hover {
+      background-color: white;
+      color: black;
+    }
+
     #description {
       display: none;
     }
@@ -52,6 +93,19 @@
       font-family: 'PT Sans', sans-serif;
       font-size: 3vh;
     }
+
+    #description a {
+      color: #ff6998;
+    }
+
+    #switcher {
+      cursor: pointer;
+    }
+
+    #switcher:hover {
+      background-color: white;
+      color: black;
+    }
   </style>
 
   <body>
@@ -59,11 +113,20 @@
     <div id="title">Faces found</div>
 
     <div id="description">
-      <p>Вся-вся-вся информация о проекте</p>
-      <p>Описание от меня бла-бла-бла бла-бла-бла бла-бла-бла бла-бла-бла бла-бла-бла
-        бла-бла-бла бла-бла-бла бла-бла-бла бла-бла-бла бла-бла-бла</p>
-      <p>Описание от вас бла-бла-бла бла-бла-бла бла-бла-бла бла-бла-бла бла-бла-бла
-        бла-бла-бла бла-бла-бла бла-бла-бла бла-бла-бла бла-бла-бла</p>
+      <p id="switcher" onclick="switcher()">RUS/ENG</p>
+      <p id="genre"><i>In-game фотография, Digital Art</i></p>
+      <p id="author"><i>Автор: D3mark0</i></p>
+      <p id="сurator"><i>Куратор: Константин Ремизов</i></p>
+      <p id="place"><i>Tom Clancy's The Division 2</i></p>
+      <p id="year"><i>2020-2021</i></p>
+      <p id="description1-1"><b>D3mark0:</b></p>
+      <p id="description1-2">В качестве первичного визуального раздражителя выступили манекены - их количество, а иногда и абсолютная неуместность, довольно быстро меня задели и побудили начать снимать. В самом процессе съёмки пришла мысль, что этот образ манекена очень созвучен с аватарами игроков, ведь взаимодействие другого человека с машиной скрыто от глаз другого игрока - нет никаких ниточек, есть только сам аватар. Это была отправная точка, с которой я начал изучение. В последствии, наряду с фотографиями манекенов и игроков, туда попали и фото мягких игрушек, и NPC, причём, мёртвых NPC тоже накопилось большое количество. В какой-то момент я понял, что далеко отошёл от первоначальной идеи сопоставления манекенов и игроков, а получившийся массив фотографий отложил в сторону...</p>
+      <p id="description1-3">...Константин Ремизов предложил задействовать какие-нибудь алгоритмы распознавания, и я "скормил" все изображения нейронной сети, которая тренировалась распознавать лица по фотографиям.</p>
+      <p id="description2-1"><b>Константин Ремизов:</b></p>
+      <p id="description2-2">...ещё мне нравится как некоторые персонажи словно бы реагируют на присутствие интерфейса и на то, что они остаются невидимы для него; ну и само формирование новых внутренних связей на изображении - возникает произвольная структура, которая неизбежно выглядит неслучайной; такая эмуляция блуждающего взгляда, обращающего внимание на незначительные детали - очень характерного, например, для японского искусства...</p>
+      <p id="description2-3">...ещё одна, всем известная особенность манги - апелляция к вшитым в человеческое подсознание алгоритмам распознавания лиц, которую тот же Макклауд называет "принципом масок"; грубо говоря, чем ближе должен быть читателю персонаж, чем больше читатель должен идентифицировать его с собой, тем проще изображается его лицо — чтобы читатель смог с наименьшими допущениями спроецировать на него своё собственное...</p>
+      <p id="description2-4">...можно попробовать прочитать получившуюся серию именно через это стремление к поиску аватара в мире игры; кого-то, с кем хотелось бы себя соотнести...</p>
+      <p><a href="http://d3mark0.ru/">d3mark0.ru</a></p>
     </div>
 
     <div ID="ngy2p" data-nanogallery2='{
