@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<title>Сибирский Интернет</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
+</head>
+
+<script type="text/javascript">
+if (screen.width <= 699) {
+document.location = "mobile.html";
+}
+</script>
+
+<style>
+  html {
+  scroll-behavior: smooth;
+  }
+  body {
+    background-color: white;
+  }
+
+  ::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: #4fd8ff;
+  }
+
+  ::selection {
+    color: white;
+    background: #4fd8ff;
+  }
+
+  #title {
+    cursor: default;
+    position: absolute;
+    color: black;
+    font-family: 'PT Serif', sans-serif;
+    font-size: 20vh;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .menu {
+    cursor: pointer;
+    position: absolute;
+    color: black;
+    font-family: 'PT Serif', sans-serif;
+    font-size: 5vh;
+    overflow: hidden;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .menu:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .marker {
+    cursor: default;
+    position: absolute;
+    color: white;
+    font-family: 'PT Serif', sans-serif;
+    font-size: 3vh;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  .container img {
+    transition: transform 0.25s ease;
+    cursor: pointer;
+  }
+
+  input[type=checkbox]:checked ~ label > img {
+    transform: scale(1.5);
+    cursor: pointer;
+  }
+
+  .text {
+    cursor: default;
+    position: absolute;
+    color: black;
+    font-family: 'PT Serif', sans-serif;
+    font-size: 3vh;
+    overflow: hidden;
+    white-space: pre;
+  }
+
+  .link {
+    cursor: pointer;
+    position: absolute;
+    color: black;
+    font-family: 'PT Serif', sans-serif;
+    font-size: 4vh;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .ascii-art {
+    cursor: default;
+    position: absolute;
+    color: black;
+    font-family: monospace;
+    font-size: 1vh;
+    overflow: hidden;
+    white-space: pre;
+  }
+
+	.emoji {
+    cursor: default;
+    position: absolute;
+    font-size: 5vh;
+    overflow: hidden;
+    white-space: pre;
+  }
+</style>
+
+<body>
+  <a class="menu" href="#news" style="left:93vw; top:3vh; width: 20vh;">Новости</a>
+  <a class="menu" href="#photos" style="left:278vw; top:3vh; width: 29vh;">Фотографии</a>
+  <a class="menu" href="#about" style="left:487vw; top:3vh; width: 31vh;">Об этом всём</a>
+  <a class="menu" href="#author" style="left:859vw; top:3vh; width: 25vh;">Кто сделал</a>
+
+  <div class="marker" style="left:0vw; top:0vh;">начало</div>
+  <div class="marker" style="left:1000vw; top:1500vh;">конец</div>
+
+  <iframe id="news" style="position:absolute; left:57vw; top:453vh;" src="https://feed.mikle.com/widget/v2/143611/?preloader-text=Loading" height="400px" width="500px" class="fw-iframe" scrolling="no" frameborder="0"></iframe>
+
+  <div id="photos" style="position:absolute; left:723vw; top:283vh;" class="container">
+    <input type="checkbox" id="zoomCheck0">
+    <label for="zoomCheck0">
+      <img src="https://source.unsplash.com/200x300/?siberia">
+    </label>
+  </div>
+
+  <div style="position:absolute; left:762vw; top:270vh;" class="container">
+    <input type="checkbox" id="zoomCheck1">
+    <label for="zoomCheck1">
+      <img src="https://source.unsplash.com/300x350/?siberia">
+    </label>
+  </div>
+
+  <div style="position:absolute; left:716vw; top:349vh;" class="container">
+    <input type="checkbox" id="zoomCheck2">
+    <label for="zoomCheck2">
+      <img src="https://source.unsplash.com/300x200/?siberia">
+    </label>
+  </div>
+
+  <div style="position:absolute; left:776vw; top:352vh;" class="container">
+    <input type="checkbox" id="zoomCheck3">
+    <label for="zoomCheck3">
+      <img src="https://source.unsplash.com/250x300/?siberia">
+    </label>
+  </div>
+
+  <div id="about" class="text" style="left:398vw; top:1123vh;">
+В январе 2020го мы с друзьями хотели съездить в другой город
+на машине, и вот когда мы рассматривали варианты, меня вдруг «ударило»:
+как же всё далеко! До того же Новосибирска из Красноярска ехать 788 км,
+до Иркутска - 1060! А потом паззл сложился окончательно, когда в голове
+всплыли образы пригорода или того, что называют «за город»:
+гигантские квадратные метры, на которых нет людей.
+А нет людей - нет и информации.
+
+    - D3mark0
+  </div>
+
+  <div class="text" style="left:458vw; top:1051vh;">
+Красноярский диджитал-художник d3mark0 (“демарко”) иронизирует
+над огромными сибирскими далями, ведь это нам очень хорошо знакомо:
+что нам - на выходные смотаться в Новосибирск, или в Ергаки!
+Веб-страница устроена таким образом, что кликнуть по ссылке
+или прокрутить вниз придется очень долго -
+примерно как от Красноярска до Новосибирска.
+
+    - Оксана Будулак
+  </div>
+
+  <div id="author" class="text" style="left:981vw; top:1242vh;">
+Автор: D3mark0
+Кураторка: Оксана Будулак
+
+«ВСЁ ИЛИ ВСЁ»
+АВАНТЮРИЗМ. СИБИРЬ
+
+Красноярск
+2021
+  </div>
+
+  <a class="link" href="http://d3mark0.ru/" style="left:983vw; top:1279vh;">http://d3mark0.ru/</a>
+
+  <div class="ascii-art" style="left:118vw; top:750vh;">
+                                              .
+                                   .         ;
+      .              .              ;%     ;;
+        ,           ,                :;%  %;
+         :         ;                   :;%;'     .,
+,.        %;     %;            ;        %;'    ,;
+  ;       ;%;  %%;        ,     %;    ;%;    ,%'
+   %;       %;%;      ,  ;       %;  ;%;   ,%;'
+    ;%;      %;        ;%;        % ;%;  ,%;'
+     `%;.     ;%;     %;'         `;%%;.%;'
+      `:;%.    ;%%. %@;        %; ;@%;%'
+         `:%;.  :;bd%;          %;@%;'
+           `@%:.  :;%.         ;@@%;'
+             `@%.  `;@%.      ;@@%;
+               `@%%. `@%%    ;@@%;
+                 ;@%. :@%%  %@@%;
+                   %@bd%%%bd%%:;
+                     #@%%%%%:;;
+                     %@@%%%::;
+                     %@@@%(o);  . '
+                     %@@@o%;:(.,'
+                 `.. %@@@o%::;
+                    `)@@@o%::;
+                     %@@(o)::;
+                    .%@@@@%::;
+                    ;%@@@@%::;.
+                   ;%@@@@%%:;;;.
+               ...;%@@@@@%%:;;;;,..
+  </div>
+
+	<div class="ascii-art" style="left:1vw; top:323vh;">
+          &&& &&  & &&
+      && &\/&\|& ()|/ @, &&
+      &\/(/&/&||/& /_/)_&/_&
+   &() &\/&|()|/&\/ '%" & ()
+  &_\_&&_\ |& |&&/&__%_/_& &&
+&&   && & &| &| /& & % ()& /&&
+ ()&_---()&\&\|&&-&&--%---()~
+     &&     \|||
+             |||
+             |||
+             |||
+       , -=-~  .-^- _
+  </div>
+
+	<div class="ascii-art" style="left:523vw; top:185vh;">
+               ,@@@@@@@,
+       ,,,.   ,@@@@@@/@@,  .oo8888o.
+    ,&%%&%&&%,@@@@@/@@@@@@,8888\88/8o
+   ,%&\%&&%&&%,@@@\@@@/@@@88\88888/88'
+   %&&%&%&/%&&%@@\@@/ /@@@88888\88888'
+   %&&%/ %&%%&&@@\ V /@@' `88\8 `/88'
+   `&%\ ` /%&'    |.|        \ '|8'
+       |o|        | |         | |
+       |.|        | |         | |
+    \\/ ._\//_/__/  ,\_//__\\/.  \_//__/_
+  </div>
+
+	<div class="ascii-art" style="left:63vw; top:1459vh;">
+     ccee88oo
+  C8O8O8Q8PoOb o8oo
+ dOB69QO8PdUOpugoO9bD
+CgggbU8OU qOp qOdoUOdcb
+    6OuU  /p u gcoUodpP
+      \\\//  /douUP
+        \\\////
+         |||/\
+         |||\/
+         |||||
+   .....//||||\....
+  </div>
+
+	<div class="ascii-art" style="left:251vw; top:909vh;">
+         . . .
+       .        .  .     ..    .
+    .                 .         .  .
+                    .
+                   .                ..
+   .          .            .              .
+   .            '.,        .               .
+   .              'b      *
+    .              '$    #.                ..
+   .    .           $:   #:               .
+ ..      .  ..      *#  @):        .   . .
+              .     :@,@):   ,.**:'   .
+  .      .,         :@@*: ..**'      .   .
+           '#o.    .:(@'.@*"'  .
+   .  .       'bq,..:,@@*'   ,*      .  .
+              ,p$q8,:@)'  .p*'      .
+       .     '  . '@@Pp@@*'    .  .
+        .  . ..    Y7'.'     .  .
+                  :@):.
+                 .:@:'.
+               .::(@:.
+  </div>
+
+	<div class="ascii-art" style="left:323vw; top:407vh;">
+    oxoxoo    ooxoo
+  ooxoxo oo  oxoxooo
+ oooo xxoxoo ooo ooox
+ oxo o oxoxo  xoxxoxo
+  oxo xooxoooo o ooo
+    ooo\oo\  /o/o
+        \  \/ /
+         |   /
+         |  |
+         | D|
+         |  |
+         |  |
+  ______/____\____
+  </div>
+
+	<div class="ascii-art" style="left:733vw; top:754vh;">
+      %%%,%%%%%%%
+       ,'%% \\-*%%%%%%%
+ ;%%%%%*%   _%%%%"
+  ,%%%       \(_.*%%%%.
+  % *%%, ,%%%%*(    '
+%^     ,*%%% )\|,%%*%,_
+     *%    \/ #).-"*%%*
+         _.) ,/ *%,
+ _________/)#(_____________
+  </div>
+
+	<div class="ascii-art" style="left:560vw; top:1090vh;">
+        # #### ####
+      ### \/#|### |/####
+     ##\/#/ \||/##/_/##/_#
+   ###  \/###|/ \/ # ###
+ ##_\_#\_\## | #/###_/_####
+## #### # \ #| /  #### ##/##
+ __#_--###`  |{,###---###-~
+           \ }{
+            }}{
+            }}{
+            {{}
+      , -=-~{ .-^- _
+            `}
+             {
+  </div>
+
+	<div class="ascii-art" style="left:879vw; top:63vh;">
+                                               |
+                                              -x-
+                                               |
+              v .   ._, |_  .,
+           `-._\/  .  \ /    |/_
+               \\  _\, y | \//
+         _\_.___\\, \\/ -.\||
+           `7-,--.`._||  / / ,
+           /'     `-. `./ / |/_.'
+                     |    |//
+                     |_    /
+                     |-   |
+                     |   =|
+                     |    |
+--------------------/ ,  . \--------._
+  </div>
+
+	<div class="ascii-art" style="left:408vw; top:202vh;">
+       ###
+      #o###
+    #####o###
+   #o#\#|#/###
+    ###\|/#o#
+     # }|{  #
+       }|{
+	</div>
+
+	<div class="ascii-art" style="left:622vw; top:1303vh;">
+            @
+      @ @ @  @ @ @
+    @  @\/@ @ /__@
+    @@@ @\ / @/  @ @
+   @\  \/@| @ | @
+  @__\@ \ |/ \| / @
+     __\|@|  ||/__/@
+    /  \ \\  / /__
+   @    \  \/ /   @
+         |" '|
+         |"  |
+         |"  |
+        ~|"  |~
+    ~~~~       ~~~~
+  ~~               ~~~
+	</div>
+
+	<div class="ascii-art" style="left:777vw; top:505vh;">
+         ; ; ;
+       ;        ;  ;     ;;    ;
+    ;                 ;         ;  ;
+                    ;
+                   ;                ;;
+   ;          ;            ;              ;
+   ;            ';,        ;               ;
+   ;              'b      *
+    ;              '$    ;;                ;;
+   ;    ;           $:   ;:               ;
+ ;;      ;  ;;      *;  @):        ;   ; ;
+              ;     :@,@):   ,;**:'   ;
+  ;      ;,         :@@*: ;;**'      ;   ;
+           ';o;    ;:(@';@*"'  ;
+   ;  ;       'bq,;;:,@@*'   ,*      ;  ;
+              ,p$q8,:@)'  ;p*'      ;
+       ;     '  ; '@@Pp@@*'    ;  ;
+        ;  ; ;;    Y7'.'     ;  ;
+                  :@):.
+                 .:@:'.
+               .::(@:.
+	</div>
+
+		<div class="ascii-art" style="left:902vw; top:203vh;">
+            .        +          .      .          .
+     .            _        .                    .
+  ,              /;-._,-.____        ,-----.__
+ ((        .    (_:#::_.:::. `-._   /:, /-._, `._,
+  `                 \   _|`"=:_::.`.);  \ __/ /
+                      ,    `./  \:. `.   )==-'  .
+    .      ., ,-=-.  ,\, +#./`   \:.  / /           .
+.           \/:/`-' , ,\ '` ` `   ): , /_  -o
+       .    /:+- - + +- : :- + + -:'  /(o-) \)     .
+  .      ,=':  \    ` `/` ' , , ,:' `'--".--"---._/`7
+   `.   (    \: \,-._` ` + '\, ,"   _,--._,---":.__/
+              \:  `  X` _| _,\/'   .-'
+.               ":._:`\____  /:'  /      .           .
+                    \::.  :\/:'  /              +
+   .                 `.:.  /:'  }      .
+           .           ):_(:;   \           .
+                      /:. _/ ,  |
+                   . (|::.     ,`                  .
+     .                |::.    {\
+                      |::.\  \ `.
+                      |:::(\    |
+              O       |:::/{ }  |                  (o
+               )  ___/#\::`/ (O "==._____   O, (O  /`
+          ~~~w/w~"~~,\` `:/,-(~`"~~~~~~~~"~o~\~/~w|/~
+      ~~~~~~~~~~~~~~~~~~~~~~~\\W~~~~~~~~~~~~\|/~~
+		</div>
+
+	<div class="emoji" style="left:123vw; top:522vh;">&#127794;</div>
+	<div class="emoji" style="left:676vw; top:223vh;">&#127794;</div>
+	<div class="emoji" style="left:78vw; top:1400vh;">&#127794;</div>
+	<div class="emoji" style="left:572vw; top:1323vh;">&#127794;</div>
+	<div class="emoji" style="left:409vw; top:888vh;">&#127794;</div>
+	<div class="emoji" style="left:823vw; top:322vh;">&#127794;</div>
+	<div class="emoji" style="left:666vw; top:100vh;">&#127794;</div>
+
+	<div class="emoji" style="left:558vw; top:76vh;">&#127795;</div>
+	<div class="emoji" style="left:178vw; top:476vh;">&#127795;</div>
+	<div class="emoji" style="left:323vw; top:406vh;">&#127795;</div>
+	<div class="emoji" style="left:907vw; top:602vh;">&#127795;</div>
+	<div class="emoji" style="left:707vw; top:321vh;">&#127795;</div>
+	<div class="emoji" style="left:500vw; top:500vh;">&#127795;</div>
+
+  <div id="title" style="left:500vw; top:750vh;">Сибирский Интернет</div>
+</body>
+
+</html>
