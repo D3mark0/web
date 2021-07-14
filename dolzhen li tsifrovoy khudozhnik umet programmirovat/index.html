@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<title>Должен ли цифровой художник уметь программировать?</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono">
+</head>
+
+<style>
+  body {
+    background-color: yellow;
+  }
+
+  #header {
+    width: 80%;
+    max-width: 50vw;
+    margin: auto;
+    padding: 1vh;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 25vh;
+    color: black;
+  }
+
+  #text {
+    margin-top: 0;
+    margin: auto;
+    padding: 10vh;
+    height: 15vh;
+    font-family: 'PT Serif', sans-serif;
+    font-size: 10vh;
+    color: red;
+  }
+
+  #progress {
+    display: none;
+    height: 15vh;
+  }
+
+  #progressbar {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 5vw;
+  }
+
+  #answer {
+    width: 25vw;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    padding: 2vh;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 4vh;
+    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 100%);
+    color: white;
+    cursor: pointer;
+  }
+
+  #hidden {
+    width: 25vw;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    padding: 0;
+    border: none;
+    background: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 4vh;
+    background-color: yellow;
+    color: yellow;
+    cursor: pointer;
+  }
+
+  #no {
+    display: none;
+    width: 80%;
+    max-width: 50vw;
+    margin: auto;
+    padding: 1vh;
+    font-family: 'PT Mono', monospace;
+    font-size: 50vh;
+    color: black;
+  }
+</style>
+
+<body>
+  <div id="header">Должен ли цифровой художник уметь программировать?</div>
+  <div id="text">Хороший вопрос...</div>
+  <button id="answer" onclick="progress()" type="button">Получить ответ</button>
+  <button id="hidden" onclick="no()" type="button">Получить ответ ещё разочек</button>
+  <div id="progress" class="progress">
+    <div id="progressbar" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100" style="width:23%">
+      23%
+    </div>
+  </div>
+  <div id="no">Нет.</div>
+
+  <script>
+  function progress() {
+    var x = document.getElementById("progress");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function no() {
+    document.getElementById("header").style.display = "none";
+    document.getElementById("text").style.display = "none";
+    document.getElementById("answer").style.display = "none";
+    document.getElementById("hidden").style.display = "none";
+    document.getElementById("progress").style.display = "none";
+
+    document.getElementById("no").style.display = "block";
+  }
+  </script>
+</body>
+</html>
