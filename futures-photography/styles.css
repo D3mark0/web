@@ -1,0 +1,84 @@
+body {
+  background-color: #f8d989;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: black;
+}
+
+::selection {
+  color: white;
+  background: black;
+}
+
+#title {
+  cursor: default;
+  position: absolute;
+  color: black;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 10vh;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.text {
+  cursor: default;
+  position: absolute;
+  color: black;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 3vh;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.link {
+  cursor: pointer;
+  position: absolute;
+  color: black;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 3vh;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.content {
+  position: absolute;
+}
+
+.dropbtn {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  background-color: #f8d989;
+  color: black;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 3vh;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  text-align: center;
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 100px;
+  overflow: auto;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #f8d989;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 3vh;
+  text-decoration: none;
+  display: block;
+}
+
+.show {display: block;}
