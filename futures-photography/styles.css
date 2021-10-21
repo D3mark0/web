@@ -29,7 +29,6 @@ body {
   font-family: 'PT Sans', sans-serif;
   font-size: 3vh;
   overflow: hidden;
-  white-space: nowrap;
 }
 
 .link {
