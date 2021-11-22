@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<title>Submarine Commander</title>
+
+<script type="text/javascript" src="sc.js"></script>
+
+<script type="text/javascript">
+if (screen.width <= 699) {
+document.location = "mobile.html";
+}
+</script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
+  <link rel="stylesheet" href="sc.css">
+</head>
+
+<body>
+
+  <div class="title-container">
+    <p>Submarine Commander</p>
+  </div>
+
+  <div class="caption-container-float" style="left:53px; bottom:23px;" onclick="openModal('modal1');">
+    <p>архив</p>
+  </div>
+
+  <div class="caption-container-float" style="left:326px; bottom:10px;" onclick="openModal('modal2');">
+    <p>память</p>
+  </div>
+
+  <div class="caption-container-float" style="left:797px; bottom:37px;" onclick="openModal('modal3');">
+    <p>найти</p>
+  </div>
+
+  <div class="caption-container-float" style="right:587px; bottom:19px;" onclick="openModal('modal4');">
+    <p>восстановить</p>
+  </div>
+
+  <div class="caption-container-float" style="right:146px; bottom:12px;" onclick="openModal('modal5');">
+    <p>место</p>
+  </div>
+
+  <div id="modal1" class="modal">
+    <span class="close cursor" onclick="closeModal('modal1')">&nbsp;&#10005;&nbsp;</span>
+    <div class="modal-content">
+      <div class="caption-container">
+        <p>архив</p>
+      </div>
+      <div class="modal-column">
+        <div class="text-container">
+          <p>Родители подарили мне PlayStation One. Конечно, это была идея папы.</p>
+          <p>Компьютера у нас не было, зато Денди я получил ещё в детском саду. Такой крупный апгрейд до PS1, конечно, произвёл на меня впечатление.</p>
+          <p>Я уже не помню, что именно я испытывал, когда только начинал играть в крупные по тем временам 3D-проекты. Оглядываясь назад - это явно на меня повлияло.</p>
+        </div>
+      </div>
+      <div class="modal-column">
+        <img src="media/1-0.jpg" style="width:100%">
+        <img src="media/1-1.jpg" style="width:100%">
+        <img src="media/1-2.jpg" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <span class="close cursor" onclick="closeModal('modal2')">&nbsp;&#10005;&nbsp;</span>
+    <div class="modal-content">
+      <div class="caption-container">
+        <p>память</p>
+      </div>
+      <div class="modal-column">
+        <div class="text-container">
+          <p>Submarine Commander - это первая сюжетная игра, которую я прошёл полностью.</p>
+          <p>По крайней мере, мне так кажется.</p>
+          <p>Папа часто говорил что-то в духе "Немного поиграешь, а потом бросаешь и включаешь другую игру, хаха!". И я с этим согласен - дисков с играми у меня было очень много.</p>
+          <p>Папа покупал мне их, а ещё приносил от своего коллеги по работе - он резал болванки с играми и подписывал их зелёным маркером.</p>
+        </div>
+      </div>
+      <div class="modal-column">
+        <p></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <span class="close cursor" onclick="closeModal('modal3')">&nbsp;&#10005;&nbsp;</span>
+    <div class="modal-content">
+      <div class="caption-container">
+        <p>найти</p>
+      </div>
+      <div class="modal-column">
+        <div class="text-container">
+          <p>Нарезать игру для PlayStation One в 2021ом году не такая уж и тривиальная задача.</p>
+          <p>Во-первых, нужно иметь в доступности дисковод с CD болванкой. Причём, именно CD-R. RW эта приставка просто не прочитает.</p>
+          <p>Во-вторых, нужно найти образ игры. То есть, файл, который потом нарежется на CD. И вот тут выясняется, что ту же Submarine Commander можно найти в трёх разных версия: английская версия, русская от Paradox и русская от Вектор. Воспользовавшись скриншотами (не факт, что они корректны, конечно), я решил, что с большей долей вероятности играл с корявым переводом от Вектора.</p>
+          <p>В-третьих, нужно уметь пользоваться программами для нарезки. Благо, вспомнив про PS1 где-то два года назад, я уже изрядно потренировался.</p>
+        </div>
+      </div>
+      <div class="modal-column">
+        <img src="media/3-4.png" style="width:100%">
+        <img src="media/3-1.jpg" style="width:100%">
+        <img src="media/3-0.jpg" style="width:100%">
+        <img src="media/3-2.webp" style="width:100%">
+        <img src="media/3-3.webp" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <span class="close cursor" onclick="closeModal('modal4')">&nbsp;&#10005;&nbsp;</span>
+    <div class="modal-content">
+      <div class="caption-container">
+        <p>восстановить</p>
+      </div>
+      <div class="modal-column">
+        <div class="text-container">
+          <p>Я точно помню, что та нарезанная болванка с Submarine Commander была подписана зелёным маркером.</p>
+          <p>Ни разу не видел того папиного коллегу вживую, даже не помню, как его зовут. Но нарезанных от него игр у меня было очень много.</p>
+          <p>Зато много раз видел его почерк. Как-то очень забавно одна буква переплеталась с другой.</p>
+          <p>Болванки всегда были серебристыми.</p>
+        </div>
+      </div>
+      <div class="modal-column">
+        <img src="media/4-0.jpg" style="width:100%">
+        <img src="media/4-1.jpg" style="width:100%">
+        <img src="media/4-2.jpg" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div id="modal5" class="modal">
+    <span class="close cursor" onclick="closeModal('modal5')">&nbsp;&#10005;&nbsp;</span>
+    <div class="modal-content">
+      <div class="caption-container">
+        <p>место</p>
+      </div>
+      <div class="modal-column">
+        <div class="text-container">
+          <p></p>
+        </div>
+      </div>
+      <div class="modal-column">
+          <video controls style="width:100%" src="media/5.webm">
+      </div>
+    </div>
+  </div>
+
+  <div id="blocked">
+    <div id="message">Пожалуйста, разверните страницу на весь экран.</div>
+  </div>
+
+</body>

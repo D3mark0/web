@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #AFD2E9;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #4A5759;
+  background: #CCFF66;
+}
+
+::selection {
+  color: #4A5759;
+  background: #CCFF66;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding: 50px 0 0 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #AFD2E9;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #AFD2E9;
+  margin: auto;
+  padding: 0;
+  width: 75%;
+}
+
+.modal-column {
+  float: left;
+  width: 50%;
+}
+
+.modal-column img {
+  vertical-align: top;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  /*font-size: 35px;
+  font-weight: bold;*/
+  font-family: 'PT Serif', sans-serif;
+  font-size: 25px;
+}
+
+.close:hover {
+  background: #F75C03;
+  color: #4A5759;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.title-container {
+  cursor: default;
+  text-align: center;
+  background-color: #FFD3E8;
+  padding: 75px 75px;
+  color: #4A5759;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 70px;
+}
+
+.caption-container {
+  cursor: default;
+  text-align: center;
+  background-color: #FFD3E8;
+  padding: 10px 10px;
+  color: #4A5759;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.text-container {
+  cursor: default;
+  text-align: left;
+  background-color: #AFD2E9;
+  padding: 10px 30px;
+  color: #4A5759;
+  font-family: 'PT Serif', sans-serif;
+  font-size: 20px;
+}
+
+.caption-container-float {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+  width: 200px;
+  padding: 10px 10px;
+  color: #AFD2E9;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.caption-container-float:hover {
+  background: #4A5759;
+  color: #F75C03;
+}
+
+#blocked {
+  display: none;
+  position: fixed;
+  z-index: 101;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #AFD2E9;
+}
+
+#message {
+  cursor: default;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  white-space: normal;
+  text-align: center;
+  font-family: 'PT Serif', sans-serif;
+  font-size: 20px;
+  background-color: #AFD2E9;
+  color: #4A5759;
+}
+
+@media only screen and (max-width: 1280px) {
+  #blocked {
+    display: block;
+  }
+  body {
+    overflow-y: hidden;
+  }
+}
