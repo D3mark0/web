@@ -1,0 +1,75 @@
+body {
+  background-color: #FC80A5;
+  background-repeat: repeat;
+}
+
+#main {
+  width: 80%;
+  max-width: 50vw;
+  border: 0.5vh #FFD0B9 solid;
+  margin: auto;
+  padding: 1vh;
+  font-family: 'PT Mono', monospace;
+  font-size: 2vh;
+  background-color: #33CC99;
+  color: #1A1110;
+  border-radius: 1vh;
+}
+
+#header {
+  margin-top: 0;
+  border: 1vh solid #FF6EFF;
+  padding: 3vh;
+  height: 15vh;
+  background-color: #FF8833;
+  background-repeat: repeat;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 5vh;
+  color: #FF4466;
+}
+
+h2 {
+  clear: both;
+  padding-top: 2vh;
+  font-family: 'PT Serif', sans-serif;
+  font-size: 3vh;
+  color: #FFF700;
+}
+
+button {
+  width: 15vw;
+  margin-top: 2vh;
+  font-family: 'PT Mono', monospace;
+  font-size: 4vh;
+  background-color: #FF007C;
+  color: #FEFEFA;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+}
+
+input {
+  width: 2vw;
+  margin-left: 2vw;
+}
+
+#answer {
+  margin: 2vh;
+  padding: 2vh;
+  background-color: #FC80A5;
+  align-items: center;
+}
+
+#image {
+  width: 80%;
+}
+
+#prediction {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 5vh;
+  color: #FF8833;
+  background-color: #FEFEFA;
+  text-align: center;
+}

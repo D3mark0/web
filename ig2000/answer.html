@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <title>Интернет Гадание 2000</title>
+<script type="text/javascript" src="functions.js"></script>
+<script type="text/javascript" src="html2canvas.min.js"></script>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,79 +10,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-<script type="text/javascript">
-    function backgr() {
-      var backimg = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg", "img/6.jpg","img/7.jpg","img/8.jpg","img/9.jpg","img/10.jpg", "img/11.jpg","img/12.jpg","img/13.jpg","img/14.jpg","img/15.jpg", "img/16.jpg","img/17.jpg","img/18.jpg","img/19.jpg","img/20.jpg", "img/21.jpg"];
-      var randimg1 =Math.floor(Math.random()*21);
-      var randimg2 =Math.floor(Math.random()*21);
-      document.body.background = backimg[randimg1];
-      document.getElementById('header').style.backgroundImage='url('+ backimg[randimg2] + ')';
-    }
-
-    function openNewURLInTheSameWindow(targetURL) {
-        var a = document.createElement('a');
-        a.href = targetURL;
-        fireClickEvent(a);
-    }
-</script>
-
-<style>
-  body {
-    background-color: #FC80A5;
-    background-repeat: repeat;
-  }
-
-  #main {
-    width: 80%;
-    max-width: 50vw;
-    border: 0.5vh #FFD0B9 solid;
-    margin: auto;
-    padding: 1vh;
-    font-family: 'PT Mono', monospace;
-    font-size: 2vh;
-    background-color: #33CC99;
-    color: #1A1110;
-    border-radius: 1vh;
-  }
-
-  #header {
-    margin-top: 0;
-    border: 1vh solid #FF6EFF;
-    padding: 3vh;
-    height: 15vh;
-    background-color: #FF8833;
-    background-repeat: repeat;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 5vh;
-    color: #FF4466;
-  }
-  h2 {
-    clear: both;
-    padding-top: 2vh;
-    font-family: 'PT Serif', sans-serif;
-    font-size: 3vh;
-    color: #FFF700;
-  }
-
-  button {
-    width: 15vw;
-    margin-top: 2vh;
-    font-family: 'PT Mono', monospace;
-    font-size: 4vh;
-    background-color: #FF007C;
-    color: white;
-    cursor: pointer;
-  }
-
-  p {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 5vh;
-    color: #FF6EFF;
-    background-color: #FEFEFA;
-  }
-</style>
 
 <body>
   <div id="main">
@@ -88,13 +19,30 @@
     <h1>Интернет Гадание 2000</h1>
   </div>
   <h2>Гадание окончено! Результат:</h2>
-  <img id="image" src="1.jpg">
-  <p>Однажды вы найдёте способ сделать свою жизнь лучшим другом.</p>
+  <div id="answer">
+    <center><img id="image" src="1.jpg"></center>
+    <div id="prediction">Однажды вы найдёте способ сделать свою жизнь лучшим другом.</div>
+  </div>
+  <button id="download" type="button">Сохранить гадание</button>
+    <p>или</p>
   <button onclick="location.href='index.html'" type="button">Погадать ещё...</button>
   </div>
+  <canvas id="canvas"></canvas>
 
   <script>
-      backgr();
+    document.getElementById("download").addEventListener("click", function() {
+        html2canvas(document.querySelector("#answer")).then(canvas => {
+            var link = document.createElement('a');
+            link.download = 'mystery.png';
+            link.href = canvas.toDataURL();
+            link.click();
+            link.delete;
+        });
+    });
+
+    backgroundChange();
+    answerGenerator();
   </script>
+
 </body>
 </html>
