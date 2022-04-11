@@ -6,11 +6,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono">
-  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
   </div>
   <h2>Гадание окончено! Результат:</h2>
   <div id="answer">
-    <center><img id="image" src="1.jpg"></center>
+    <center><img id="image" src="default.jpg"></center>
     <div id="prediction">Однажды вы найдёте способ сделать свою жизнь лучшим другом.</div>
   </div>
   <button id="download" type="button">Сохранить гадание</button>
@@ -40,6 +40,7 @@
         });
     });
 
+    stylesSetup();
     backgroundChange();
     answerGenerator();
   </script>

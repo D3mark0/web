@@ -5,42 +5,42 @@ body {
 
 #main {
   width: 80%;
-  max-width: 50vw;
-  border: 0.5vh #FFD0B9 solid;
+  max-width: 90vw;
+  border: 0.5vw #FFD0B9 solid;
   margin: auto;
-  padding: 1vh;
+  padding: 2vw;
   font-family: 'PT Mono', monospace;
-  font-size: 2vh;
+  font-size: 4vw;
   background-color: #33CC99;
   color: #1A1110;
-  border-radius: 1vh;
+  border-radius: 2vw;
 }
 
 #header {
   margin-top: 0;
-  border: 1vh solid #FF6EFF;
-  padding: 3vh;
-  height: 15vh;
+  border: 2vw solid #FF6EFF;
+  padding: 3vw;
+  height: 20vh;
   background-color: #FF8833;
   background-repeat: repeat;
   font-family: 'PT Sans', sans-serif;
-  font-size: 5vh;
+  font-size: 5vw;
   color: #FF4466;
 }
 
 h2 {
   clear: both;
-  padding-top: 2vh;
+  padding-top: 4vw;
   font-family: 'PT Serif', sans-serif;
-  font-size: 3vh;
+  font-size: 6vw;
   color: #FFF700;
 }
 
 button {
-  width: 15vw;
-  margin-top: 2vh;
+  width: 30vw;
+  margin-top: 4vw;
   font-family: 'PT Mono', monospace;
-  font-size: 4vh;
+  font-size: 8vw;
   background-color: #FF007C;
   color: #FEFEFA;
   cursor: pointer;
@@ -51,24 +51,24 @@ label {
 }
 
 input {
-  width: 2vw;
-  margin-left: 2vw;
+  width: 4vw;
+  margin-left: 4vw;
 }
 
 #answer {
-  margin: 2vh;
-  padding: 2vh;
+  margin: 4vw;
+  padding: 4vw;
   background-color: #FC80A5;
   align-items: center;
 }
 
 #image {
-  width: 80%
+  width: 100%;
 }
 
 #prediction {
   font-family: 'PT Sans', sans-serif;
-  font-size: 5vh;
+  font-size: 7vw;
   color: #FF8833;
   background-color: #FEFEFA;
   text-align: center;

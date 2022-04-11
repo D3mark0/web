@@ -1,3 +1,13 @@
+function stylesSetup() {
+  var theme = document.getElementsByTagName('link')[0];
+
+  if (screen.width > screen.height) {
+      theme.setAttribute('href', 'styles.css');
+  } else {
+      theme.setAttribute('href', 'styles-mobile.css');
+  }
+}
+
 function backgroundChange() {
   var randimg1 =Math.floor(Math.random()*34) + 1;
   var randimg2 =Math.floor(Math.random()*34) + 1;
