@@ -73,3 +73,13 @@ input {
   background-color: #FEFEFA;
   text-align: center;
 }
+
+.range {
+  width: 32vw;
+  margin-left: 2vw;
+}
+
+.calendar {
+  width: 16vw;
+  margin-left: 4vw;
+}

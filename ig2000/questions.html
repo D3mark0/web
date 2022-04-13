@@ -19,35 +19,26 @@
   </div>
   <form id="form1">
 
-  <h2>Вопрос 1</h2>
-  <label for='11'><input type="radio" name="first" id="11"/>Ответ 1</label>
-  <label for='12'><input type="radio" name="first" id="12"/>Ответ 2</label>
-  <label for='13'><input type="radio" name="first" id="13"/>Ответ 3</label>
-  <label for='14'><input type="radio" name="first" id="14"/>Ответ 4</label>
+  <h2>Деньги или приз?</h2>
+  <input class="range" type="range" name="money" min="0" max="11"><label for="money">деньги</label>
+  <input class="range" type="range" name="prize" min="0" max="5"><label for="prize">приз</label>
 
-  <h2>Вопрос 2</h2>
-  <label for='21'><input type="radio" name="second" id="21"/>Ответ 1</label>
-  <label for='22'><input type="radio" name="second" id="22"/>Ответ 2</label>
-  <label for='23'><input type="radio" name="second" id="23"/>Ответ 3</label>
-  <label for='24'><input type="radio" name="second" id="24"/>Ответ 4</label>
+  <h2>Ваша любимая дата:</h2>
+  <input class="calendar" type="date" id="start" name="trip-start" value="2022-04-16" min="1337-01-01" max="2228-01-01">
 
-  <h2>Вопрос 3</h2>
-  <label for='31'><input type="radio" name="third" id="31"/>Ответ 1</label>
-  <label for='32'><input type="radio" name="third" id="32"/>Ответ 2</label>
-  <label for='33'><input type="radio" name="third" id="33"/>Ответ 3</label>
-  <label for='34'><input type="radio" name="third" id="34"/>Ответ 4</label>
+  <h2>Что вы сегодня съели на завтрак?</h2>
+  <textarea name="comment" cols="40" rows="3"></textarea>
 
-  <h2>Вопрос 4</h2>
-  <label for='41'><input type="radio" name="fourth" id="41"/>Ответ 1</label>
-  <label for='42'><input type="radio" name="fourth" id="42"/>Ответ 2</label>
-  <label for='43'><input type="radio" name="fourth" id="43"/>Ответ 3</label>
-  <label for='44'><input type="radio" name="fourth" id="44"/>Ответ 4</label>
+  <h2>котики или пёсики</h2>
+  <label for='1'><input type="radio" name="fourth" id="1"/>котики</label>
+  <label for='2'><input type="radio" name="fourth" id="2"/>пёсики</label>
 
   <h2>Вопрос 5</h2>
-  <label for='51'><input type="radio" name="fifth" id="51"/>Ответ 1</label>
-  <label for='52'><input type="radio" name="fifth" id="52"/>Ответ 2</label>
-  <label for='53'><input type="radio" name="fifth" id="53"/>Ответ 3</label>
-  <label for='54'><input type="radio" name="fifth" id="54"/>Ответ 4</label>
+  <label for='51'><input type="radio" name="second" id="51"/>Ответ 1</label>
+  <label for='52'><input type="radio" name="second" id="52"/>Ответ 2</label>
+  <label for='53'><input type="radio" name="second" id="53"/>Ответ 3</label>
+  <label for='54'><input type="radio" name="second" id="254"/>Ответ 4</label>
+
 
   <button onclick="location.href='answer.html'" type="button">Получить предсказание</button>
   </form>
