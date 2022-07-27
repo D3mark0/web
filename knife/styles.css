@@ -1,0 +1,45 @@
+body {
+  background-image: url('horizontal.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#title {
+  cursor: default;
+  display: block;
+  max-width: 75%;
+  white-space: nowrap;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 5vw;
+}
+
+.link {
+  z-index: 2;
+  cursor: pointer;
+  margin: 0;
+  display: block;
+  max-width: 50%;
+  background: white;
+  color: black;
+  text-align: center;
+  padding: 1vw 1vw;
+  text-decoration: none;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1vw;
+}
+
+.link:hover {
+  background: black;
+  color: white;
+}
+
+::-moz-selection {
+  color: white;
+  background: black;
+}
+
+::selection {
+  color: white;
+  background: black;
+}
