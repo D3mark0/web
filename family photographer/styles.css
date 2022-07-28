@@ -90,3 +90,13 @@ body {
 .nGY2 .toolbar {
   font-family: 'PT Sans', sans-serif;
 }
+
+::-moz-selection {
+  color: white;
+  background: #4fd8ff;
+}
+
+::selection {
+  color: white;
+  background: #4fd8ff;
+}
