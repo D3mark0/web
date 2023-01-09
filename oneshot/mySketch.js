@@ -1,12 +1,16 @@
 function setup() {
-	createCanvas(480, 640);
-  	cam = createCapture({ audio: false, video: { width:  {max: 480} , height: {max: 640}, facingMode: "environment" } });
+
+	pixelDensity(1);
+	createCanvas(480,640);
+
+  cam = createCapture({ audio: false, video: { width: {max: 480}, height: {max: 640}, facingMode: "environment" } });
 	cam.hide(); 
 	cam.width=1;
-	img = createGraphics(480,640);
-	img_new = createGraphics(480,640);
-	img.imageMode(CENTER);
+	img_cam = createGraphics(480,640);
+	img_get = createGraphics(480,640);
+	img_cam.imageMode(CENTER);
 	frame = 0;
+
 }
 
 function draw() {
@@ -17,6 +21,7 @@ function draw() {
 	if (frame==3) drawF3();
 	if (frame==4) drawF4();
 	if (frame==5) drawF5();
+	if (frame==6) drawF6();
 }
 
 // looking for camera
@@ -28,15 +33,16 @@ function drawF0() {
 
 // shooting
 function drawF1() {
-	img.image(cam,240,320); 
-	image(img,0,0);
+	let k = height/cam.height;
+	img_cam.image(cam,240,320,cam.width*k,cam.height*k); 
+	image(img_cam,0,0);
 	textSize(65).fill(255).noStroke().text("📸",width/2,height*0.90);
 	if (mouseIsPressed && mouseY>height*0.8) { mouseIsPressed=false; frame=2; }
 }
 
 // shot preview
 function drawF2() {
-	image(img,0,0);
+	image(img_cam,0,0);
 	textSize(65).fill(255).noStroke().text("🔁",width*0.25,height*0.90);
 	textSize(65).fill(255).noStroke().text("✉️",width*0.75,height*0.90);
 	if (mouseIsPressed && mouseY>height*0.8 && mouseX<width*0.5) { mouseIsPressed=false; frame=1; }
@@ -45,32 +51,42 @@ function drawF2() {
 
 // downloading image from the server
 function drawF3() {
-	image(img,0,0);
-	img_new = loadImage('img.jpg');
+	image(img_cam,0,0);
+	img_get = img_get = loadImage('img.jpg?'+ random(1000));
 	frame=4;
 }
 
 // uploading new image to the server
 function drawF4() {
-	image(img,0,0);
-	// textSize(65).fill(255).noStroke().text("💱",width/2,height/2);
-	var canvas = $('canvas')[0];
-	var data = canvas.toDataURL('image/png').replace(/data:image\/png;base64,/, '');
-	iname = 'img.jpg';
-	$.post('save.php',{data: data, iname });
-	frame=5;
+	image(img_cam,0,0);
+	textSize(65).fill(255).noStroke().text("💱",width/2,height/2);
+	if (img_get.width>1) {
+		var canvas = img_cam.canvas;	//  $('canvas')[0];
+		var data = canvas.toDataURL('image/jpeg').replace(/data:image\/jpeg;base64,/, '');
+		iname = 'img.jpg';
+		$.post('save.php',{data: data, iname });
+		frame=5;
+	}
 }
 
+// saving downloaded image
 function drawF5() {
-	image(img_new,0,0);
-	textSize(65).fill(255).noStroke().text("🔁",width*0.25,height*0.90);
-	textSize(65).fill(255).noStroke().text("📥",width*0.75,height*0.90);
-	if (mouseIsPressed && mouseY>height*0.8 && mouseX<width*0.5) { 
-		mouseIsPressed=false;
-		frame=1; 
-	}
-	if (mouseIsPressed && mouseY>height*0.8 && mouseX>width*0.5) { 
+	image(img_get,0,0);
+	textSize(65).fill(255).noStroke().text("📥",width*0.5,height*0.90);
+	if (mouseIsPressed && mouseY>height*0.8) { 
 		mouseIsPressed=false; 
-		img_new.save('oneshot - '+year()+nf(month(),2)+nf(day(),2)+" - "+nf(hour(),2)+nf(minute(),2)+nf(second())+'.jpg');
+		img_get.save('oneshot - '+year()+nf(month(),2)+nf(day(),2)+" - "+nf(hour(),2)+nf(minute(),2)+nf(second())+'.jpg');
+		frame=6;
 	}
+}
+
+// goodbye screen
+function drawF6() {
+	background(100);
+	let mes = "";
+	mes += "👋";
+	mes += random(["🤭","😘","🤤", "🤠", "😉", "😌"]);
+	mes += random(["🤟","🖖","🤙", "💅", "👍", "🤳"]);
+	textSize(65).fill(255).noStroke().text(mes,width*0.5,height*0.50);
+	noDraw();
 }
