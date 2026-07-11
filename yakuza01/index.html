@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Якудза01</title>
+<meta name="description" content="Якудза01 — красноярский рэпер. Музыка, видео, тексты о нём, сайд-проекты и контакты.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --fg:#000000;
+    --red:#ff3000;
+    --chrome:#ececec;
+    --chrome-dark:#cfcfcf;
+    --gray:#6b6b6b;
+    --yellow:#ffd400;
+    --green:#1fbf3f;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'PT Serif', serif;
+    line-height:1.5;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;}
+  a{color:inherit;}
+  ::selection{background:var(--red);color:#fff;}
+
+  a{
+    color:var(--fg);
+    text-decoration:none;
+    font-weight:700;
+    border-bottom:2px dashed var(--fg);
+    padding:0 2px;
+    transition:background .12s ease, color .12s ease, border-color .12s ease;
+  }
+  a:hover, a:focus-visible{
+    background:var(--red);
+    color:#fff;
+    border-color:var(--red);
+  }
+  :focus-visible{
+    outline:3px solid var(--red);
+    outline-offset:2px;
+  }
+
+  /* ---------- menu bar ---------- */
+  .menubar{
+    position:sticky;
+    top:0;
+    z-index:100;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    height:38px;
+    padding:0 14px;
+    background:#fff;
+    border-bottom:2px solid var(--fg);
+    font-family:'PT Sans', sans-serif;
+    font-size:.82rem;
+    white-space:nowrap;
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .menubar::-webkit-scrollbar{display:none;}
+  .menubar .brand{
+    font-weight:700;
+    color:var(--red);
+    border:none;
+    padding:0;
+    letter-spacing:.02em;
+  }
+  .menubar .brand:hover{background:none;color:var(--red);}
+  .menubar nav{display:flex;gap:16px;}
+  .menubar nav a{
+    border:none;
+    font-weight:400;
+    padding:0;
+    color:var(--fg);
+  }
+  .menubar nav a:hover, .menubar nav a:focus-visible{
+    background:none;
+    color:var(--red);
+    text-decoration:underline;
+    text-decoration-style:wavy;
+  }
+  .menubar .clock{
+    margin-left:auto;
+    font-variant-numeric:tabular-nums;
+    color:var(--gray);
+    flex:0 0 auto;
+  }
+
+  /* ---------- logo hero ---------- */
+  .logo-block{
+    padding:clamp(14px,3vw,28px) clamp(10px,3vw,28px) 0;
+  }
+  .logo-block img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+  @media (min-width:760px){
+    .logo-block{display:flex;justify-content:center;}
+    .logo-block img{
+      width:auto;
+      max-width:100%;
+      max-height:20vh;
+    }
+  }
+
+  /* ---------- window component ---------- */
+  .window{
+    background:#fff;
+    border:2px solid var(--fg);
+    box-shadow:6px 6px 0 var(--fg);
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+  }
+  .titlebar{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:7px 10px;
+    border-bottom:2px solid var(--fg);
+    background:var(--chrome);
+    font-family:'PT Sans', sans-serif;
+    font-size:.78rem;
+    user-select:none;
+  }
+  .titlebar.mac .traffic{display:flex;gap:6px;flex:0 0 auto;}
+  .titlebar.mac .traffic span{
+    width:11px;height:11px;border-radius:50%;
+    border:1.3px solid var(--fg);display:inline-block;
+  }
+  .titlebar.mac .traffic span:nth-child(1){background:var(--red);}
+  .titlebar.mac .traffic span:nth-child(2){background:var(--yellow);}
+  .titlebar.mac .traffic span:nth-child(3){background:var(--green);}
+  .titlebar.mac .wtitle{flex:1;text-align:center;font-weight:700;}
+  .titlebar.mac .spacer{width:39px;flex:0 0 auto;}
+
+  .titlebar.linux{justify-content:space-between;}
+  .titlebar.linux .wtitle{font-weight:700;}
+  .titlebar.linux .winctrls{display:flex;gap:5px;flex:0 0 auto;}
+  .titlebar.linux .winctrls span{
+    width:18px;height:16px;
+    border:1.3px solid var(--fg);
+    display:flex;align-items:center;justify-content:center;
+    font-size:.68rem;line-height:1;background:#fff;
+  }
+
+  .wcontent{
+    padding:22px clamp(16px,4vw,30px);
+    font-size:1.02rem;
+  }
+  .wcontent p{margin:0 0 10px;max-width:62ch;}
+  .wcontent p:last-child{margin-bottom:0;}
+
+  .prompt{
+    font-family:'PT Sans', sans-serif;
+    font-size:.82rem;
+    color:var(--gray);
+    margin:0 0 12px;
+  }
+  .lead{font-size:1.14rem;line-height:1.65;}
+  .cursor{
+    display:inline-block;width:.55em;height:1em;
+    background:var(--fg);margin-left:2px;vertical-align:text-bottom;
+    animation:blink 1s steps(1) infinite;
+  }
+  @keyframes blink{50%{opacity:0;}}
+  @media (prefers-reduced-motion:reduce){
+    .cursor{animation:none;}
+  }
+
+  .big-title{
+    font-family:'PT Sans', sans-serif;
+    font-weight:700;
+    font-style:normal;
+    color:var(--red);
+    font-size:clamp(1.5rem,4.2vw,2.1rem);
+    line-height:1.15;
+    margin:0 0 18px;
+  }
+
+  .linklist{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .linklist li{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+  }
+  .linklist .arrow{
+    color:var(--red);
+    font-weight:700;
+    flex:0 0 auto;
+  }
+  .linklist a{
+    font-family:'PT Sans', sans-serif;
+    font-size:1.08rem;
+  }
+
+  /* ---------- primary row: about + contacts ---------- */
+  .primary-row{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+    padding:24px clamp(10px,3vw,28px);
+  }
+  @media (min-width:1100px){
+    .primary-row{grid-template-columns:2fr 1fr;align-items:stretch;}
+  }
+
+  /* ---------- gallery ---------- */
+  .gallery-wrap{
+    padding:10px clamp(10px,3vw,28px) 30px;
+    border-top:2px dashed var(--chrome-dark);
+    border-bottom:2px dashed var(--chrome-dark);
+    margin:0 clamp(10px,3vw,28px);
+  }
+  .gallery{
+    display:flex;
+    flex-wrap:wrap;
+    gap:26px;
+    justify-content:center;
+    align-items:flex-start;
+    padding-top:28px;
+  }
+  .gallery figure{
+    margin:0;
+    background:#fff;
+    border:2px solid var(--fg);
+    box-shadow:6px 6px 0 var(--fg);
+    padding:8px 8px 6px;
+    transform:translateY(var(--ty,0px)) rotate(var(--r,0deg)) scale(var(--scale,1));
+    transition:transform .15s ease;
+  }
+  .gallery figure:hover{transform:translateY(var(--ty,0px)) rotate(0deg) scale(calc(var(--scale,1) * 1.03));}
+  .gallery img{
+    display:block;
+    max-width:min(300px,72vw);
+    max-height:360px;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+  }
+  .gallery img.cover{max-width:min(280px,68vw);max-height:280px;}
+  .gallery figcaption{
+    font-family:'PT Sans', sans-serif;
+    font-size:.7rem;
+    color:var(--gray);
+    text-align:center;
+    margin-top:6px;
+    letter-spacing:.02em;
+  }
+  .gallery figure.audio-fig{
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    width:min(300px,80vw);
+  }
+  .gallery figure.audio-fig .titlebar{margin:0;}
+  .gallery figure.audio-fig .audio-body{padding:18px 14px;}
+  .gallery figure.audio-fig audio{width:100%;display:block;}
+  .gallery figure:nth-child(1){--r:-4deg;margin-top:0;}
+  .gallery figure:nth-child(2){--r:3deg;margin-top:34px;}
+  .gallery figure:nth-child(3){--r:-2deg;margin-top:6px;}
+  .gallery figure:nth-child(4){--r:4deg;margin-top:40px;}
+  .gallery figure:nth-child(5){--r:-3deg;margin-top:14px;}
+  .gallery figure:nth-child(6){--r:2deg;margin-top:24px;}
+  .gallery figure:nth-child(7){--r:-3deg;margin-top:50px;}
+  @media (max-width:600px){
+    .gallery figure{margin-top:0 !important;}
+  }
+  @media (min-width:760px){
+    .gallery{gap:0;justify-content:space-between;padding-top:90px;padding-bottom:90px;flex-wrap:nowrap;align-items:center;}
+    .gallery figure{flex:1 1 0;min-width:0;position:relative;z-index:1;margin-top:0;}
+    .gallery figure.cover{flex:0 1 30%;z-index:2;}
+    .gallery figure:not(.cover){flex:1 1 21%;}
+    .gallery figure.audio-fig{flex:1 1 20%;min-width:190px;}
+    .gallery figure:nth-child(n+2){margin-left:-46px;}
+    .gallery figure:nth-child(1){--ty:-100px;flex:0 1 30%;}
+    .gallery figure:nth-child(2){--ty:80px;}
+    .gallery figure:nth-child(3){--ty:-50px;}
+    .gallery figure:nth-child(4){--ty:120px;flex:1 1 46%;z-index:6;}
+    .gallery figure:nth-child(5){--ty:-80px;}
+    .gallery figure:nth-child(6){--ty:40px;z-index:10;}
+    .gallery figure:nth-child(7){--ty:-110px;flex:1 1 32%;z-index:6;}
+    .gallery figure:hover{z-index:7;}
+    .gallery figure:nth-child(6):hover{z-index:12;}
+    .gallery img{max-width:100%;width:100%;max-height:640px;}
+    .gallery img.cover{max-width:100%;width:100%;max-height:600px;}
+    .gallery figure:nth-child(4) img{max-height:680px;}
+    .gallery figure:nth-child(1) img{max-height:600px;}
+    .gallery figure:nth-child(7) img{max-height:820px;}
+  }
+  @media (min-width:1400px){
+    .gallery{padding-top:130px;padding-bottom:130px;}
+    .gallery figure:nth-child(n+2){margin-left:-70px;}
+    .gallery figure:nth-child(1){--ty:-130px;}
+    .gallery figure:nth-child(2){--ty:100px;}
+    .gallery figure:nth-child(3){--ty:-70px;}
+    .gallery figure:nth-child(4){--ty:150px;}
+    .gallery figure:nth-child(5){--ty:-100px;}
+    .gallery figure:nth-child(6){--ty:60px;}
+    .gallery figure:nth-child(7){--ty:-140px;}
+    .gallery img{max-height:760px;}
+    .gallery img.cover{max-height:720px;}
+    .gallery figure:nth-child(4) img{max-height:800px;}
+    .gallery figure:nth-child(1) img{max-height:720px;}
+    .gallery figure:nth-child(7) img{max-height:960px;}
+  }
+
+  /* ---------- link windows grid ---------- */
+  .windows-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+    padding:6px clamp(10px,3vw,28px) 36px;
+  }
+  @media (min-width:760px){
+    .windows-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (min-width:1100px){
+    .windows-grid{grid-template-columns:repeat(4,1fr);}
+  }
+  .windows-grid .window{height:100%;}
+
+  /* ---------- rider ---------- */
+  .rider-section{padding:0 clamp(10px,3vw,28px) 40px;}
+  .contact-rider-row{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+    padding:0 clamp(10px,3vw,28px) 40px;
+  }
+  @media (min-width:760px){
+    .contact-rider-row{grid-template-columns:1fr 1fr;}
+  }
+  .contact-line{
+    font-family:'PT Sans', sans-serif;
+    font-size:.95rem;
+    margin:0 0 6px;
+  }
+  .contact-line a{
+    font-weight:400;
+    border-bottom:1px dashed var(--fg);
+  }
+  details.rider summary{
+    cursor:pointer;
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:0;
+  }
+  details.rider summary::-webkit-details-marker{display:none;}
+  details.rider summary::before{
+    content:"▸";
+    display:inline-block;
+    color:var(--red);
+    transition:transform .15s ease;
+  }
+  details.rider[open] summary::before{transform:rotate(90deg);}
+  details.rider[open] summary{margin-bottom:16px;}
+  .rider-answer{
+    background:var(--chrome);
+    border:2px solid var(--fg);
+    box-shadow:4px 4px 0 var(--fg);
+    padding:16px;
+    font-family:'PT Sans', sans-serif;
+    font-weight:700;
+    text-align:center;
+    font-size:1.05rem;
+  }
+  @media (min-width:760px){
+    details.rider{position:relative;}
+    details.rider[open] summary{margin-bottom:0;}
+    .rider-answer{
+      position:absolute;
+      left:0;
+      right:0;
+      top:calc(100% + 10px);
+      z-index:30;
+    }
+  }
+
+  /* ---------- dock footer ---------- */
+  .dock{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    justify-content:center;
+    padding:18px 14px 26px;
+    border-top:2px solid var(--fg);
+  }
+  .dock a{
+    width:46px;height:46px;
+    border:2px solid var(--fg);
+    border-bottom:2px solid var(--fg);
+    box-shadow:4px 4px 0 var(--fg);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'PT Sans', sans-serif;
+    font-weight:700;font-size:.72rem;
+    background:#fff;
+  }
+  .dock a:hover, .dock a:focus-visible{
+    transform:translateY(-3px);
+    background:var(--red);color:#fff;border-color:var(--fg);
+  }
+  .footnote{
+    text-align:center;
+    font-family:'PT Sans', sans-serif;
+    font-size:.72rem;
+    color:var(--gray);
+    padding:0 14px 24px;
+  }
+</style>
+</head>
+<body>
+
+<header class="menubar">
+  <span class="brand">Якудза01</span>
+  <span class="clock" id="clock" aria-hidden="true">00:00:00</span>
+</header>
+
+<main>
+
+  <div class="logo-block">
+    <img src="logo.png" alt="Якудза01 — логотип">
+  </div>
+
+  <div class="primary-row">
+
+    <section id="about" class="window">
+      <div class="titlebar mac">
+        <span class="traffic" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="wtitle">about.txt — изменено только что</span>
+        <span class="spacer" aria-hidden="true"></span>
+      </div>
+      <div class="wcontent">
+        <p class="prompt">$ cat about.txt</p>
+        <p class="lead">Привет, это красноярский рэпер Якудза01. Я музыкант-любитель, потому что люблю, что делаю. А когда я делаю музыку, в ход идёт всё: от аналоговых синтов и стемов hyper-pop исполнителей до звуков бормашины и нарезок документалок из YouTube. Но главным для меня в произведениях всегда остаётся ощущение умата и угара!<span class="cursor" aria-hidden="true"></span></p>
+      </div>
+    </section>
+
+    <section id="contacts" class="window">
+      <div class="titlebar linux">
+        <span class="wtitle">links.txt</span>
+        <span class="winctrls" aria-hidden="true"><span>−</span><span>□</span><span>×</span></span>
+      </div>
+      <div class="wcontent">
+        <ul class="linklist">
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://t.me/dthreemarkzero" target="_blank" rel="noopener">Telegram</a></li>
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://vk.com/yakuzazeroone" target="_blank" rel="noopener">ВКонтакте</a></li>
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://instagram.com/d3mark0" target="_blank" rel="noopener">IG</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+  <div id="gallery" class="gallery-wrap">
+    <div class="gallery">
+      <figure>
+        <img src="images/photo-1.jpg" alt="Фото Якудза01" loading="lazy">
+        <figcaption>photo-1.jpg</figcaption>
+      </figure>
+      <figure class="cover">
+        <img class="cover" src="images/cover-1.jpg" alt="Обложка релиза Якудза01" loading="lazy">
+        <figcaption>cover-1.jpg</figcaption>
+      </figure>
+      <figure class="audio-fig">
+        <div class="titlebar mac">
+          <span class="traffic" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="wtitle">любитель.mp3</span>
+          <span class="spacer" aria-hidden="true"></span>
+        </div>
+        <div class="audio-body">
+          <audio controls style="width:100%;display:block;">
+            <source src="любитель.mp3">
+          </audio>
+        </div>
+      </figure>
+      <figure>
+        <img src="images/photo-2.jpg" alt="Фото Якудза01" loading="lazy">
+        <figcaption>photo-2.jpg</figcaption>
+      </figure>
+      <figure class="cover">
+        <img class="cover" src="images/cover-2.jpg" alt="Обложка релиза Якудза01" loading="lazy">
+        <figcaption>cover-2.jpg</figcaption>
+      </figure>
+      <figure class="audio-fig">
+        <div class="titlebar linux">
+          <span class="wtitle">успех_final.mp3</span>
+          <span class="winctrls" aria-hidden="true"><span>−</span><span>□</span><span>×</span></span>
+        </div>
+        <div class="audio-body">
+          <audio controls style="width:100%;display:block;">
+            <source src="успех_final.mp3">
+          </audio>
+        </div>
+      </figure>
+      <figure>
+        <img src="images/photo-3.jpg" alt="Фото Якудза01" loading="lazy">
+        <figcaption>photo-3.jpg</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="windows-grid">
+
+    <section id="music" class="window">
+      <div class="titlebar mac">
+        <span class="traffic" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="wtitle">music.app</span>
+        <span class="spacer" aria-hidden="true"></span>
+      </div>
+      <div class="wcontent">
+        <p class="big-title">Послушать музыку</p>
+        <ul class="linklist">
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://music.yandex.ru/artist/9213218" target="_blank" rel="noopener">Яндекс Музыка</a></li>
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://vk.com/artist/4841014232876325223" target="_blank" rel="noopener">VK Музыка</a></li>
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://zvuk.com/artist/211380306" target="_blank" rel="noopener">Звук</a></li>
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://open.spotify.com/artist/17uHd37kkFmCCvxzl7r1qG?si=UNfDfK9iTi2Cn4lZk40AtA" target="_blank" rel="noopener">Spotify</a></li>
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://music.apple.com/ru/artist/%D1%8F%D0%BA%D1%83%D0%B4%D0%B7%D0%B001/1573735521" target="_blank" rel="noopener">Apple Music</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="video" class="window">
+      <div class="titlebar linux">
+        <span class="wtitle">video.app</span>
+        <span class="winctrls" aria-hidden="true"><span>−</span><span>□</span><span>×</span></span>
+      </div>
+      <div class="wcontent">
+        <p class="big-title">Посмотреть видео</p>
+        <ul class="linklist">
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://www.youtube.com/watch?v=4tuF1tjJRvM&list=PLhgHfuWFDIPBgP1CSl8It8iJohOQI2AhH" target="_blank" rel="noopener">Визуализация EP «PLAYING WITH YOURSELF»</a></li>
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://www.youtube.com/watch?v=aeWikiQyJPA" target="_blank" rel="noopener">Лайв с CRASH TEST</a></li>
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://www.youtube.com/watch?v=ErXIXL4Qqqg" target="_blank" rel="noopener">Лайв с арт-маркета</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="press" class="window">
+      <div class="titlebar mac">
+        <span class="traffic" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="wtitle">press.app</span>
+        <span class="spacer" aria-hidden="true"></span>
+      </div>
+      <div class="wcontent">
+        <p class="big-title">Почитать в СМИ</p>
+        <ul class="linklist">
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://makersofsiberia.com/rabotyi/albums-03-26.html" target="_blank" rel="noopener">Makers of Siberia</a></li>
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://makersofsiberia.com/rabotyi/albums-10-11-25.html" target="_blank" rel="noopener">Ещё MoS</a></li>
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://makersofsiberia.com/rabotyi/albums-07-24.html" target="_blank" rel="noopener">И ещё MoS</a></li>
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://gornovosti.ru/news/tvorchestvo-dlya-menya-svoeobraznaya-igra-intervyu-s-krasnoyarskim-reperom-aleksandrom-mikhaylovym/?sphrase_id=102644" target="_blank" rel="noopener">Городские новости Красноярска</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="side" class="window">
+      <div class="titlebar linux">
+        <span class="wtitle">side-projects.app</span>
+        <span class="winctrls" aria-hidden="true"><span>−</span><span>□</span><span>×</span></span>
+      </div>
+      <div class="wcontent">
+        <p class="big-title">А ещё сайд-проекты</p>
+        <ul class="linklist">
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://vk.com/yakuzazeroone" target="_blank" rel="noopener">Лейбл Якудза01</a></li>
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://music.yandex.ru/artist/21058041" target="_blank" rel="noopener">Рэп-дуэт Сибирский бриз</a></li>
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://d3mark0.ru/?p=3370" target="_blank" rel="noopener">Выставочный проект Сибирская трэпповая провинция</a></li>
+          <li><span class="arrow" aria-hidden="true">→</span><a href="https://music.yandex.ru/artist/16706112" target="_blank" rel="noopener">Рэп для жены от Саши Сладкого</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="contact-rider-row">
+    <section id="contact-details" class="window">
+      <div class="titlebar mac">
+        <span class="traffic" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="wtitle">contacts.txt</span>
+        <span class="spacer" aria-hidden="true"></span>
+      </div>
+      <div class="wcontent">
+        <p class="big-title" style="margin-bottom:14px;">Связаться</p>
+        <p class="contact-line"><a href="tel:+79135882565">+7-913-588-25-65</a></p>
+        <p class="contact-line"><a href="mailto:striown@gmail.com">striown@gmail.com</a></p>
+      </div>
+    </section>
+
+    <section id="rider" class="window">
+      <div class="titlebar mac">
+        <span class="traffic" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="wtitle">rider.txt</span>
+        <span class="spacer" aria-hidden="true"></span>
+      </div>
+      <div class="wcontent">
+        <details class="rider">
+          <summary class="big-title">Райдер</summary>
+          <div class="rider-answer">Две банки RED BULL Original 0.5L</div>
+        </details>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<footer>
+  <div class="dock">
+    <a href="https://t.me/dthreemarkzero" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+    <a href="https://vk.com/yakuzazeroone" target="_blank" rel="noopener" aria-label="ВКонтакте">VK</a>
+    <a href="https://instagram.com/d3mark0" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+  </div>
+  <p class="footnote">Якудза01 (совместно с <a href="https://d3mark0.ru/" target="_blank" rel="noopener">D3mark0</a>)</p>
+</footer>
+
+<script>
+  function tick(){
+    var now = new Date();
+    var pad = function(n){return n.toString().padStart(2,'0');};
+    var el = document.getElementById('clock');
+    if(el){
+      el.textContent = pad(now.getHours()) + ':' + pad(now.getMinutes()) + ':' + pad(now.getSeconds());
+    }
+  }
+  tick();
+  setInterval(tick, 1000);
+</script>
+
+</body>
+</html>
