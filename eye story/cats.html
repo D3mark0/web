@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>истории [кошки]</title>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="icon" href="cats.ico">
+</head>
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Arimo', sans-serif;
+    background: #cfcfcf;
+    color: #222;
+    height: 100vh;
+    overflow: hidden;
+}
+
+::selection {
+    text-shadow: none;
+}
+
+::-moz-selection {
+    text-shadow: none;
+}
+
+/* --- Layout --- */
+.wrapper {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 75% 25%;
+    height: 100vh;
+}
+
+.left {
+    grid-row: 1 / span 2;
+    border-right: 1px solid #111;
+    padding: 20px;
+    background: #d7d7d7;
+}
+
+.top {
+    position: relative;
+    border-bottom: 1px solid #111;
+    overflow: hidden;
+    background: #d0d0d0;
+}
+
+.bottom {
+    overflow-y: auto;
+    border-top: 1px solid #111;
+    background: #d9d9d9;
+}
+
+/* --- Left panel content --- */
+.left { overflow-y: auto; overflow-x: hidden; }
+.left h1 { margin-bottom: 15px; }
+.left p { margin-bottom: 20px; line-height: 1.4; }
+.left a {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* --- Grid --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    padding: 10px;
+}
+
+.thumb {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    background: #bdbdbd;
+    cursor: pointer;
+    border: 1px solid #222;
+}
+
+/* --- Draggable windows --- */
+.window {
+    position: absolute;
+    border: 1px solid #111;
+    background: #398739;
+    padding: 6px;
+}
+
+.window img,
+.window video {
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: contain;
+    display: block;
+}
+
+.window audio {
+    width: 250px;
+}
+
+.window .text {
+    width: 500px;
+    height: 200px;        
+    overflow-y: auto;     
+    overflow-x: hidden;
+    white-space: pre-wrap;
+    pointer-events: auto; 
+    background: #398739;
+    padding: 4px;
+}
+
+.header {
+    font-size: 1px;
+    margin-bottom: 10px;
+    background: #398739;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="left">
+        <h1>истории [кошки]</h1>
+        <p><a href="https://t.me/ingameph/10301?single">Продолжение</a> приключения кошки-(не совсем уже)малышки, а скорее даже чудачки, по имени Хиросима в поисках Аномалии-Клубка Два.</p>
+        <p>Хиросима родилась в городе-космонавте Калуга летом 2024-го года, успела сменить перед своим приключением более двух хозяев (последний неуклюже, как оказалось потом – обычно, появился зимой 2025-го накануне Нового Года, под самый конец возможности выброса бродяжкой на улице в возрасте 6/7 месяцев), которые и сами не обладали одним постоянным местом-теплом для неё, по причинам больших желаний порхания вокруг кормушек с фригой и высокой проводимости липкой приятно-неопределённости самих путешествия-локализаций спокойствия, какое можно увидеть в кинофильмах в стиле под широкими фильтрами = (небезопасная езда + неудержимая болтовня + неустроенность дивана в холодных домах) * N всего остального: очистки сообщений; высокой стоимости аренды жилья в доступном до всего районе; санкций при крытых границах;         (                            в                   )                  что                ; осознанной практики текучести безработицы с одной стороны и желания процесса резкого увольнения/разрыва с другой;                           то         после                                   ; дезертирства прямоты; невпопад смены эмоциональных состояний; бегства с последующей односторонней наружней слежкой; доброжелательного  нарциссизма; блокировки контактов; коварства и в ответ только агрессии, что надо теперь следить за словами; удаления страницы; самой последней попытки возвращения в дружбы; творчески вшитого во многие жизни самозванства; стресса одиночества с кошачьим наедине, а на фоне – выборочная настойчивая эмпатия вопреки и забывчивость за всем этим.</p>
+        <p>Больше всего привлекают: протечки туалетной воды или сразу открытые унитазы; запахи пакетов и ботинок – после улицы букеты; звуки шуршания; заправленные полотенца/коврики; разные уровни высоты; следы на окнах;                         в                     и                      ; стыки линолеума и заусенцы; детский домик и крик с улицы во времена футбола; распушённые шары/птицы; мягкие игрушки уже чуть рваные; щели; пальцы левой руки; светящиеся экраны и замирающие перья;</p>
+        <p>Таким образом, ни один человек в виде продолжительного хозяина не состоялся, и кошке развитого 5,5 кг разумного трюкачества пришлось лететь дальше хвостами/лапами и дальше вибриссами через череды окошек поля свободного притяжения Клубка падения проходящем через все шевелящиеся складочки, дырочки, поры и ямы4ктататкошцшц надеюсь не попасться в кпканы и выступаю атататтктк  Против JD+JSJSJKAjjj((888 связывания с другими объектами Тыььытцььцьц клубок дурак ненормальный ЬаьаьаддадуыжхиытоыооытОооооолузухуз (Автосигнализация)–Оставь всех в покое Аттаткькьудр-р &&&&  с полюбовным боданием ๏﴿</p>
+        <p>В области интересов: изучения тесных пространств, их рыхления; лёгкий сон после еды; быть в домике; сворачивание в трубочку; невидимость;                      или же                      ; очень долгие зализывания неровностей на участках шерсти; множественное нападение со спины; путаться в градиентах непрозрачности; прыжки в чужой рост; замыкать круги скачек;          за              /                ; превращение селëдкой; быть наготове; собирание коллекций хвостов и огрызков; пролетать через стены и домофоны; мягко брать ускорение на поворотах.</p>
+        <p>Хиросима, как чёрно-белая с фиолетовыми отливами весной кошка, совершенно не умела мяучить, и изначальный разительный мурмявк (поэтому, но ещё и с заметных усиков поверх усов, первоначальная кличка была ▓▒▓▓▒▓) вместе c переходным возрастом стал сначала вороньим клокотаньем врадости за период обретения навыка левитации, а теперь, когда она окончательно исчезла через, предположительно, в туалете вытяжку над лотком (окна VEKA на протяжении всех её возвышенных "тыгдыков" после мокрого корма были плотно прикрыты), (а встроенная в муниципальный ремонт пластиковая решётка оказалась не такой крепкой для подцепа когте-розочками), осталась под утром в комнате с пробуждением в качестве гудения линий напряжения цикад.</p> 
+        <p>Не нравится крайним случаем: когда без установленного контакта зрительного напрямую и предварительного запроса ласковости – берут на ручки; приходится тогда сразу вытекать по кистям; отвечать-цепляться; а это не очень и возникает конфликтная ситуация с переворотом мисок, что никому вообще; как и те же надоедающие повтором усиления звукa в спëртых помещениях, а это деваться некуда и по трубам лезть вверх; и сгибается тело; и каждые кости сворачиваются по фигуре лаза хребта.</p>
+        <p>Изначальные полёты ограничивались одним мячом отскока сверху и коридором-пола, пока, как она думала, никто не заметит, затем остановками под натяжным потолком застрявшей разрядами шаровой молнией статического электричества в засыпаниях. Для ночи фонарик на телефоне можно было не включать, Хиросима-кошка всегда могла провести протекторами глаз, от минимального света за окном они начинали заливаться внутри отражениями всей улицы со столбами-соседями тенью театра посреди комнаты карты проекции.</p>
+        <p>В будущем я хотел(а) бы: роль второго плана чьвтвто  что-то ьвовлдбябббыбь  ОоооОооодюююдддылцлцл рта аббатства Иииияяяя öooooooöooooö:DNDNDN kkkkkkkkkkiwiwiiw VVVVVVVVVVVVVVVVVV free to the metaverse bad dream about the other day I will be here for you готовится отомстит ему не удалось добиться успеха на взрослом чемпионате мира по чбьчьчббябррроовомбяяббяблпббввцggbsьмьс и и и и не только где на территории района протекают реки ๏﴿</p> 
+        <p>Вопреки своему полному, буквальному, конкретному и материальному уходу,  она ещё питалась исключительно сухим с характерным хрустом небольшой камнечистки; проявлялась двойной экспозицией присутствия на вернакулярных снимках счётчика, фото-отчётах арендодателю и родственникам по содержанию комнат, товарах на авито всполоха шерсти отпечатками пыли/мебели; а потому никем эта потеря замечена не была, ведь сон этих хищных до времени внимания животных занимает около приблизительно 70% раскручивания вечернего образа жизни, следовательно легко можно было найти микроцарапины по телу и трещины внутри дома, через которые слышны заразительные хлюпанья влажным носом, а в сообщениях, отправленных оттуда, появлялись взбитые символы: похожие на прогулки по клавиатуре с перестановками перед лицом.</p>
+        <p>๏﴿ -части написаны совместно</p>
+    </div>
+
+    <div class="top" id="topPanel"></div>
+
+    <div class="bottom">
+        <div class="grid" id="grid"></div>
+    </div>
+</div>
+
+<script>
+/* ---------------- НАСТРОЙКА КОНТЕНТА ---------------- */
+const ITEMS = [
+    { type: 'image', thumb: 'cat/false/1.jpg', src: 'cat/true/1.jpg' },
+    { type: 'video', thumb: 'cat/false/2.jpg', src: 'cat/true/2.webm'},
+    { type: 'image', thumb: 'cat/false/3.jpg', src: 'cat/true/3.jpg' },
+    { type: 'image', thumb: 'cat/false/4.jpg', src: 'cat/true/4.jpg' },
+    { type: 'video', thumb: 'cat/false/5.jpg', src: 'cat/true/5.webm' },
+    { type: 'image', thumb: 'cat/false/6.jpg', src: 'cat/true/6.jpg' },
+    { type: 'image', thumb: 'cat/false/7.jpg', src: 'cat/true/7.jpg' },
+    { type: 'image', thumb: 'cat/false/8.jpg', src: 'cat/true/8.jpg' },
+    { type: 'image', thumb: 'cat/false/9.jpg', src: 'cat/true/9.jpg' },
+    { type: 'video', thumb: 'cat/false/10.jpg', src: 'cat/true/10.webm' },
+    { type: 'image', thumb: 'cat/false/11.jpg', src: 'cat/true/11.jpg' },
+    { type: 'video', thumb: 'cat/false/12.jpg', src: 'cat/true/12.webm' },
+    { type: 'image', thumb: 'cat/false/13.jpg', src: 'cat/true/13.jpg' },
+    { type: 'image', thumb: 'cat/false/14.jpg', src: 'cat/true/14.jpg' },
+    { type: 'image', thumb: 'cat/false/15.jpg', src: 'cat/true/15.jpg' },
+    { type: 'image', thumb: 'cat/false/16.jpg', src: 'cat/true/16.jpg' },
+    { type: 'image', thumb: 'cat/false/17.jpg', src: 'cat/true/17.jpg' },
+    { type: 'image', thumb: 'cat/false/18.jpg', src: 'cat/true/18.jpg' },
+    { type: 'image', thumb: 'cat/false/19.jpg', src: 'cat/true/19.jpg' },
+    { type: 'image', thumb: 'cat/false/20.jpg', src: 'cat/true/20.jpg' },
+    { type: 'image', thumb: 'cat/false/21.jpg', src: 'cat/true/21.jpg' },
+    { type: 'image', thumb: 'cat/false/22.jpg', src: 'cat/true/22.jpg' },
+    { type: 'image', thumb: 'cat/false/23.jpg', src: 'cat/true/23.jpg' },
+    { type: 'video', thumb: 'cat/false/24.jpg', src: 'cat/true/24.webm' },
+    { type: 'image', thumb: 'cat/false/25.jpg', src: 'cat/true/25.jpg' },
+    { type: 'image', thumb: 'cat/false/26.jpg', src: 'cat/true/26.jpg' },
+    { type: 'video', thumb: 'cat/false/27.jpg', src: 'cat/true/27.webm' },
+    { type: 'video', thumb: 'cat/false/28.jpg', src: 'cat/true/28.webm' },
+    { type: 'image', thumb: 'cat/false/29.jpg', src: 'cat/true/29.jpg' },
+    { type: 'video', thumb: 'cat/false/30.jpg', src: 'cat/true/30.webm' },
+    { type: 'image', thumb: 'cat/false/31.jpg', src: 'cat/true/31.jpg' },
+    { type: 'image', thumb: 'cat/false/32.jpg', src: 'cat/true/32.jpg' },
+    { type: 'image', thumb: 'cat/false/33.jpg', src: 'cat/true/33.jpg' },
+    { type: 'image', thumb: 'cat/false/34.jpg', src: 'cat/true/34.jpg' },
+    { type: 'image', thumb: 'cat/false/35.jpg', src: 'cat/true/35.jpg' },
+    { type: 'image', thumb: 'cat/false/36.jpg', src: 'cat/true/36.jpg' },
+    { type: 'video', thumb: 'cat/false/37.jpg', src: 'cat/true/37.webm' },
+    { type: 'image', thumb: 'cat/false/38.jpg', src: 'cat/true/38.jpg' },
+    { type: 'image', thumb: 'cat/false/39.jpg', src: 'cat/true/39.jpg' },
+    { type: 'image', thumb: 'cat/false/40.jpg', src: 'cat/true/40.jpg' },
+    { type: 'image', thumb: 'cat/false/41.jpg', src: 'cat/true/41.jpg' },
+    { type: 'image', thumb: 'cat/false/42.jpg', src: 'cat/true/42.jpg' },
+    { type: 'image', thumb: 'cat/false/43.jpg', src: 'cat/true/43.jpg' },
+    { type: 'video', thumb: 'cat/false/44.jpg', src: 'cat/true/44.webm' },
+    { type: 'image', thumb: 'cat/false/45.jpg', src: 'cat/true/45.jpg' },
+    { type: 'video', thumb: 'cat/false/46.jpg', src: 'cat/true/46.webm' },
+    { type: 'image', thumb: 'cat/false/47.jpg', src: 'cat/true/47.jpg' },
+    { type: 'image', thumb: 'cat/false/48.jpg', src: 'cat/true/48.jpg' },
+    { type: 'image', thumb: 'cat/false/49.jpg', src: 'cat/true/49.jpg' },
+    { type: 'link', thumb: 'cat/false/50.jpg', src: 'cat/true/50.webm', url: 'https://eye.krasnaya-gallery.ru' }
+];
+
+/* ---------------- СОЗДАНИЕ СЕТКИ ---------------- */
+const grid = document.getElementById('grid');
+const MAX_CONCURRENT = 6;
+
+async function loadGrid() {
+    for (let i = 0; i < ITEMS.length; i += MAX_CONCURRENT) {
+        const batch = ITEMS.slice(i, i + MAX_CONCURRENT);
+
+        await Promise.all(batch.map(item => {
+            return new Promise(resolve => {
+                const img = document.createElement('img');
+
+                img.className = 'thumb';
+                img.onclick = () => spawnWindow(item);
+
+                img.onload = resolve;
+                img.onerror = resolve;
+
+                grid.appendChild(img);
+                img.src = item.thumb;
+            });
+        }));
+    }
+}
+
+loadGrid();
+
+/* ---------------- ВЕРХНЯЯ ПАНЕЛЬ ---------------- */
+const topPanel = document.getElementById('topPanel');
+let zIndexCounter = 1;
+
+/* ---------------- СОЗДАНИЕ ОКОН ---------------- */
+function spawnWindow(item) {
+    const win = document.createElement('div');
+    win.className = 'window';
+    win.style.zIndex = ++zIndexCounter;
+
+    const header = document.createElement('div');
+    header.className = 'header';
+    header.textContent = '';
+    win.appendChild(header);
+
+    let content;
+
+    if (item.type === 'image') {
+        content = document.createElement('img');
+        content.src = item.src;
+        content.style.cursor = 'pointer';
+
+        content.addEventListener('click', (e) => {
+            e.stopPropagation();
+
+            const a = document.createElement('a');
+            a.href = item.src;
+            a.target = '_blank';
+            a.rel = 'noopener';
+            a.click();
+        });
+    }
+
+    if (item.type === 'audio') {
+        content = document.createElement('audio');
+        content.src = item.src;
+        content.controls = true;
+    }
+
+    if (item.type === 'video') {
+        content = document.createElement('video');
+        content.src = item.src;
+        content.controls = true;
+        content.loop = true;
+        content.autoplay = true;
+        content.muted = true;
+    }
+
+    if (item.type === 'text') {
+        content = document.createElement('div');
+        content.className = 'text';
+        content.textContent = 'Загрузка...';
+
+        fetch(item.src)
+            .then(r => r.text())
+            .then(t => content.textContent = t)
+            .catch(() => content.textContent = 'Ошибка загрузки файла');
+    }
+
+    if (item.type === 'link') {
+        window.open(item.url, '_blank', 'noopener');
+        content = document.createElement('video');
+        content.src = item.src;
+        content.controls = true;
+        content.loop = true;
+        content.autoplay = true;
+        content.muted = true;
+    }
+
+    win.appendChild(content);
+    topPanel.appendChild(win);
+
+    makeDraggable(win, header);
+    randomPosition(win);
+
+    win.addEventListener('mousedown', () => {
+        win.style.zIndex = ++zIndexCounter;
+    });
+}
+
+function randomPosition(el) {
+    requestAnimationFrame(() => {
+        const rect = topPanel.getBoundingClientRect();
+
+        // реальные размеры уже отрисованного окна
+        const w = el.offsetWidth;
+        const h = el.offsetHeight;
+
+        const maxX = Math.max(0, rect.width - w);
+        const maxY = Math.max(0, rect.height - h);
+
+        const x = Math.random() * maxX;
+        const y = Math.random() * maxY;
+
+        el.style.left = x + 'px';
+        el.style.top = y + 'px';
+    });
+}
+
+function makeDraggable(el, handle) {
+    let offsetX = 0, offsetY = 0, isDown = false;
+
+    handle.addEventListener('mousedown', (e) => {
+        isDown = true;
+        offsetX = e.clientX - el.offsetLeft;
+        offsetY = e.clientY - el.offsetTop;
+        el.style.zIndex = ++zIndexCounter;
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+
+        const rect = topPanel.getBoundingClientRect();
+        let x = e.clientX - offsetX;
+        let y = e.clientY - offsetY;
+
+        x = Math.max(0, Math.min(x, rect.width - el.offsetWidth));
+        y = Math.max(0, Math.min(y, rect.height - el.offsetHeight));
+
+        el.style.left = x + 'px';
+        el.style.top = y + 'px';
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (!isDown) return;
+        isDown = false;
+    });
+}
+</script>
+
+<script src="cursor_cat.js"></script>
+
+</body>
+</html>
